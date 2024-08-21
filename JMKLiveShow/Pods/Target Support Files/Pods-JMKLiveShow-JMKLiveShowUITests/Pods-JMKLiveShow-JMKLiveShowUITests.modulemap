@@ -1,0 +1,6 @@
+framework module Pods_JMKLiveShow_JMKLiveShowUITests {
+  umbrella header "Pods-JMKLiveShow-JMKLiveShowUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

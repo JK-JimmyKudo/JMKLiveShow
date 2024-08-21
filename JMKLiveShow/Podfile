@@ -1,0 +1,56 @@
+source'https://github.com/CocoaPods/Specs.git'
+# platform :ios, '9.0'
+
+target 'JMKLiveShow' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for JMKLiveShow
+
+  target 'JMKLiveShowTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'JMKLiveShowUITests' do
+    # Pods for testing
+  end
+
+
+  pod 'VHLiveSDK' # 直播
+  pod 'VHLiveSDK_Interactive'# 互动
+  pod 'VHGoodsSDK' # 商品
+  
+  pod 'MJRefresh'
+  pod 'MJExtension'
+  pod 'SDWebImage'
+  pod 'YYText'
+  pod 'Masonry'
+  pod 'MBProgressHUD'
+  pod 'IQKeyboardManager'
+  pod 'JXCategoryView'
+  pod 'TXScrollLabelView'
+  pod 'GKPhotoBrowser/SD'
+  pod 'Reachability'
+  pod 'LYEmptyView'
+  pod 'BarrageRenderer'
+
+  pod 'VHYun_Beautify'
+  pod 'FURenderKit'
+
+
+end
+
+
+post_install do |installer|
+    installer.generated_projects.each do |project|
+        project.targets.each do |target|
+            target.build_configurations.each do |config|
+                config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+            end
+        end
+    end
+    installer.pods_project.targets.each do |target|
+        #  flutter_additional_ios_build_settings(target)
+    end
+end
