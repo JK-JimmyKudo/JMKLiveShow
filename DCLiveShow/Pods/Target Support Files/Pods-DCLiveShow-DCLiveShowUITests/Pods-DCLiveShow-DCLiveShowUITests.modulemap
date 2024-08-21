@@ -1,0 +1,6 @@
+framework module Pods_DCLiveShow_DCLiveShowUITests {
+  umbrella header "Pods-DCLiveShow-DCLiveShowUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
