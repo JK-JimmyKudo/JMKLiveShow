@@ -7,6 +7,10 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "JMKNavigationController.h"
+#import "JMKLoginViewController.h"
+
+
 @interface AppDelegate ()
 
 @end
@@ -17,7 +21,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc]initWithFrame: [UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[ViewController alloc]init];
+    
+    JMKLoginViewController *JMKLogin = [[JMKLoginViewController alloc]init];
+    
+    JMKNavigationController *JMKNavi = [[JMKNavigationController alloc]initWithRootViewController:JMKLogin];
+    
+    self.window.rootViewController = JMKNavi;
+    
     [self.window makeKeyWindow];
     
     return YES;

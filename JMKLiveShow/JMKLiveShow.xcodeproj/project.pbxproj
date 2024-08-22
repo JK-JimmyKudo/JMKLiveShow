@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		333BE0DE54C69DD173C6F829 /* Pods_JMKLiveShow_JMKLiveShowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94627C1ABC00729F449EDF1C /* Pods_JMKLiveShow_JMKLiveShowUITests.framework */; };
+		4E3D84E62C7669020079B7E9 /* JMKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D84E52C7669020079B7E9 /* JMKBaseViewController.m */; };
+		4E3D84E92C76690F0079B7E9 /* JMKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D84E82C76690F0079B7E9 /* JMKNavigationController.m */; };
+		4E3D84EC2C7669600079B7E9 /* JMKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D84EB2C7669600079B7E9 /* JMKLoginViewController.m */; };
 		4E9FC8A92C7661B100FFA7E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9FC8A82C7661B100FFA7E3 /* AppDelegate.m */; };
 		4E9FC8AF2C7661B100FFA7E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9FC8AE2C7661B100FFA7E3 /* ViewController.m */; };
 		4E9FC8B22C7661B100FFA7E3 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4E9FC8B12C7661B100FFA7E3 /* Base */; };
@@ -41,6 +44,12 @@
 /* Begin PBXFileReference section */
 		10CADB6F27EBF033BB80A07E /* Pods_JMKLiveShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMKLiveShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		434E052CD775DF2FC82653D1 /* Pods-JMKLiveShow-JMKLiveShowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMKLiveShow-JMKLiveShowUITests.debug.xcconfig"; path = "Target Support Files/Pods-JMKLiveShow-JMKLiveShowUITests/Pods-JMKLiveShow-JMKLiveShowUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4E3D84E42C7669020079B7E9 /* JMKBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKBaseViewController.h; sourceTree = "<group>"; };
+		4E3D84E52C7669020079B7E9 /* JMKBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKBaseViewController.m; sourceTree = "<group>"; };
+		4E3D84E72C76690F0079B7E9 /* JMKNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKNavigationController.h; sourceTree = "<group>"; };
+		4E3D84E82C76690F0079B7E9 /* JMKNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKNavigationController.m; sourceTree = "<group>"; };
+		4E3D84EA2C7669600079B7E9 /* JMKLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKLoginViewController.h; sourceTree = "<group>"; };
+		4E3D84EB2C7669600079B7E9 /* JMKLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKLoginViewController.m; sourceTree = "<group>"; };
 		4E9FC8A42C7661B100FFA7E3 /* JMKLiveShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMKLiveShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9FC8A72C7661B100FFA7E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4E9FC8A82C7661B100FFA7E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,6 +65,8 @@
 		4E9FC8C92C7661B200FFA7E3 /* JMKLiveShowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JMKLiveShowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9FC8CD2C7661B200FFA7E3 /* JMKLiveShowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKLiveShowUITests.m; sourceTree = "<group>"; };
 		4E9FC8CF2C7661B200FFA7E3 /* JMKLiveShowUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKLiveShowUITestsLaunchTests.m; sourceTree = "<group>"; };
+		4ED40BA32C766E32009F8ECA /* JMKLiveShowPrefix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKLiveShowPrefix.h; sourceTree = "<group>"; };
+		4ED40BA42C766E87009F8ECA /* defineHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = defineHeader.h; sourceTree = "<group>"; };
 		55E85EE684C0225E5533E4B9 /* Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig"; path = "Target Support Files/Pods-JMKLiveShow-JMKLiveShowUITests/Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig"; sourceTree = "<group>"; };
 		94627C1ABC00729F449EDF1C /* Pods_JMKLiveShow_JMKLiveShowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMKLiveShow_JMKLiveShowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3E27507AA7323ADF4998AB /* Pods-JMKLiveShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMKLiveShow.release.xcconfig"; path = "Target Support Files/Pods-JMKLiveShow/Pods-JMKLiveShow.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +126,8 @@
 		4E3D84CB2C7666440079B7E9 /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4E3D84E42C7669020079B7E9 /* JMKBaseViewController.h */,
+				4E3D84E52C7669020079B7E9 /* JMKBaseViewController.m */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -122,6 +135,8 @@
 		4E3D84CE2C7666440079B7E9 /* NavigationController */ = {
 			isa = PBXGroup;
 			children = (
+				4E3D84E72C76690F0079B7E9 /* JMKNavigationController.h */,
+				4E3D84E82C76690F0079B7E9 /* JMKNavigationController.m */,
 			);
 			path = NavigationController;
 			sourceTree = "<group>";
@@ -146,6 +161,8 @@
 		4E3D84D32C7666440079B7E9 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				4E3D84EA2C7669600079B7E9 /* JMKLoginViewController.h */,
+				4E3D84EB2C7669600079B7E9 /* JMKLoginViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -161,6 +178,8 @@
 		4E3D84D52C7666440079B7E9 /* Header */ = {
 			isa = PBXGroup;
 			children = (
+				4ED40BA32C766E32009F8ECA /* JMKLiveShowPrefix.h */,
+				4ED40BA42C766E87009F8ECA /* defineHeader.h */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -565,9 +584,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E3D84E92C76690F0079B7E9 /* JMKNavigationController.m in Sources */,
 				4E9FC8AF2C7661B100FFA7E3 /* ViewController.m in Sources */,
 				4E9FC8A92C7661B100FFA7E3 /* AppDelegate.m in Sources */,
+				4E3D84E62C7669020079B7E9 /* JMKBaseViewController.m in Sources */,
 				4E9FC8BA2C7661B200FFA7E3 /* main.m in Sources */,
+				4E3D84EC2C7669600079B7E9 /* JMKLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,6 +771,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BUCWZY2XF4;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/llj/Desktop/DCLiveShow/JMKLiveShow/JMKLiveShow/Classes/Header/JMKLiveShowPrefix.h;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JMKLiveShow/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -778,6 +802,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BUCWZY2XF4;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/llj/Desktop/DCLiveShow/JMKLiveShow/JMKLiveShow/Classes/Header/JMKLiveShowPrefix.h;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JMKLiveShow/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
