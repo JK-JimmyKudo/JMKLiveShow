@@ -158,7 +158,7 @@
 //    }
 //    
 //    // 取消键盘
-//    [self.view endEditing:YES];
+    [self.view endEditing:YES];
 //
 //    // 记录登录信息
 //    DEMO_Setting.account = self.accountTextField.text;
@@ -166,19 +166,19 @@
 //
 //    [VHProgressHud showLoading];
 //
-//    __weak __typeof(self) weakSelf = self;
+    __weak __typeof(self) weakSelf = self;
 //    [VHallApi loginWithAccount:DEMO_Setting.account
 //                      password:DEMO_Setting.password
 //                       success:^{
 //        [VHProgressHud hideLoading];
 //        VHLog(@"Account: %@ userID:%@", [VHallApi currentAccount], [VHallApi currentUserID]);
-//        [VHProgressHud showToast:@"登录成功"];
+        [JMKProgressHud showToast:@"登录成功"];
 //
 //        // 进入首页
-//        VHHomeViewController *homeVC = [[VHHomeViewController alloc] init];
-//        homeVC.vh_NavIsHidden = YES;
-//        [weakSelf.navigationController pushViewController:homeVC
-//                                                 animated:YES];
+    JMKHomeViewController *homeVC = [[JMKHomeViewController alloc] init];
+        homeVC.vh_NavIsHidden = YES;
+        [weakSelf.navigationController pushViewController:homeVC
+                                                 animated:YES];
 //    }
 //                       failure:^(NSError *error) {
 //        VHLog(@"登录失败%@", error);

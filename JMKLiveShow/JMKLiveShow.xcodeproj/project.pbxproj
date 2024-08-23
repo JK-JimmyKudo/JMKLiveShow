@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		0BEB80B7B6203ABA55E1C145 /* Pods_JMKLiveShow_JMKLiveShowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4180FA0A05C015EA56702BC0 /* Pods_JMKLiveShow_JMKLiveShowUITests.framework */; };
 		195C5C68D6BD2932F2974E1A /* Pods_JMKLiveShowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181C95884C7A77B0DCBD2E09 /* Pods_JMKLiveShowTests.framework */; };
+		4E6116E02C7901480059810D /* JMKProgressHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6116DF2C7901480059810D /* JMKProgressHud.m */; };
+		4E6116E32C7901C60059810D /* JMKHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6116E22C7901C60059810D /* JMKHomeViewController.m */; };
+		4E6116E52C7904BC0059810D /* JMKHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E6116E42C7904BC0059810D /* JMKHomeViewController.xib */; };
+		4E6116E82C7906360059810D /* JMKInavAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6116E72C7906360059810D /* JMKInavAlertView.m */; };
+		4E6116EC2C7906A00059810D /* JMKAuthAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6116EB2C7906A00059810D /* JMKAuthAlertView.m */; };
+		4E6116EF2C790AC30059810D /* JMKStystemSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6116EE2C790AC30059810D /* JMKStystemSetting.m */; };
+		4E6116F32C790D090059810D /* JMKWatchLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6116F22C790D090059810D /* JMKWatchLiveViewController.m */; };
+		4E6116F72C790D730059810D /* JMKWarmUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6116F62C790D730059810D /* JMKWarmUpViewController.m */; };
+		4E6116FB2C790DB60059810D /* JMKWarmUpStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6116FA2C790DB60059810D /* JMKWarmUpStartView.m */; };
+		4E6116FE2C790FC10059810D /* UIView+ITTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6116FD2C790FC10059810D /* UIView+ITTAdditions.m */; };
 		4EFB7E382C78EC4400C27AC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB7E372C78EC4400C27AC1 /* ViewController.m */; };
 		4EFB7E3B2C78EC4400C27AC1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4EFB7E3A2C78EC4400C27AC1 /* Base */; };
 		4EFB7E3D2C78EC4600C27AC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EFB7E3C2C78EC4600C27AC1 /* Assets.xcassets */; };
@@ -51,6 +61,25 @@
 		277266BF325032AB01A6947E /* Pods_JMKLiveShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMKLiveShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4077A3A145365D8BC7979BEC /* Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig"; path = "Target Support Files/Pods-JMKLiveShow-JMKLiveShowUITests/Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4180FA0A05C015EA56702BC0 /* Pods_JMKLiveShow_JMKLiveShowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMKLiveShow_JMKLiveShowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E6116DE2C7901480059810D /* JMKProgressHud.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKProgressHud.h; sourceTree = "<group>"; };
+		4E6116DF2C7901480059810D /* JMKProgressHud.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKProgressHud.m; sourceTree = "<group>"; };
+		4E6116E12C7901C60059810D /* JMKHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKHomeViewController.h; sourceTree = "<group>"; };
+		4E6116E22C7901C60059810D /* JMKHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKHomeViewController.m; sourceTree = "<group>"; };
+		4E6116E42C7904BC0059810D /* JMKHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMKHomeViewController.xib; sourceTree = "<group>"; };
+		4E6116E62C7906360059810D /* JMKInavAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKInavAlertView.h; sourceTree = "<group>"; };
+		4E6116E72C7906360059810D /* JMKInavAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKInavAlertView.m; sourceTree = "<group>"; };
+		4E6116EA2C7906A00059810D /* JMKAuthAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKAuthAlertView.h; sourceTree = "<group>"; };
+		4E6116EB2C7906A00059810D /* JMKAuthAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKAuthAlertView.m; sourceTree = "<group>"; };
+		4E6116ED2C790AC30059810D /* JMKStystemSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKStystemSetting.h; sourceTree = "<group>"; };
+		4E6116EE2C790AC30059810D /* JMKStystemSetting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKStystemSetting.m; sourceTree = "<group>"; };
+		4E6116F12C790D090059810D /* JMKWatchLiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKWatchLiveViewController.h; sourceTree = "<group>"; };
+		4E6116F22C790D090059810D /* JMKWatchLiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKWatchLiveViewController.m; sourceTree = "<group>"; };
+		4E6116F52C790D730059810D /* JMKWarmUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKWarmUpViewController.h; sourceTree = "<group>"; };
+		4E6116F62C790D730059810D /* JMKWarmUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKWarmUpViewController.m; sourceTree = "<group>"; };
+		4E6116F92C790DB60059810D /* JMKWarmUpStartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKWarmUpStartView.h; sourceTree = "<group>"; };
+		4E6116FA2C790DB60059810D /* JMKWarmUpStartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKWarmUpStartView.m; sourceTree = "<group>"; };
+		4E6116FC2C790FC10059810D /* UIView+ITTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ITTAdditions.h"; sourceTree = "<group>"; };
+		4E6116FD2C790FC10059810D /* UIView+ITTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ITTAdditions.m"; sourceTree = "<group>"; };
 		4EFB7E2D2C78EC4400C27AC1 /* JMKLiveShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMKLiveShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EFB7E362C78EC4400C27AC1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4EFB7E372C78EC4400C27AC1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -124,6 +153,57 @@
 				181C95884C7A77B0DCBD2E09 /* Pods_JMKLiveShowTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E6116E92C7906460059810D /* Catogroy */ = {
+			isa = PBXGroup;
+			children = (
+				4EFB7E802C78F35400C27AC1 /* UIColor+JMKColor.h */,
+				4EFB7E812C78F35400C27AC1 /* UIColor+JMKColor.m */,
+				4EFB7E822C78F35400C27AC1 /* UIImage+ImageUtil.h */,
+				4EFB7E832C78F35400C27AC1 /* UIImage+ImageUtil.m */,
+				4E6116FC2C790FC10059810D /* UIView+ITTAdditions.h */,
+				4E6116FD2C790FC10059810D /* UIView+ITTAdditions.m */,
+			);
+			path = Catogroy;
+			sourceTree = "<group>";
+		};
+		4E6116F02C790CE20059810D /* WatchLive */ = {
+			isa = PBXGroup;
+			children = (
+				4E6116F12C790D090059810D /* JMKWatchLiveViewController.h */,
+				4E6116F22C790D090059810D /* JMKWatchLiveViewController.m */,
+			);
+			path = WatchLive;
+			sourceTree = "<group>";
+		};
+		4E6116F42C790D5E0059810D /* WarmUp */ = {
+			isa = PBXGroup;
+			children = (
+				4E6116F82C790DA80059810D /* View */,
+				4E6116F52C790D730059810D /* JMKWarmUpViewController.h */,
+				4E6116F62C790D730059810D /* JMKWarmUpViewController.m */,
+			);
+			path = WarmUp;
+			sourceTree = "<group>";
+		};
+		4E6116F82C790DA80059810D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E6116F92C790DB60059810D /* JMKWarmUpStartView.h */,
+				4E6116FA2C790DB60059810D /* JMKWarmUpStartView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4EC76FD82C78FB3200000296 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4E6116E12C7901C60059810D /* JMKHomeViewController.h */,
+				4E6116E22C7901C60059810D /* JMKHomeViewController.m */,
+				4E6116E42C7904BC0059810D /* JMKHomeViewController.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		4EFB7E242C78EC4400C27AC1 = {
@@ -238,6 +318,9 @@
 		4EFB7E742C78F35400C27AC1 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				4E6116F42C790D5E0059810D /* WarmUp */,
+				4E6116F02C790CE20059810D /* WatchLive */,
+				4EC76FD82C78FB3200000296 /* Home */,
 				4EFB7E732C78F35400C27AC1 /* Login */,
 			);
 			path = Business;
@@ -263,6 +346,12 @@
 		4EFB7E7A2C78F35400C27AC1 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				4EFB7E7E2C78F35400C27AC1 /* JMKUITool.h */,
+				4EFB7E7F2C78F35400C27AC1 /* JMKUITool.m */,
+				4E6116DE2C7901480059810D /* JMKProgressHud.h */,
+				4E6116DF2C7901480059810D /* JMKProgressHud.m */,
+				4E6116ED2C790AC30059810D /* JMKStystemSetting.h */,
+				4E6116EE2C790AC30059810D /* JMKStystemSetting.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -277,12 +366,10 @@
 		4EFB7E842C78F35400C27AC1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				4EFB7E7E2C78F35400C27AC1 /* JMKUITool.h */,
-				4EFB7E7F2C78F35400C27AC1 /* JMKUITool.m */,
-				4EFB7E802C78F35400C27AC1 /* UIColor+JMKColor.h */,
-				4EFB7E812C78F35400C27AC1 /* UIColor+JMKColor.m */,
-				4EFB7E822C78F35400C27AC1 /* UIImage+ImageUtil.h */,
-				4EFB7E832C78F35400C27AC1 /* UIImage+ImageUtil.m */,
+				4E6116E62C7906360059810D /* JMKInavAlertView.h */,
+				4E6116E72C7906360059810D /* JMKInavAlertView.m */,
+				4E6116EA2C7906A00059810D /* JMKAuthAlertView.h */,
+				4E6116EB2C7906A00059810D /* JMKAuthAlertView.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -290,6 +377,7 @@
 		4EFB7E852C78F35400C27AC1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4E6116E92C7906460059810D /* Catogroy */,
 				4EFB7E672C78F35400C27AC1 /* AppDelegate */,
 				4EFB7E6F2C78F35400C27AC1 /* Application */,
 				4EFB7E742C78F35400C27AC1 /* Business */,
@@ -444,6 +532,7 @@
 				4EFB7E8A2C78F35400C27AC1 /* JMKLoginViewController.xib in Resources */,
 				4EFB7E402C78EC4600C27AC1 /* Base in Resources */,
 				4EFB7E3B2C78EC4400C27AC1 /* Base in Resources */,
+				4E6116E52C7904BC0059810D /* JMKHomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,14 +695,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EFB7E882C78F35400C27AC1 /* JMKNavigationController.m in Sources */,
+				4E6116FB2C790DB60059810D /* JMKWarmUpStartView.m in Sources */,
+				4E6116F72C790D730059810D /* JMKWarmUpViewController.m in Sources */,
+				4E6116E32C7901C60059810D /* JMKHomeViewController.m in Sources */,
+				4E6116EC2C7906A00059810D /* JMKAuthAlertView.m in Sources */,
+				4E6116EF2C790AC30059810D /* JMKStystemSetting.m in Sources */,
+				4E6116F32C790D090059810D /* JMKWatchLiveViewController.m in Sources */,
 				4EFB7E8D2C78F35400C27AC1 /* UIImage+ImageUtil.m in Sources */,
 				4EFB7E862C78F35400C27AC1 /* AppDelegate.m in Sources */,
 				4EFB7E872C78F35400C27AC1 /* JMKBaseViewController.m in Sources */,
 				4EFB7E892C78F35400C27AC1 /* JMKLoginViewController.m in Sources */,
 				4EFB7E8B2C78F35400C27AC1 /* JMKUITool.m in Sources */,
 				4EFB7E382C78EC4400C27AC1 /* ViewController.m in Sources */,
+				4E6116E82C7906360059810D /* JMKInavAlertView.m in Sources */,
+				4E6116FE2C790FC10059810D /* UIView+ITTAdditions.m in Sources */,
 				4EFB7E8C2C78F35400C27AC1 /* UIColor+JMKColor.m in Sources */,
 				4EFB7E432C78EC4600C27AC1 /* main.m in Sources */,
+				4E6116E02C7901480059810D /* JMKProgressHud.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,7 +893,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BUCWZY2XF4;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = /Users/llj/Desktop/JMKLiveShow/JMKLiveShow/Classes/Header/JMKLiveShowPrefix.h;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				GCC_PREFIX_HEADER = /Users/llj/Desktop/DCLiveShow/JMKLiveShow/JMKLiveShow/Classes/Header/JMKLiveShowPrefix.h;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JMKLiveShow/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -825,7 +924,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BUCWZY2XF4;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = /Users/llj/Desktop/JMKLiveShow/JMKLiveShow/Classes/Header/JMKLiveShowPrefix.h;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				GCC_PREFIX_HEADER = /Users/llj/Desktop/DCLiveShow/JMKLiveShow/JMKLiveShow/Classes/Header/JMKLiveShowPrefix.h;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JMKLiveShow/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

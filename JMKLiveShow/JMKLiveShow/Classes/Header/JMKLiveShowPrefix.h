@@ -14,8 +14,25 @@
 
 #import "UIImage+ImageUtil.h"
 #import "UIColor+JMKColor.h"
-#import "JMKUITool.h"
+#import "UIView+ITTAdditions.h"
 
+#import "JMKUITool.h"
+#import "JMKProgressHud.h"
+
+// 视图
+#import "JMKAuthAlertView.h"
+
+
+
+#import "JMKHomeViewController.h"
+#import "JMKWatchLiveViewController.h"
+#import "JMKWarmUpViewController.h"
+
+
+
+
+
+#import "JMKStystemSetting.h"
 
 
 // 微吼
@@ -32,10 +49,10 @@
 //#import "IQKeyboardManager.h"
 //#import "IQKeyboardManager/IQKeyboardManager.h"
 #import "MBProgressHUD.h"
-//#import "UIImageView+WebCache.h"
-//#import "JXCategoryView.h"
+#import "UIImageView+WebCache.h"
+#import "JXCategoryView.h"
 //#import "GKPhotoBrowser.h"
-//#import "LYEmptyViewHeader.h"
+#import "LYEmptyViewHeader.h"
 
 
 
