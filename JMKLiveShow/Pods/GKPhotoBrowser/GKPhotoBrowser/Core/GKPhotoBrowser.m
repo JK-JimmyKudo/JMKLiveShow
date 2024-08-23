@@ -9,6 +9,7 @@
 #import "GKPhotoBrowser.h"
 #import "GKPhotoGestureHandler.h"
 #import "GKPhotoRotationHandler.h"
+#import "GKPhotoView+Image.h"
 
 #if __has_include(<GKYYWebImageManager.h>)
 #import "GKYYWebImageManager.h"
@@ -25,6 +26,7 @@
 static Class imageManagerClass = nil;
 static Class videoManagerClass = nil;
 static Class progressClass = nil;
+static Class livePhotoClass = nil;
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
@@ -65,6 +67,9 @@ static Class progressClass = nil;
 // 进度条
 @property (nonatomic, strong) id<GKProgressViewProtocol> progress;
 
+// livePhoto
+@property (nonatomic, strong) id<GKLivePhotoProtocol> livePhoto;
+
 @end
 
 @implementation GKPhotoBrowser
@@ -75,41 +80,58 @@ static Class progressClass = nil;
 
 - (instancetype)initWithPhotos:(NSArray<GKPhoto *> *)photos currentIndex:(NSInteger)currentIndex {
     if (self = [super init]) {
-        self.photos       = photos;
+        self.photos = photos;
         self.currentIndex = currentIndex;
-        self.isStatusBarShow         = NO;
-        self.isHideSourceView        = YES;
-        self.statusBarStyle          = UIStatusBarStyleLightContent;
-        self.isFullWidthForLandScape = YES;
-        self.maxZoomScale            = kMaxZoomScale;
-        self.doubleZoomScale         = self.maxZoomScale;
-        self.animDuration            = kAnimationDuration;
-        self.photoViewPadding        = kPhotoViewPadding;
-        self.hidesSavedBtn           = YES;
-        self.showPlayImage           = YES;
-        self.isVideoReplay           = YES;
-        self.isVideoPausedWhenDragged = YES;
-        
-        _visiblePhotoViews  = [NSMutableArray new];
-        _reusablePhotoViews = [NSMutableSet new];
-        
-        imageManagerClass = NSClassFromString(@"GKSDWebImageManager");
-        if (!imageManagerClass) {
-            imageManagerClass = NSClassFromString(@"GKYYWebImageManager");
-        }
-        if (imageManagerClass) {
-            [self setupWebImageProtocol:[imageManagerClass new]];
-        }
-        videoManagerClass = NSClassFromString(@"GKAVPlayerManager");
-        if (videoManagerClass) {
-            [self setupVideoPlayerProtocol:[videoManagerClass new]];
-        }
-        progressClass = NSClassFromString(@"GKProgressView");
-        if (progressClass) {
-            [self setupVideoProgressProtocol:[progressClass new]];
-        }
+        [self initialize];
     }
     return self;
+}
+
+- (void)initialize {
+    self.isStatusBarShow         = NO;
+    self.isHideSourceView        = YES;
+    self.statusBarStyle          = UIStatusBarStyleLightContent;
+    self.isFullWidthForLandScape = YES;
+    self.maxZoomScale            = kMaxZoomScale;
+    self.doubleZoomScale         = self.maxZoomScale;
+    self.animDuration            = kAnimationDuration;
+    self.photoViewPadding        = kPhotoViewPadding;
+    self.hidesSavedBtn           = YES;
+    self.showPlayImage           = YES;
+    self.isVideoReplay           = YES;
+    self.isVideoPausedWhenDragged = YES;
+    self.isLivePhotoPausedWhenDragged = YES;
+    self.isClearMemoryForLivePhoto = YES;
+    self.showStyle = GKPhotoBrowserShowStyleZoom;
+    self.hideStyle = GKPhotoBrowserHideStyleZoom;
+    self.loadStyle = GKPhotoBrowserLoadStyleIndeterminate;
+    self.originLoadStyle = GKPhotoBrowserLoadStyleIndeterminate;
+    self.videoLoadStyle = GKPhotoBrowserLoadStyleIndeterminate;
+    self.failStyle = GKPhotoBrowserFailStyleOnlyText;
+    self.liveLoadStyle = GKPhotoBrowserLoadStyleDeterminateSector;
+    
+    _visiblePhotoViews  = [NSMutableArray new];
+    _reusablePhotoViews = [NSMutableSet new];
+    
+    imageManagerClass = NSClassFromString(@"GKSDWebImageManager");
+    if (!imageManagerClass) {
+        imageManagerClass = NSClassFromString(@"GKYYWebImageManager");
+    }
+    if (imageManagerClass) {
+        [self setupWebImageProtocol:[imageManagerClass new]];
+    }
+    videoManagerClass = NSClassFromString(@"GKAVPlayerManager");
+    if (videoManagerClass) {
+        [self setupVideoPlayerProtocol:[videoManagerClass new]];
+    }
+    progressClass = NSClassFromString(@"GKProgressView");
+    if (progressClass) {
+        [self setupVideoProgressProtocol:[progressClass new]];
+    }
+    livePhotoClass = NSClassFromString(@"GKAFLivePhotoManager");
+    if (livePhotoClass) {
+        [self setupLivePhotoProtocol:[livePhotoClass new]];
+    }
 }
 
 - (void)setupWebImageProtocol:(id<GKWebImageProtocol>)protocol {
@@ -128,7 +150,10 @@ static Class progressClass = nil;
         if (!self.curPhotoView.photo.isVideo) return;
         if (![self.curPhoto.videoUrl isEqual:mgr.assetURL]) return;
         switch (status) {
-            case GKVideoPlayerStatusPrepared:
+            case GKVideoPlayerStatusPrepared: {
+                [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback withOptions:AVAudioSessionCategoryOptionAllowBluetooth error:nil];
+                [[AVAudioSession sharedInstance] setActive:YES error:nil];
+            }
             case GKVideoPlayerStatusBuffering: {
                 [self.curPhotoView showLoading];
             } break;
@@ -143,7 +168,8 @@ static Class progressClass = nil;
                 }
             } break;
             case GKVideoPlayerStatusFailed: {
-                [self.curPhotoView showFailure];
+                [self.curPhotoView showFailure:self.player.error];
+                self.progressView.hidden = YES;
             } break;
             default: break;
         }
@@ -202,6 +228,21 @@ static Class progressClass = nil;
     };
 }
 
+- (void)setupLivePhotoProtocol:(id<GKLivePhotoProtocol>)protocol {
+    protocol.browser = self;
+    self.livePhoto = protocol;
+    __weak __typeof(self) weakSelf = self;
+    self.livePhoto.liveStatusChanged = ^(id<GKLivePhotoProtocol> mgr, GKLivePlayStatus status) {
+        __strong __typeof(weakSelf) self = weakSelf;
+        if (!self.isShowLivePhotoMark) return;
+        if (status == GKLivePlayStatusBegin) {
+            self.curPhotoView.liveMarkView.hidden = YES;
+        }else {
+            self.curPhotoView.liveMarkView.hidden = NO;
+        }
+    };
+}
+
 - (void)setupVideoProgressProtocol:(id<GKProgressViewProtocol>)protocol {
     protocol.browser = self;
     self.progress = protocol;
@@ -216,7 +257,6 @@ static Class progressClass = nil;
 
 - (void)dealloc {
     [self.rotationHandler delDeviceOrientationObserver];
-    [self.player gk_stop];
 }
 
 - (void)loadView {
@@ -275,6 +315,13 @@ static Class progressClass = nil;
             [self.imageProtocol clearMemory];
         }
     }
+    // 手动释放，防止某些情况下释放不了
+    self.imageProtocol = nil;
+    [self.player gk_stop];
+    self.player = nil;
+    [self.livePhoto gk_stop];
+    self.livePhoto = nil;
+    self.progress = nil;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -597,23 +644,10 @@ static Class progressClass = nil;
         
         GKPhotoView *photoView = [self photoViewForIndex:i];
         if (photoView == nil) {
-            photoView                 = [self dequeueReusablePhotoView];
-            photoView.delegate        = self;
-            photoView.player          = self.player;
-            photoView.loadStyle       = self.loadStyle;
-            photoView.originLoadStyle = self.originLoadStyle;
-            photoView.failStyle       = self.failStyle;
-            photoView.isFollowSystemRotation = self.isFollowSystemRotation;
-            photoView.isFullWidthForLandScape = self.isFullWidthForLandScape;
-            photoView.isAdaptiveSafeArea = self.isAdaptiveSafeArea;
-            photoView.failureText     = self.failureText;
-            photoView.failureImage    = self.failureImage;
-            photoView.maxZoomScale    = self.maxZoomScale;
+            photoView = [self dequeueReusablePhotoView];
+            photoView.delegate = self;
+            photoView.browser = self;
             photoView.doubleZoomScale = self.doubleZoomScale;
-            photoView.showPlayImage   = self.showPlayImage;
-            photoView.videoPlayImage  = self.videoPlayImage;
-            photoView.isVideoPausedWhenDragged = self.isVideoPausedWhenDragged;
-            photoView.isClearMemoryWhenViewReuse = self.isClearMemoryWhenViewReuse;
             
             CGRect frame = self.photoScrollView.bounds;
             
@@ -633,7 +667,7 @@ static Class progressClass = nil;
             [photoView resetFrame];
         }
         
-        if (photoView.photo == nil && self.handler.isShow) {
+        if (photoView.photo == nil && self.handler.isShow && !self.gestureHandler.isClickDismiss) {
             [photoView setupPhoto:self.photos[i]];
         }
         if ([self.delegate respondsToSelector:@selector(photoBrowser:reuseAtIndex:photoView:)]) {
@@ -725,16 +759,29 @@ static Class progressClass = nil;
     if ([self.delegate respondsToSelector:@selector(photoBrowser:loadFailedAtIndex:error:)]) {
         [self.delegate photoBrowser:self loadFailedAtIndex:index error:error];
     }
-    NSString *failText = self.failureText ?: @"图片加载失败";
-    if ([self.delegate respondsToSelector:@selector(photoBrowser:failedTextAtIndex:)]) {
-        failText = [self.delegate photoBrowser:self failedTextAtIndex:index];
+    if (photoView.photo.isVideo) {
+        NSString *failText = self.failureText ?: @"视频播放失败";
+        if ([self.delegate respondsToSelector:@selector(photoBrowser:failedTextAtIndex:)]) {
+            failText = [self.delegate photoBrowser:self failedTextAtIndex:index];
+        }
+        UIImage *failImage = self.failureImage ?: GKPhotoBrowserImage(@"loading_error");
+        if ([self.delegate respondsToSelector:@selector(photoBrowser:failedImageAtIndex:)]) {
+            failImage = [self.delegate photoBrowser:self failedImageAtIndex:index];
+        }
+        photoView.videoLoadingView.failText = failText;
+        photoView.videoLoadingView.failImage = failImage;
+    }else {
+        NSString *failText = self.failureText ?: @"图片加载失败";
+        if ([self.delegate respondsToSelector:@selector(photoBrowser:failedTextAtIndex:)]) {
+            failText = [self.delegate photoBrowser:self failedTextAtIndex:index];
+        }
+        UIImage *failImage = self.failureImage ?: GKPhotoBrowserImage(@"loading_error");
+        if ([self.delegate respondsToSelector:@selector(photoBrowser:failedImageAtIndex:)]) {
+            failImage = [self.delegate photoBrowser:self failedImageAtIndex:index];
+        }
+        photoView.loadingView.failText = failText;
+        photoView.loadingView.failImage = failImage;
     }
-    UIImage *failImage = self.failureImage ?: GKPhotoBrowserImage(@"loading_error");
-    if ([self.delegate respondsToSelector:@selector(photoBrowser:failedImageAtIndex:)]) {
-        failImage = [self.delegate photoBrowser:self failedImageAtIndex:index];
-    }
-    photoView.loadingView.failText = failText;
-    photoView.loadingView.failImage = failImage;
 }
 
 - (void)photoView:(GKPhotoView *)photoView loadProgress:(float)progress isOriginImage:(BOOL)isOriginImage {
@@ -742,6 +789,15 @@ static Class progressClass = nil;
     if (curPhotoView.tag == photoView.tag) {
         if ([self.delegate respondsToSelector:@selector(photoBrowser:loadImageAtIndex:progress:isOriginImage:)]) {
             [self.delegate photoBrowser:self loadImageAtIndex:self.currentIndex progress:progress isOriginImage:isOriginImage];
+        }
+    }
+}
+
+- (void)photoView:(GKPhotoView *)photoView loadStart:(BOOL)isStart success:(BOOL)success {
+    GKPhotoView *curPhotoView = self.curPhotoView;
+    if (curPhotoView.tag == photoView.tag) {
+        if ([self.delegate respondsToSelector:@selector(photoBrowser:videoLoadStart:success:)]) {
+            [self.delegate photoBrowser:self videoLoadStart:isStart success:success];
         }
     }
 }
@@ -934,6 +990,7 @@ static Class progressClass = nil;
         pageControl.currentPage = self.currentIndex;
         pageControl.hidesForSinglePage = YES;
         pageControl.hidden = YES;
+        pageControl.enabled = NO;
         if (@available(iOS 14.0, *)) {
             pageControl.backgroundStyle = UIPageControlBackgroundStyleMinimal;
         }

@@ -15,16 +15,16 @@ NS_ASSUME_NONNULL_BEGIN
 @interface GKPhoto : NSObject
 
 /** 图片地址 */
-@property (nonatomic, strong) NSURL              *url;
+@property (nonatomic, strong, nullable) NSURL *url;
 
 /** 原图地址 */
-@property (nonatomic, strong) NSURL              *originUrl;
+@property (nonatomic, strong, nullable) NSURL *originUrl;
 
 /** 来源imageView */
-@property (nonatomic, strong) UIImageView        *sourceImageView;
+@property (nonatomic, strong, nullable) UIImageView *sourceImageView;
 
 /** 来源frame */
-@property (nonatomic, assign) CGRect             sourceFrame;
+@property (nonatomic, assign) CGRect sourceFrame;
 
 /** 图片(静态) */
 @property (nonatomic, strong, nullable) UIImage  *image;
@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 以下属性播放视频时使用
 /** 视频地址 */
-@property (nonatomic, strong) NSURL              *videoUrl;
+@property (nonatomic, strong, nullable) NSURL    *videoUrl;
 /** 视频相册资源 */
 @property (nonatomic, strong, nullable) PHAsset  *videoAsset;
 /** 视频尺寸 */
@@ -46,6 +46,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 是否自动播放视频，默认YES
 @property (nonatomic, assign, getter=isAutoPlay) BOOL autoPlay;
 
+#pragma mark - LivePhoto
+// 是否是livePhoto，需从外部传入
+@property (nonatomic, assign) BOOL              isLivePhoto;
 
 /************************内部使用，无需关心 ********************/
 /** 图片是否加载完成 */
@@ -73,8 +76,12 @@ NS_ASSUME_NONNULL_BEGIN
 /** 视频手动点击播放 */
 @property (nonatomic, assign) BOOL               isVideoClicked;
 
+/// 根据相册资源获取图片
+/// - Parameter completion: 完成回调
 - (void)getImage:(nullable void(^)(NSData *_Nullable data, UIImage *_Nullable image, NSError *_Nullable error))completion;
 
+/// 根据相册资源获取视频
+/// - Parameter completion: 完成回调
 - (void)getVideo:(nullable void(^)(NSURL *_Nullable url, NSError *_Nullable error))completion;
 
 @end

@@ -7,329 +7,325 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		333BE0DE54C69DD173C6F829 /* Pods_JMKLiveShow_JMKLiveShowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94627C1ABC00729F449EDF1C /* Pods_JMKLiveShow_JMKLiveShowUITests.framework */; };
-		4E3D84E62C7669020079B7E9 /* JMKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D84E52C7669020079B7E9 /* JMKBaseViewController.m */; };
-		4E3D84E92C76690F0079B7E9 /* JMKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D84E82C76690F0079B7E9 /* JMKNavigationController.m */; };
-		4E9FC8A92C7661B100FFA7E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9FC8A82C7661B100FFA7E3 /* AppDelegate.m */; };
-		4E9FC8AF2C7661B100FFA7E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9FC8AE2C7661B100FFA7E3 /* ViewController.m */; };
-		4E9FC8B22C7661B100FFA7E3 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4E9FC8B12C7661B100FFA7E3 /* Base */; };
-		4E9FC8B42C7661B200FFA7E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9FC8B32C7661B200FFA7E3 /* Assets.xcassets */; };
-		4E9FC8B72C7661B200FFA7E3 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4E9FC8B62C7661B200FFA7E3 /* Base */; };
-		4E9FC8BA2C7661B200FFA7E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9FC8B92C7661B200FFA7E3 /* main.m */; };
-		4E9FC8C42C7661B200FFA7E3 /* JMKLiveShowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9FC8C32C7661B200FFA7E3 /* JMKLiveShowTests.m */; };
-		4E9FC8CE2C7661B200FFA7E3 /* JMKLiveShowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9FC8CD2C7661B200FFA7E3 /* JMKLiveShowUITests.m */; };
-		4E9FC8D02C7661B200FFA7E3 /* JMKLiveShowUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9FC8CF2C7661B200FFA7E3 /* JMKLiveShowUITestsLaunchTests.m */; };
-		4ED40BAA2C76CB12009F8ECA /* UIImage+ImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED40BA92C76CB12009F8ECA /* UIImage+ImageUtil.m */; };
-		4ED40BAE2C76D51B009F8ECA /* UIColor+JMKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED40BAD2C76D51B009F8ECA /* UIColor+JMKColor.m */; };
-		4ED40BB12C76D6A2009F8ECA /* JMKUITool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED40BB02C76D6A2009F8ECA /* JMKUITool.m */; };
-		4ED40BB52C76D96C009F8ECA /* JMKLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED40BB22C76D96C009F8ECA /* JMKLoginViewController.xib */; };
-		4ED40BB62C76D96C009F8ECA /* JMKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED40BB32C76D96C009F8ECA /* JMKLoginViewController.m */; };
-		4ED40BB82C76DDE0009F8ECA /* IQKeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED40BB72C76DDE0009F8ECA /* IQKeyboardManager.framework */; };
-		642C61B809239C7328AC9B1B /* Pods_JMKLiveShow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10CADB6F27EBF033BB80A07E /* Pods_JMKLiveShow.framework */; };
-		9C15CF658E471F9224711787 /* Pods_JMKLiveShowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B961A0422A20AB54C25E9662 /* Pods_JMKLiveShowTests.framework */; };
+		0BEB80B7B6203ABA55E1C145 /* Pods_JMKLiveShow_JMKLiveShowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4180FA0A05C015EA56702BC0 /* Pods_JMKLiveShow_JMKLiveShowUITests.framework */; };
+		195C5C68D6BD2932F2974E1A /* Pods_JMKLiveShowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181C95884C7A77B0DCBD2E09 /* Pods_JMKLiveShowTests.framework */; };
+		4EFB7E382C78EC4400C27AC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB7E372C78EC4400C27AC1 /* ViewController.m */; };
+		4EFB7E3B2C78EC4400C27AC1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4EFB7E3A2C78EC4400C27AC1 /* Base */; };
+		4EFB7E3D2C78EC4600C27AC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EFB7E3C2C78EC4600C27AC1 /* Assets.xcassets */; };
+		4EFB7E402C78EC4600C27AC1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4EFB7E3F2C78EC4600C27AC1 /* Base */; };
+		4EFB7E432C78EC4600C27AC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB7E422C78EC4600C27AC1 /* main.m */; };
+		4EFB7E4D2C78EC4600C27AC1 /* JMKLiveShowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB7E4C2C78EC4600C27AC1 /* JMKLiveShowTests.m */; };
+		4EFB7E572C78EC4600C27AC1 /* JMKLiveShowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB7E562C78EC4600C27AC1 /* JMKLiveShowUITests.m */; };
+		4EFB7E592C78EC4600C27AC1 /* JMKLiveShowUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB7E582C78EC4600C27AC1 /* JMKLiveShowUITestsLaunchTests.m */; };
+		4EFB7E862C78F35400C27AC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB7E662C78F35400C27AC1 /* AppDelegate.m */; };
+		4EFB7E872C78F35400C27AC1 /* JMKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB7E692C78F35400C27AC1 /* JMKBaseViewController.m */; };
+		4EFB7E882C78F35400C27AC1 /* JMKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB7E6C2C78F35400C27AC1 /* JMKNavigationController.m */; };
+		4EFB7E892C78F35400C27AC1 /* JMKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB7E712C78F35400C27AC1 /* JMKLoginViewController.m */; };
+		4EFB7E8A2C78F35400C27AC1 /* JMKLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EFB7E722C78F35400C27AC1 /* JMKLoginViewController.xib */; };
+		4EFB7E8B2C78F35400C27AC1 /* JMKUITool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB7E7F2C78F35400C27AC1 /* JMKUITool.m */; };
+		4EFB7E8C2C78F35400C27AC1 /* UIColor+JMKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB7E812C78F35400C27AC1 /* UIColor+JMKColor.m */; };
+		4EFB7E8D2C78F35400C27AC1 /* UIImage+ImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB7E832C78F35400C27AC1 /* UIImage+ImageUtil.m */; };
+		87118570BDEB45FCFC2BE4AD /* Pods_JMKLiveShow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277266BF325032AB01A6947E /* Pods_JMKLiveShow.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4E9FC8C02C7661B200FFA7E3 /* PBXContainerItemProxy */ = {
+		4EFB7E492C78EC4600C27AC1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4E9FC89C2C7661B100FFA7E3 /* Project object */;
+			containerPortal = 4EFB7E252C78EC4400C27AC1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4E9FC8A32C7661B100FFA7E3;
+			remoteGlobalIDString = 4EFB7E2C2C78EC4400C27AC1;
 			remoteInfo = JMKLiveShow;
 		};
-		4E9FC8CA2C7661B200FFA7E3 /* PBXContainerItemProxy */ = {
+		4EFB7E532C78EC4600C27AC1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4E9FC89C2C7661B100FFA7E3 /* Project object */;
+			containerPortal = 4EFB7E252C78EC4400C27AC1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4E9FC8A32C7661B100FFA7E3;
+			remoteGlobalIDString = 4EFB7E2C2C78EC4400C27AC1;
 			remoteInfo = JMKLiveShow;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		10CADB6F27EBF033BB80A07E /* Pods_JMKLiveShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMKLiveShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		434E052CD775DF2FC82653D1 /* Pods-JMKLiveShow-JMKLiveShowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMKLiveShow-JMKLiveShowUITests.debug.xcconfig"; path = "Target Support Files/Pods-JMKLiveShow-JMKLiveShowUITests/Pods-JMKLiveShow-JMKLiveShowUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		4E3D84E42C7669020079B7E9 /* JMKBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKBaseViewController.h; sourceTree = "<group>"; };
-		4E3D84E52C7669020079B7E9 /* JMKBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKBaseViewController.m; sourceTree = "<group>"; };
-		4E3D84E72C76690F0079B7E9 /* JMKNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKNavigationController.h; sourceTree = "<group>"; };
-		4E3D84E82C76690F0079B7E9 /* JMKNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKNavigationController.m; sourceTree = "<group>"; };
-		4E9FC8A42C7661B100FFA7E3 /* JMKLiveShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMKLiveShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E9FC8A72C7661B100FFA7E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		4E9FC8A82C7661B100FFA7E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4E9FC8AD2C7661B100FFA7E3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4E9FC8AE2C7661B100FFA7E3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		4E9FC8B12C7661B100FFA7E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4E9FC8B32C7661B200FFA7E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4E9FC8B62C7661B200FFA7E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4E9FC8B82C7661B200FFA7E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E9FC8B92C7661B200FFA7E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4E9FC8BF2C7661B200FFA7E3 /* JMKLiveShowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JMKLiveShowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E9FC8C32C7661B200FFA7E3 /* JMKLiveShowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKLiveShowTests.m; sourceTree = "<group>"; };
-		4E9FC8C92C7661B200FFA7E3 /* JMKLiveShowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JMKLiveShowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E9FC8CD2C7661B200FFA7E3 /* JMKLiveShowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKLiveShowUITests.m; sourceTree = "<group>"; };
-		4E9FC8CF2C7661B200FFA7E3 /* JMKLiveShowUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKLiveShowUITestsLaunchTests.m; sourceTree = "<group>"; };
-		4ED40BA32C766E32009F8ECA /* JMKLiveShowPrefix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKLiveShowPrefix.h; sourceTree = "<group>"; };
-		4ED40BA42C766E87009F8ECA /* defineHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = defineHeader.h; sourceTree = "<group>"; };
-		4ED40BA82C76CB12009F8ECA /* UIImage+ImageUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageUtil.h"; sourceTree = "<group>"; };
-		4ED40BA92C76CB12009F8ECA /* UIImage+ImageUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageUtil.m"; sourceTree = "<group>"; };
-		4ED40BAB2C76D3DE009F8ECA /* CommonMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
-		4ED40BAC2C76D51B009F8ECA /* UIColor+JMKColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+JMKColor.h"; sourceTree = "<group>"; };
-		4ED40BAD2C76D51B009F8ECA /* UIColor+JMKColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JMKColor.m"; sourceTree = "<group>"; };
-		4ED40BAF2C76D6A2009F8ECA /* JMKUITool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKUITool.h; sourceTree = "<group>"; };
-		4ED40BB02C76D6A2009F8ECA /* JMKUITool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKUITool.m; sourceTree = "<group>"; };
-		4ED40BB22C76D96C009F8ECA /* JMKLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMKLoginViewController.xib; sourceTree = "<group>"; };
-		4ED40BB32C76D96C009F8ECA /* JMKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMKLoginViewController.m; sourceTree = "<group>"; };
-		4ED40BB42C76D96C009F8ECA /* JMKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMKLoginViewController.h; sourceTree = "<group>"; };
-		4ED40BB72C76DDE0009F8ECA /* IQKeyboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		55E85EE684C0225E5533E4B9 /* Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig"; path = "Target Support Files/Pods-JMKLiveShow-JMKLiveShowUITests/Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig"; sourceTree = "<group>"; };
-		94627C1ABC00729F449EDF1C /* Pods_JMKLiveShow_JMKLiveShowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMKLiveShow_JMKLiveShowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C3E27507AA7323ADF4998AB /* Pods-JMKLiveShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMKLiveShow.release.xcconfig"; path = "Target Support Files/Pods-JMKLiveShow/Pods-JMKLiveShow.release.xcconfig"; sourceTree = "<group>"; };
-		A83318F04136A9AFAF09D7B3 /* Pods-JMKLiveShowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMKLiveShowTests.release.xcconfig"; path = "Target Support Files/Pods-JMKLiveShowTests/Pods-JMKLiveShowTests.release.xcconfig"; sourceTree = "<group>"; };
-		B961A0422A20AB54C25E9662 /* Pods_JMKLiveShowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMKLiveShowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D188B0DD3ED7C054EC7C774E /* Pods-JMKLiveShowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMKLiveShowTests.debug.xcconfig"; path = "Target Support Files/Pods-JMKLiveShowTests/Pods-JMKLiveShowTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F1FACF71637824FB0345794F /* Pods-JMKLiveShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMKLiveShow.debug.xcconfig"; path = "Target Support Files/Pods-JMKLiveShow/Pods-JMKLiveShow.debug.xcconfig"; sourceTree = "<group>"; };
+		181C95884C7A77B0DCBD2E09 /* Pods_JMKLiveShowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMKLiveShowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		189B374058ADFF2235D7B85C /* Pods-JMKLiveShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMKLiveShow.debug.xcconfig"; path = "Target Support Files/Pods-JMKLiveShow/Pods-JMKLiveShow.debug.xcconfig"; sourceTree = "<group>"; };
+		277266BF325032AB01A6947E /* Pods_JMKLiveShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMKLiveShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4077A3A145365D8BC7979BEC /* Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig"; path = "Target Support Files/Pods-JMKLiveShow-JMKLiveShowUITests/Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4180FA0A05C015EA56702BC0 /* Pods_JMKLiveShow_JMKLiveShowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMKLiveShow_JMKLiveShowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EFB7E2D2C78EC4400C27AC1 /* JMKLiveShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMKLiveShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EFB7E362C78EC4400C27AC1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4EFB7E372C78EC4400C27AC1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4EFB7E3A2C78EC4400C27AC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4EFB7E3C2C78EC4600C27AC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4EFB7E3F2C78EC4600C27AC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4EFB7E412C78EC4600C27AC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EFB7E422C78EC4600C27AC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4EFB7E482C78EC4600C27AC1 /* JMKLiveShowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JMKLiveShowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EFB7E4C2C78EC4600C27AC1 /* JMKLiveShowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKLiveShowTests.m; sourceTree = "<group>"; };
+		4EFB7E522C78EC4600C27AC1 /* JMKLiveShowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JMKLiveShowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EFB7E562C78EC4600C27AC1 /* JMKLiveShowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKLiveShowUITests.m; sourceTree = "<group>"; };
+		4EFB7E582C78EC4600C27AC1 /* JMKLiveShowUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKLiveShowUITestsLaunchTests.m; sourceTree = "<group>"; };
+		4EFB7E652C78F35400C27AC1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4EFB7E662C78F35400C27AC1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4EFB7E682C78F35400C27AC1 /* JMKBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMKBaseViewController.h; sourceTree = "<group>"; };
+		4EFB7E692C78F35400C27AC1 /* JMKBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMKBaseViewController.m; sourceTree = "<group>"; };
+		4EFB7E6B2C78F35400C27AC1 /* JMKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMKNavigationController.h; sourceTree = "<group>"; };
+		4EFB7E6C2C78F35400C27AC1 /* JMKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMKNavigationController.m; sourceTree = "<group>"; };
+		4EFB7E702C78F35400C27AC1 /* JMKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMKLoginViewController.h; sourceTree = "<group>"; };
+		4EFB7E712C78F35400C27AC1 /* JMKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMKLoginViewController.m; sourceTree = "<group>"; };
+		4EFB7E722C78F35400C27AC1 /* JMKLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMKLoginViewController.xib; sourceTree = "<group>"; };
+		4EFB7E752C78F35400C27AC1 /* CommonMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
+		4EFB7E762C78F35400C27AC1 /* defineHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defineHeader.h; sourceTree = "<group>"; };
+		4EFB7E772C78F35400C27AC1 /* JMKLiveShowPrefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMKLiveShowPrefix.h; sourceTree = "<group>"; };
+		4EFB7E7E2C78F35400C27AC1 /* JMKUITool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMKUITool.h; sourceTree = "<group>"; };
+		4EFB7E7F2C78F35400C27AC1 /* JMKUITool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMKUITool.m; sourceTree = "<group>"; };
+		4EFB7E802C78F35400C27AC1 /* UIColor+JMKColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JMKColor.h"; sourceTree = "<group>"; };
+		4EFB7E812C78F35400C27AC1 /* UIColor+JMKColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JMKColor.m"; sourceTree = "<group>"; };
+		4EFB7E822C78F35400C27AC1 /* UIImage+ImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageUtil.h"; sourceTree = "<group>"; };
+		4EFB7E832C78F35400C27AC1 /* UIImage+ImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageUtil.m"; sourceTree = "<group>"; };
+		77A3C79C88B90A9843C6B665 /* Pods-JMKLiveShowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMKLiveShowTests.release.xcconfig"; path = "Target Support Files/Pods-JMKLiveShowTests/Pods-JMKLiveShowTests.release.xcconfig"; sourceTree = "<group>"; };
+		907663E2390668D1D5711DC7 /* Pods-JMKLiveShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMKLiveShow.release.xcconfig"; path = "Target Support Files/Pods-JMKLiveShow/Pods-JMKLiveShow.release.xcconfig"; sourceTree = "<group>"; };
+		AFCDCCF11FA6B8E03AB1F2C0 /* Pods-JMKLiveShowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMKLiveShowTests.debug.xcconfig"; path = "Target Support Files/Pods-JMKLiveShowTests/Pods-JMKLiveShowTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F476B872830B33F9DA16EE17 /* Pods-JMKLiveShow-JMKLiveShowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMKLiveShow-JMKLiveShowUITests.debug.xcconfig"; path = "Target Support Files/Pods-JMKLiveShow-JMKLiveShowUITests/Pods-JMKLiveShow-JMKLiveShowUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4E9FC8A12C7661B100FFA7E3 /* Frameworks */ = {
+		4EFB7E2A2C78EC4400C27AC1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ED40BB82C76DDE0009F8ECA /* IQKeyboardManager.framework in Frameworks */,
-				642C61B809239C7328AC9B1B /* Pods_JMKLiveShow.framework in Frameworks */,
+				87118570BDEB45FCFC2BE4AD /* Pods_JMKLiveShow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E9FC8BC2C7661B200FFA7E3 /* Frameworks */ = {
+		4EFB7E452C78EC4600C27AC1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C15CF658E471F9224711787 /* Pods_JMKLiveShowTests.framework in Frameworks */,
+				195C5C68D6BD2932F2974E1A /* Pods_JMKLiveShowTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E9FC8C62C7661B200FFA7E3 /* Frameworks */ = {
+		4EFB7E4F2C78EC4600C27AC1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				333BE0DE54C69DD173C6F829 /* Pods_JMKLiveShow_JMKLiveShowUITests.framework in Frameworks */,
+				0BEB80B7B6203ABA55E1C145 /* Pods_JMKLiveShow_JMKLiveShowUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		450809CD7D2A6AAE45A787F2 /* Frameworks */ = {
+		18D61436E6A940AC2DEB6805 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4ED40BB72C76DDE0009F8ECA /* IQKeyboardManager.framework */,
-				10CADB6F27EBF033BB80A07E /* Pods_JMKLiveShow.framework */,
-				94627C1ABC00729F449EDF1C /* Pods_JMKLiveShow_JMKLiveShowUITests.framework */,
-				B961A0422A20AB54C25E9662 /* Pods_JMKLiveShowTests.framework */,
+				277266BF325032AB01A6947E /* Pods_JMKLiveShow.framework */,
+				4180FA0A05C015EA56702BC0 /* Pods_JMKLiveShow_JMKLiveShowUITests.framework */,
+				181C95884C7A77B0DCBD2E09 /* Pods_JMKLiveShowTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4E3D84C82C7666440079B7E9 /* AppDelegate */ = {
+		4EFB7E242C78EC4400C27AC1 = {
 			isa = PBXGroup;
 			children = (
-				4E9FC8A72C7661B100FFA7E3 /* AppDelegate.h */,
-				4E9FC8A82C7661B100FFA7E3 /* AppDelegate.m */,
+				4EFB7E2F2C78EC4400C27AC1 /* JMKLiveShow */,
+				4EFB7E4B2C78EC4600C27AC1 /* JMKLiveShowTests */,
+				4EFB7E552C78EC4600C27AC1 /* JMKLiveShowUITests */,
+				4EFB7E2E2C78EC4400C27AC1 /* Products */,
+				EF0F98C131592E613BC98863 /* Pods */,
+				18D61436E6A940AC2DEB6805 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4EFB7E2E2C78EC4400C27AC1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4EFB7E2D2C78EC4400C27AC1 /* JMKLiveShow.app */,
+				4EFB7E482C78EC4600C27AC1 /* JMKLiveShowTests.xctest */,
+				4EFB7E522C78EC4600C27AC1 /* JMKLiveShowUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4EFB7E2F2C78EC4400C27AC1 /* JMKLiveShow */ = {
+			isa = PBXGroup;
+			children = (
+				4EFB7E852C78F35400C27AC1 /* Classes */,
+				4EFB7E8F2C78F37600C27AC1 /* Resources */,
+				4EFB7E362C78EC4400C27AC1 /* ViewController.h */,
+				4EFB7E372C78EC4400C27AC1 /* ViewController.m */,
+				4EFB7E392C78EC4400C27AC1 /* Main.storyboard */,
+				4EFB7E3C2C78EC4600C27AC1 /* Assets.xcassets */,
+				4EFB7E3E2C78EC4600C27AC1 /* LaunchScreen.storyboard */,
+				4EFB7E412C78EC4600C27AC1 /* Info.plist */,
+				4EFB7E422C78EC4600C27AC1 /* main.m */,
+			);
+			path = JMKLiveShow;
+			sourceTree = "<group>";
+		};
+		4EFB7E4B2C78EC4600C27AC1 /* JMKLiveShowTests */ = {
+			isa = PBXGroup;
+			children = (
+				4EFB7E4C2C78EC4600C27AC1 /* JMKLiveShowTests.m */,
+			);
+			path = JMKLiveShowTests;
+			sourceTree = "<group>";
+		};
+		4EFB7E552C78EC4600C27AC1 /* JMKLiveShowUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4EFB7E562C78EC4600C27AC1 /* JMKLiveShowUITests.m */,
+				4EFB7E582C78EC4600C27AC1 /* JMKLiveShowUITestsLaunchTests.m */,
+			);
+			path = JMKLiveShowUITests;
+			sourceTree = "<group>";
+		};
+		4EFB7E672C78F35400C27AC1 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				4EFB7E652C78F35400C27AC1 /* AppDelegate.h */,
+				4EFB7E662C78F35400C27AC1 /* AppDelegate.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		4E3D84CB2C7666440079B7E9 /* BaseViewController */ = {
+		4EFB7E6A2C78F35400C27AC1 /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4E3D84E42C7669020079B7E9 /* JMKBaseViewController.h */,
-				4E3D84E52C7669020079B7E9 /* JMKBaseViewController.m */,
+				4EFB7E682C78F35400C27AC1 /* JMKBaseViewController.h */,
+				4EFB7E692C78F35400C27AC1 /* JMKBaseViewController.m */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
 		};
-		4E3D84CE2C7666440079B7E9 /* NavigationController */ = {
+		4EFB7E6D2C78F35400C27AC1 /* NavigationController */ = {
 			isa = PBXGroup;
 			children = (
-				4E3D84E72C76690F0079B7E9 /* JMKNavigationController.h */,
-				4E3D84E82C76690F0079B7E9 /* JMKNavigationController.m */,
+				4EFB7E6B2C78F35400C27AC1 /* JMKNavigationController.h */,
+				4EFB7E6C2C78F35400C27AC1 /* JMKNavigationController.m */,
 			);
 			path = NavigationController;
 			sourceTree = "<group>";
 		};
-		4E3D84CF2C7666440079B7E9 /* TabBarController */ = {
+		4EFB7E6E2C78F35400C27AC1 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = TabBarController;
 			sourceTree = "<group>";
 		};
-		4E3D84D02C7666440079B7E9 /* Application */ = {
+		4EFB7E6F2C78F35400C27AC1 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				4E3D84CB2C7666440079B7E9 /* BaseViewController */,
-				4E3D84CE2C7666440079B7E9 /* NavigationController */,
-				4E3D84CF2C7666440079B7E9 /* TabBarController */,
+				4EFB7E6A2C78F35400C27AC1 /* BaseViewController */,
+				4EFB7E6D2C78F35400C27AC1 /* NavigationController */,
+				4EFB7E6E2C78F35400C27AC1 /* TabBarController */,
 			);
 			path = Application;
 			sourceTree = "<group>";
 		};
-		4E3D84D32C7666440079B7E9 /* Login */ = {
+		4EFB7E732C78F35400C27AC1 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				4ED40BB42C76D96C009F8ECA /* JMKLoginViewController.h */,
-				4ED40BB32C76D96C009F8ECA /* JMKLoginViewController.m */,
-				4ED40BB22C76D96C009F8ECA /* JMKLoginViewController.xib */,
+				4EFB7E702C78F35400C27AC1 /* JMKLoginViewController.h */,
+				4EFB7E712C78F35400C27AC1 /* JMKLoginViewController.m */,
+				4EFB7E722C78F35400C27AC1 /* JMKLoginViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
 		};
-		4E3D84D42C7666440079B7E9 /* Business */ = {
+		4EFB7E742C78F35400C27AC1 /* Business */ = {
 			isa = PBXGroup;
 			children = (
-				4E3D84D32C7666440079B7E9 /* Login */,
+				4EFB7E732C78F35400C27AC1 /* Login */,
 			);
 			path = Business;
 			sourceTree = "<group>";
 		};
-		4E3D84D52C7666440079B7E9 /* Header */ = {
+		4EFB7E782C78F35400C27AC1 /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				4ED40BA32C766E32009F8ECA /* JMKLiveShowPrefix.h */,
-				4ED40BA42C766E87009F8ECA /* defineHeader.h */,
-				4ED40BAB2C76D3DE009F8ECA /* CommonMacro.h */,
+				4EFB7E752C78F35400C27AC1 /* CommonMacro.h */,
+				4EFB7E762C78F35400C27AC1 /* defineHeader.h */,
+				4EFB7E772C78F35400C27AC1 /* JMKLiveShowPrefix.h */,
 			);
 			path = Header;
 			sourceTree = "<group>";
 		};
-		4E3D84D62C7666440079B7E9 /* Lib */ = {
+		4EFB7E792C78F35400C27AC1 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Lib;
 			sourceTree = "<group>";
 		};
-		4E3D84D72C7666440079B7E9 /* Manager */ = {
+		4EFB7E7A2C78F35400C27AC1 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		4E3D84D82C7666440079B7E9 /* Networking */ = {
+		4EFB7E7B2C78F35400C27AC1 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		4E3D84D92C7666440079B7E9 /* Utils */ = {
+		4EFB7E842C78F35400C27AC1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				4ED40BA82C76CB12009F8ECA /* UIImage+ImageUtil.h */,
-				4ED40BA92C76CB12009F8ECA /* UIImage+ImageUtil.m */,
-				4ED40BAC2C76D51B009F8ECA /* UIColor+JMKColor.h */,
-				4ED40BAD2C76D51B009F8ECA /* UIColor+JMKColor.m */,
-				4ED40BAF2C76D6A2009F8ECA /* JMKUITool.h */,
-				4ED40BB02C76D6A2009F8ECA /* JMKUITool.m */,
+				4EFB7E7E2C78F35400C27AC1 /* JMKUITool.h */,
+				4EFB7E7F2C78F35400C27AC1 /* JMKUITool.m */,
+				4EFB7E802C78F35400C27AC1 /* UIColor+JMKColor.h */,
+				4EFB7E812C78F35400C27AC1 /* UIColor+JMKColor.m */,
+				4EFB7E822C78F35400C27AC1 /* UIImage+ImageUtil.h */,
+				4EFB7E832C78F35400C27AC1 /* UIImage+ImageUtil.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		4E3D84DA2C7666440079B7E9 /* Classes */ = {
+		4EFB7E852C78F35400C27AC1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4E3D84C82C7666440079B7E9 /* AppDelegate */,
-				4E3D84D02C7666440079B7E9 /* Application */,
-				4E3D84D42C7666440079B7E9 /* Business */,
-				4E3D84D52C7666440079B7E9 /* Header */,
-				4E3D84D62C7666440079B7E9 /* Lib */,
-				4E3D84D72C7666440079B7E9 /* Manager */,
-				4E3D84D82C7666440079B7E9 /* Networking */,
-				4E3D84D92C7666440079B7E9 /* Utils */,
+				4EFB7E672C78F35400C27AC1 /* AppDelegate */,
+				4EFB7E6F2C78F35400C27AC1 /* Application */,
+				4EFB7E742C78F35400C27AC1 /* Business */,
+				4EFB7E782C78F35400C27AC1 /* Header */,
+				4EFB7E792C78F35400C27AC1 /* Lib */,
+				4EFB7E7A2C78F35400C27AC1 /* Manager */,
+				4EFB7E7B2C78F35400C27AC1 /* Networking */,
+				4EFB7E842C78F35400C27AC1 /* Utils */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		4E3D84DF2C76664B0079B7E9 /* Image */ = {
+		4EFB7E8E2C78F37600C27AC1 /* Image */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Image;
 			sourceTree = "<group>";
 		};
-		4E3D84E22C76664B0079B7E9 /* Resources */ = {
+		4EFB7E8F2C78F37600C27AC1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4E3D84DF2C76664B0079B7E9 /* Image */,
+				4EFB7E8E2C78F37600C27AC1 /* Image */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		4E9FC89B2C7661B100FFA7E3 = {
+		EF0F98C131592E613BC98863 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4E9FC8A62C7661B100FFA7E3 /* JMKLiveShow */,
-				4E9FC8C22C7661B200FFA7E3 /* JMKLiveShowTests */,
-				4E9FC8CC2C7661B200FFA7E3 /* JMKLiveShowUITests */,
-				4E9FC8A52C7661B100FFA7E3 /* Products */,
-				E690A8AA72A78711EE3B2FF9 /* Pods */,
-				450809CD7D2A6AAE45A787F2 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		4E9FC8A52C7661B100FFA7E3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4E9FC8A42C7661B100FFA7E3 /* JMKLiveShow.app */,
-				4E9FC8BF2C7661B200FFA7E3 /* JMKLiveShowTests.xctest */,
-				4E9FC8C92C7661B200FFA7E3 /* JMKLiveShowUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		4E9FC8A62C7661B100FFA7E3 /* JMKLiveShow */ = {
-			isa = PBXGroup;
-			children = (
-				4E3D84DA2C7666440079B7E9 /* Classes */,
-				4E3D84E22C76664B0079B7E9 /* Resources */,
-				4E9FC8AD2C7661B100FFA7E3 /* ViewController.h */,
-				4E9FC8AE2C7661B100FFA7E3 /* ViewController.m */,
-				4E9FC8B02C7661B100FFA7E3 /* Main.storyboard */,
-				4E9FC8B32C7661B200FFA7E3 /* Assets.xcassets */,
-				4E9FC8B52C7661B200FFA7E3 /* LaunchScreen.storyboard */,
-				4E9FC8B82C7661B200FFA7E3 /* Info.plist */,
-				4E9FC8B92C7661B200FFA7E3 /* main.m */,
-			);
-			path = JMKLiveShow;
-			sourceTree = "<group>";
-		};
-		4E9FC8C22C7661B200FFA7E3 /* JMKLiveShowTests */ = {
-			isa = PBXGroup;
-			children = (
-				4E9FC8C32C7661B200FFA7E3 /* JMKLiveShowTests.m */,
-			);
-			path = JMKLiveShowTests;
-			sourceTree = "<group>";
-		};
-		4E9FC8CC2C7661B200FFA7E3 /* JMKLiveShowUITests */ = {
-			isa = PBXGroup;
-			children = (
-				4E9FC8CD2C7661B200FFA7E3 /* JMKLiveShowUITests.m */,
-				4E9FC8CF2C7661B200FFA7E3 /* JMKLiveShowUITestsLaunchTests.m */,
-			);
-			path = JMKLiveShowUITests;
-			sourceTree = "<group>";
-		};
-		E690A8AA72A78711EE3B2FF9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F1FACF71637824FB0345794F /* Pods-JMKLiveShow.debug.xcconfig */,
-				9C3E27507AA7323ADF4998AB /* Pods-JMKLiveShow.release.xcconfig */,
-				434E052CD775DF2FC82653D1 /* Pods-JMKLiveShow-JMKLiveShowUITests.debug.xcconfig */,
-				55E85EE684C0225E5533E4B9 /* Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig */,
-				D188B0DD3ED7C054EC7C774E /* Pods-JMKLiveShowTests.debug.xcconfig */,
-				A83318F04136A9AFAF09D7B3 /* Pods-JMKLiveShowTests.release.xcconfig */,
+				189B374058ADFF2235D7B85C /* Pods-JMKLiveShow.debug.xcconfig */,
+				907663E2390668D1D5711DC7 /* Pods-JMKLiveShow.release.xcconfig */,
+				F476B872830B33F9DA16EE17 /* Pods-JMKLiveShow-JMKLiveShowUITests.debug.xcconfig */,
+				4077A3A145365D8BC7979BEC /* Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig */,
+				AFCDCCF11FA6B8E03AB1F2C0 /* Pods-JMKLiveShowTests.debug.xcconfig */,
+				77A3C79C88B90A9843C6B665 /* Pods-JMKLiveShowTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -337,16 +333,16 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4E9FC8A32C7661B100FFA7E3 /* JMKLiveShow */ = {
+		4EFB7E2C2C78EC4400C27AC1 /* JMKLiveShow */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E9FC8D32C7661B200FFA7E3 /* Build configuration list for PBXNativeTarget "JMKLiveShow" */;
+			buildConfigurationList = 4EFB7E5C2C78EC4600C27AC1 /* Build configuration list for PBXNativeTarget "JMKLiveShow" */;
 			buildPhases = (
-				224F6A40B401EF38D7D488E2 /* [CP] Check Pods Manifest.lock */,
-				4E9FC8A02C7661B100FFA7E3 /* Sources */,
-				4E9FC8A12C7661B100FFA7E3 /* Frameworks */,
-				4E9FC8A22C7661B100FFA7E3 /* Resources */,
-				B3445010A89B266DFC64AFB7 /* [CP] Embed Pods Frameworks */,
-				2EB02511D6BF2102F2FE6B95 /* [CP] Copy Pods Resources */,
+				76B81C01EC5FB47029D0A9D3 /* [CP] Check Pods Manifest.lock */,
+				4EFB7E292C78EC4400C27AC1 /* Sources */,
+				4EFB7E2A2C78EC4400C27AC1 /* Frameworks */,
+				4EFB7E2B2C78EC4400C27AC1 /* Resources */,
+				D0DAF0F1513A5544D93E0A11 /* [CP] Embed Pods Frameworks */,
+				E4EE2A07D848FB97D7ECA4FE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -354,72 +350,72 @@
 			);
 			name = JMKLiveShow;
 			productName = JMKLiveShow;
-			productReference = 4E9FC8A42C7661B100FFA7E3 /* JMKLiveShow.app */;
+			productReference = 4EFB7E2D2C78EC4400C27AC1 /* JMKLiveShow.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4E9FC8BE2C7661B200FFA7E3 /* JMKLiveShowTests */ = {
+		4EFB7E472C78EC4600C27AC1 /* JMKLiveShowTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E9FC8D62C7661B200FFA7E3 /* Build configuration list for PBXNativeTarget "JMKLiveShowTests" */;
+			buildConfigurationList = 4EFB7E5F2C78EC4600C27AC1 /* Build configuration list for PBXNativeTarget "JMKLiveShowTests" */;
 			buildPhases = (
-				5EFE5DE8EB6C5C4FD24FC6E8 /* [CP] Check Pods Manifest.lock */,
-				4E9FC8BB2C7661B200FFA7E3 /* Sources */,
-				4E9FC8BC2C7661B200FFA7E3 /* Frameworks */,
-				4E9FC8BD2C7661B200FFA7E3 /* Resources */,
+				6073D8DAB5BC029DC9E3CF13 /* [CP] Check Pods Manifest.lock */,
+				4EFB7E442C78EC4600C27AC1 /* Sources */,
+				4EFB7E452C78EC4600C27AC1 /* Frameworks */,
+				4EFB7E462C78EC4600C27AC1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4E9FC8C12C7661B200FFA7E3 /* PBXTargetDependency */,
+				4EFB7E4A2C78EC4600C27AC1 /* PBXTargetDependency */,
 			);
 			name = JMKLiveShowTests;
 			productName = JMKLiveShowTests;
-			productReference = 4E9FC8BF2C7661B200FFA7E3 /* JMKLiveShowTests.xctest */;
+			productReference = 4EFB7E482C78EC4600C27AC1 /* JMKLiveShowTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4E9FC8C82C7661B200FFA7E3 /* JMKLiveShowUITests */ = {
+		4EFB7E512C78EC4600C27AC1 /* JMKLiveShowUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E9FC8D92C7661B200FFA7E3 /* Build configuration list for PBXNativeTarget "JMKLiveShowUITests" */;
+			buildConfigurationList = 4EFB7E622C78EC4600C27AC1 /* Build configuration list for PBXNativeTarget "JMKLiveShowUITests" */;
 			buildPhases = (
-				8B634560764C9C3A375EF26C /* [CP] Check Pods Manifest.lock */,
-				4E9FC8C52C7661B200FFA7E3 /* Sources */,
-				4E9FC8C62C7661B200FFA7E3 /* Frameworks */,
-				4E9FC8C72C7661B200FFA7E3 /* Resources */,
-				3A6FDA9EF8B6DDD540F36DA5 /* [CP] Embed Pods Frameworks */,
-				3CEEAC96F9A6B964021EC9C3 /* [CP] Copy Pods Resources */,
+				06FB74C2587B7D90A5B74421 /* [CP] Check Pods Manifest.lock */,
+				4EFB7E4E2C78EC4600C27AC1 /* Sources */,
+				4EFB7E4F2C78EC4600C27AC1 /* Frameworks */,
+				4EFB7E502C78EC4600C27AC1 /* Resources */,
+				03D68C3644EE58DB5ADD2238 /* [CP] Embed Pods Frameworks */,
+				08ADE05020418D35C18D28CB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4E9FC8CB2C7661B200FFA7E3 /* PBXTargetDependency */,
+				4EFB7E542C78EC4600C27AC1 /* PBXTargetDependency */,
 			);
 			name = JMKLiveShowUITests;
 			productName = JMKLiveShowUITests;
-			productReference = 4E9FC8C92C7661B200FFA7E3 /* JMKLiveShowUITests.xctest */;
+			productReference = 4EFB7E522C78EC4600C27AC1 /* JMKLiveShowUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4E9FC89C2C7661B100FFA7E3 /* Project object */ = {
+		4EFB7E252C78EC4400C27AC1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					4E9FC8A32C7661B100FFA7E3 = {
+					4EFB7E2C2C78EC4400C27AC1 = {
 						CreatedOnToolsVersion = 15.4;
 					};
-					4E9FC8BE2C7661B200FFA7E3 = {
+					4EFB7E472C78EC4600C27AC1 = {
 						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 4E9FC8A32C7661B100FFA7E3;
+						TestTargetID = 4EFB7E2C2C78EC4400C27AC1;
 					};
-					4E9FC8C82C7661B200FFA7E3 = {
+					4EFB7E512C78EC4600C27AC1 = {
 						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 4E9FC8A32C7661B100FFA7E3;
+						TestTargetID = 4EFB7E2C2C78EC4400C27AC1;
 					};
 				};
 			};
-			buildConfigurationList = 4E9FC89F2C7661B100FFA7E3 /* Build configuration list for PBXProject "JMKLiveShow" */;
+			buildConfigurationList = 4EFB7E282C78EC4400C27AC1 /* Build configuration list for PBXProject "JMKLiveShow" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -427,38 +423,38 @@
 				en,
 				Base,
 			);
-			mainGroup = 4E9FC89B2C7661B100FFA7E3;
-			productRefGroup = 4E9FC8A52C7661B100FFA7E3 /* Products */;
+			mainGroup = 4EFB7E242C78EC4400C27AC1;
+			productRefGroup = 4EFB7E2E2C78EC4400C27AC1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4E9FC8A32C7661B100FFA7E3 /* JMKLiveShow */,
-				4E9FC8BE2C7661B200FFA7E3 /* JMKLiveShowTests */,
-				4E9FC8C82C7661B200FFA7E3 /* JMKLiveShowUITests */,
+				4EFB7E2C2C78EC4400C27AC1 /* JMKLiveShow */,
+				4EFB7E472C78EC4600C27AC1 /* JMKLiveShowTests */,
+				4EFB7E512C78EC4600C27AC1 /* JMKLiveShowUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4E9FC8A22C7661B100FFA7E3 /* Resources */ = {
+		4EFB7E2B2C78EC4400C27AC1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ED40BB52C76D96C009F8ECA /* JMKLoginViewController.xib in Resources */,
-				4E9FC8B42C7661B200FFA7E3 /* Assets.xcassets in Resources */,
-				4E9FC8B72C7661B200FFA7E3 /* Base in Resources */,
-				4E9FC8B22C7661B100FFA7E3 /* Base in Resources */,
+				4EFB7E3D2C78EC4600C27AC1 /* Assets.xcassets in Resources */,
+				4EFB7E8A2C78F35400C27AC1 /* JMKLoginViewController.xib in Resources */,
+				4EFB7E402C78EC4600C27AC1 /* Base in Resources */,
+				4EFB7E3B2C78EC4400C27AC1 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E9FC8BD2C7661B200FFA7E3 /* Resources */ = {
+		4EFB7E462C78EC4600C27AC1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E9FC8C72C7661B200FFA7E3 /* Resources */ = {
+		4EFB7E502C78EC4600C27AC1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -468,46 +464,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		224F6A40B401EF38D7D488E2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-JMKLiveShow-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2EB02511D6BF2102F2FE6B95 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JMKLiveShow/Pods-JMKLiveShow-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JMKLiveShow/Pods-JMKLiveShow-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JMKLiveShow/Pods-JMKLiveShow-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3A6FDA9EF8B6DDD540F36DA5 /* [CP] Embed Pods Frameworks */ = {
+		03D68C3644EE58DB5ADD2238 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -524,46 +481,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JMKLiveShow-JMKLiveShowUITests/Pods-JMKLiveShow-JMKLiveShowUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3CEEAC96F9A6B964021EC9C3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JMKLiveShow-JMKLiveShowUITests/Pods-JMKLiveShow-JMKLiveShowUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JMKLiveShow-JMKLiveShowUITests/Pods-JMKLiveShow-JMKLiveShowUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JMKLiveShow-JMKLiveShowUITests/Pods-JMKLiveShow-JMKLiveShowUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5EFE5DE8EB6C5C4FD24FC6E8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-JMKLiveShowTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8B634560764C9C3A375EF26C /* [CP] Check Pods Manifest.lock */ = {
+		06FB74C2587B7D90A5B74421 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -585,7 +503,68 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B3445010A89B266DFC64AFB7 /* [CP] Embed Pods Frameworks */ = {
+		08ADE05020418D35C18D28CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JMKLiveShow-JMKLiveShowUITests/Pods-JMKLiveShow-JMKLiveShowUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JMKLiveShow-JMKLiveShowUITests/Pods-JMKLiveShow-JMKLiveShowUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JMKLiveShow-JMKLiveShowUITests/Pods-JMKLiveShow-JMKLiveShowUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6073D8DAB5BC029DC9E3CF13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JMKLiveShowTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76B81C01EC5FB47029D0A9D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JMKLiveShow-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0DAF0F1513A5544D93E0A11 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -602,70 +581,87 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JMKLiveShow/Pods-JMKLiveShow-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E4EE2A07D848FB97D7ECA4FE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JMKLiveShow/Pods-JMKLiveShow-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JMKLiveShow/Pods-JMKLiveShow-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JMKLiveShow/Pods-JMKLiveShow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4E9FC8A02C7661B100FFA7E3 /* Sources */ = {
+		4EFB7E292C78EC4400C27AC1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E3D84E92C76690F0079B7E9 /* JMKNavigationController.m in Sources */,
-				4E9FC8AF2C7661B100FFA7E3 /* ViewController.m in Sources */,
-				4ED40BB62C76D96C009F8ECA /* JMKLoginViewController.m in Sources */,
-				4ED40BAE2C76D51B009F8ECA /* UIColor+JMKColor.m in Sources */,
-				4ED40BB12C76D6A2009F8ECA /* JMKUITool.m in Sources */,
-				4E9FC8A92C7661B100FFA7E3 /* AppDelegate.m in Sources */,
-				4E3D84E62C7669020079B7E9 /* JMKBaseViewController.m in Sources */,
-				4E9FC8BA2C7661B200FFA7E3 /* main.m in Sources */,
-				4ED40BAA2C76CB12009F8ECA /* UIImage+ImageUtil.m in Sources */,
+				4EFB7E882C78F35400C27AC1 /* JMKNavigationController.m in Sources */,
+				4EFB7E8D2C78F35400C27AC1 /* UIImage+ImageUtil.m in Sources */,
+				4EFB7E862C78F35400C27AC1 /* AppDelegate.m in Sources */,
+				4EFB7E872C78F35400C27AC1 /* JMKBaseViewController.m in Sources */,
+				4EFB7E892C78F35400C27AC1 /* JMKLoginViewController.m in Sources */,
+				4EFB7E8B2C78F35400C27AC1 /* JMKUITool.m in Sources */,
+				4EFB7E382C78EC4400C27AC1 /* ViewController.m in Sources */,
+				4EFB7E8C2C78F35400C27AC1 /* UIColor+JMKColor.m in Sources */,
+				4EFB7E432C78EC4600C27AC1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E9FC8BB2C7661B200FFA7E3 /* Sources */ = {
+		4EFB7E442C78EC4600C27AC1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E9FC8C42C7661B200FFA7E3 /* JMKLiveShowTests.m in Sources */,
+				4EFB7E4D2C78EC4600C27AC1 /* JMKLiveShowTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E9FC8C52C7661B200FFA7E3 /* Sources */ = {
+		4EFB7E4E2C78EC4600C27AC1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E9FC8D02C7661B200FFA7E3 /* JMKLiveShowUITestsLaunchTests.m in Sources */,
-				4E9FC8CE2C7661B200FFA7E3 /* JMKLiveShowUITests.m in Sources */,
+				4EFB7E592C78EC4600C27AC1 /* JMKLiveShowUITestsLaunchTests.m in Sources */,
+				4EFB7E572C78EC4600C27AC1 /* JMKLiveShowUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4E9FC8C12C7661B200FFA7E3 /* PBXTargetDependency */ = {
+		4EFB7E4A2C78EC4600C27AC1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4E9FC8A32C7661B100FFA7E3 /* JMKLiveShow */;
-			targetProxy = 4E9FC8C02C7661B200FFA7E3 /* PBXContainerItemProxy */;
+			target = 4EFB7E2C2C78EC4400C27AC1 /* JMKLiveShow */;
+			targetProxy = 4EFB7E492C78EC4600C27AC1 /* PBXContainerItemProxy */;
 		};
-		4E9FC8CB2C7661B200FFA7E3 /* PBXTargetDependency */ = {
+		4EFB7E542C78EC4600C27AC1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4E9FC8A32C7661B100FFA7E3 /* JMKLiveShow */;
-			targetProxy = 4E9FC8CA2C7661B200FFA7E3 /* PBXContainerItemProxy */;
+			target = 4EFB7E2C2C78EC4400C27AC1 /* JMKLiveShow */;
+			targetProxy = 4EFB7E532C78EC4600C27AC1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4E9FC8B02C7661B100FFA7E3 /* Main.storyboard */ = {
+		4EFB7E392C78EC4400C27AC1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4E9FC8B12C7661B100FFA7E3 /* Base */,
+				4EFB7E3A2C78EC4400C27AC1 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		4E9FC8B52C7661B200FFA7E3 /* LaunchScreen.storyboard */ = {
+		4EFB7E3E2C78EC4600C27AC1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4E9FC8B62C7661B200FFA7E3 /* Base */,
+				4EFB7E3F2C78EC4600C27AC1 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -673,7 +669,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4E9FC8D12C7661B200FFA7E3 /* Debug */ = {
+		4EFB7E5A2C78EC4600C27AC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -734,7 +730,7 @@
 			};
 			name = Debug;
 		};
-		4E9FC8D22C7661B200FFA7E3 /* Release */ = {
+		4EFB7E5B2C78EC4600C27AC1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -789,9 +785,9 @@
 			};
 			name = Release;
 		};
-		4E9FC8D42C7661B200FFA7E3 /* Debug */ = {
+		4EFB7E5D2C78EC4600C27AC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1FACF71637824FB0345794F /* Pods-JMKLiveShow.debug.xcconfig */;
+			baseConfigurationReference = 189B374058ADFF2235D7B85C /* Pods-JMKLiveShow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -799,8 +795,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BUCWZY2XF4;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/llj/Desktop/DCLiveShow/JMKLiveShow/JMKLiveShow/Classes/Header/JMKLiveShowPrefix.h;
+				GCC_PREFIX_HEADER = /Users/llj/Desktop/JMKLiveShow/JMKLiveShow/Classes/Header/JMKLiveShowPrefix.h;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JMKLiveShow/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -812,94 +807,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-l\"stdc++\"",
-					"-framework",
-					"\"AVFoundation\"",
-					"-framework",
-					"\"Accelerate\"",
-					"-framework",
-					"\"AssetsLibrary\"",
-					"-framework",
-					"\"BarrageRenderer\"",
-					"-framework",
-					"\"CoreFoundation\"",
-					"-framework",
-					"\"CoreGraphics\"",
-					"-framework",
-					"\"CoreMedia\"",
-					"-framework",
-					"\"CoreTelephony\"",
-					"-framework",
-					"\"CoreText\"",
-					"-framework",
-					"\"FURenderKit\"",
-					"-framework",
-					"\"Foundation\"",
-					"-framework",
-					"\"GKPhotoBrowser\"",
-					"-framework",
-					"$(inherited)",
-					"-framework",
-					"\"ImageIO\"",
-					"-framework",
-					"\"JXCategoryView\"",
-					"-framework",
-					"\"JavaScriptCore\"",
-					"-framework",
-					"\"LYEmptyView\"",
-					"-framework",
-					"\"MBProgressHUD\"",
-					"-framework",
-					"\"MJExtension\"",
-					"-framework",
-					"\"MJRefresh\"",
-					"-framework",
-					"\"Masonry\"",
-					"-framework",
-					"\"MediaPlayer\"",
-					"-framework",
-					"\"MobileCoreServices\"",
-					"-framework",
-					"\"OpenAL\"",
-					"-framework",
-					"\"OpenGLES\"",
-					"-framework",
-					"\"QuartzCore\"",
-					"-framework",
-					"\"Reachability\"",
-					"-framework",
-					"\"SDWebImage\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"SystemConfiguration\"",
-					"-framework",
-					"\"TXScrollLabelView\"",
-					"-framework",
-					"\"UIKit\"",
-					"-framework",
-					"\"VHBFURender\"",
-					"-framework",
-					"\"VHBeautifyKit\"",
-					"-framework",
-					"\"VHGoodsSDK\"",
-					"-framework",
-					"\"VHInteractive\"",
-					"-framework",
-					"\"VHLiveSDK\"",
-					"-framework",
-					"\"VHWebRTC\"",
-					"-framework",
-					"\"VhallLiveBaseApi\"",
-					"-framework",
-					"\"VideoToolbox\"",
-					"-framework",
-					"\"YYText\"",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = JMKLiveShow.JMKLiveShow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -907,9 +815,9 @@
 			};
 			name = Debug;
 		};
-		4E9FC8D52C7661B200FFA7E3 /* Release */ = {
+		4EFB7E5E2C78EC4600C27AC1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C3E27507AA7323ADF4998AB /* Pods-JMKLiveShow.release.xcconfig */;
+			baseConfigurationReference = 907663E2390668D1D5711DC7 /* Pods-JMKLiveShow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -917,8 +825,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BUCWZY2XF4;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/llj/Desktop/DCLiveShow/JMKLiveShow/JMKLiveShow/Classes/Header/JMKLiveShowPrefix.h;
+				GCC_PREFIX_HEADER = /Users/llj/Desktop/JMKLiveShow/JMKLiveShow/Classes/Header/JMKLiveShowPrefix.h;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JMKLiveShow/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -930,94 +837,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-l\"stdc++\"",
-					"-framework",
-					"\"AVFoundation\"",
-					"-framework",
-					"\"Accelerate\"",
-					"-framework",
-					"\"AssetsLibrary\"",
-					"-framework",
-					"\"BarrageRenderer\"",
-					"-framework",
-					"\"CoreFoundation\"",
-					"-framework",
-					"\"CoreGraphics\"",
-					"-framework",
-					"\"CoreMedia\"",
-					"-framework",
-					"\"CoreTelephony\"",
-					"-framework",
-					"\"CoreText\"",
-					"-framework",
-					"\"FURenderKit\"",
-					"-framework",
-					"\"Foundation\"",
-					"-framework",
-					"\"GKPhotoBrowser\"",
-					"-framework",
-					"$(inherited)",
-					"-framework",
-					"\"ImageIO\"",
-					"-framework",
-					"\"JXCategoryView\"",
-					"-framework",
-					"\"JavaScriptCore\"",
-					"-framework",
-					"\"LYEmptyView\"",
-					"-framework",
-					"\"MBProgressHUD\"",
-					"-framework",
-					"\"MJExtension\"",
-					"-framework",
-					"\"MJRefresh\"",
-					"-framework",
-					"\"Masonry\"",
-					"-framework",
-					"\"MediaPlayer\"",
-					"-framework",
-					"\"MobileCoreServices\"",
-					"-framework",
-					"\"OpenAL\"",
-					"-framework",
-					"\"OpenGLES\"",
-					"-framework",
-					"\"QuartzCore\"",
-					"-framework",
-					"\"Reachability\"",
-					"-framework",
-					"\"SDWebImage\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"SystemConfiguration\"",
-					"-framework",
-					"\"TXScrollLabelView\"",
-					"-framework",
-					"\"UIKit\"",
-					"-framework",
-					"\"VHBFURender\"",
-					"-framework",
-					"\"VHBeautifyKit\"",
-					"-framework",
-					"\"VHGoodsSDK\"",
-					"-framework",
-					"\"VHInteractive\"",
-					"-framework",
-					"\"VHLiveSDK\"",
-					"-framework",
-					"\"VHWebRTC\"",
-					"-framework",
-					"\"VhallLiveBaseApi\"",
-					"-framework",
-					"\"VideoToolbox\"",
-					"-framework",
-					"\"YYText\"",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = JMKLiveShow.JMKLiveShow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1025,9 +845,9 @@
 			};
 			name = Release;
 		};
-		4E9FC8D72C7661B200FFA7E3 /* Debug */ = {
+		4EFB7E602C78EC4600C27AC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D188B0DD3ED7C054EC7C774E /* Pods-JMKLiveShowTests.debug.xcconfig */;
+			baseConfigurationReference = AFCDCCF11FA6B8E03AB1F2C0 /* Pods-JMKLiveShowTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1044,9 +864,9 @@
 			};
 			name = Debug;
 		};
-		4E9FC8D82C7661B200FFA7E3 /* Release */ = {
+		4EFB7E612C78EC4600C27AC1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A83318F04136A9AFAF09D7B3 /* Pods-JMKLiveShowTests.release.xcconfig */;
+			baseConfigurationReference = 77A3C79C88B90A9843C6B665 /* Pods-JMKLiveShowTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1063,9 +883,9 @@
 			};
 			name = Release;
 		};
-		4E9FC8DA2C7661B200FFA7E3 /* Debug */ = {
+		4EFB7E632C78EC4600C27AC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 434E052CD775DF2FC82653D1 /* Pods-JMKLiveShow-JMKLiveShowUITests.debug.xcconfig */;
+			baseConfigurationReference = F476B872830B33F9DA16EE17 /* Pods-JMKLiveShow-JMKLiveShowUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1080,9 +900,9 @@
 			};
 			name = Debug;
 		};
-		4E9FC8DB2C7661B200FFA7E3 /* Release */ = {
+		4EFB7E642C78EC4600C27AC1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55E85EE684C0225E5533E4B9 /* Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig */;
+			baseConfigurationReference = 4077A3A145365D8BC7979BEC /* Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1100,43 +920,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4E9FC89F2C7661B100FFA7E3 /* Build configuration list for PBXProject "JMKLiveShow" */ = {
+		4EFB7E282C78EC4400C27AC1 /* Build configuration list for PBXProject "JMKLiveShow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E9FC8D12C7661B200FFA7E3 /* Debug */,
-				4E9FC8D22C7661B200FFA7E3 /* Release */,
+				4EFB7E5A2C78EC4600C27AC1 /* Debug */,
+				4EFB7E5B2C78EC4600C27AC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E9FC8D32C7661B200FFA7E3 /* Build configuration list for PBXNativeTarget "JMKLiveShow" */ = {
+		4EFB7E5C2C78EC4600C27AC1 /* Build configuration list for PBXNativeTarget "JMKLiveShow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E9FC8D42C7661B200FFA7E3 /* Debug */,
-				4E9FC8D52C7661B200FFA7E3 /* Release */,
+				4EFB7E5D2C78EC4600C27AC1 /* Debug */,
+				4EFB7E5E2C78EC4600C27AC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E9FC8D62C7661B200FFA7E3 /* Build configuration list for PBXNativeTarget "JMKLiveShowTests" */ = {
+		4EFB7E5F2C78EC4600C27AC1 /* Build configuration list for PBXNativeTarget "JMKLiveShowTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E9FC8D72C7661B200FFA7E3 /* Debug */,
-				4E9FC8D82C7661B200FFA7E3 /* Release */,
+				4EFB7E602C78EC4600C27AC1 /* Debug */,
+				4EFB7E612C78EC4600C27AC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E9FC8D92C7661B200FFA7E3 /* Build configuration list for PBXNativeTarget "JMKLiveShowUITests" */ = {
+		4EFB7E622C78EC4600C27AC1 /* Build configuration list for PBXNativeTarget "JMKLiveShowUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E9FC8DA2C7661B200FFA7E3 /* Debug */,
-				4E9FC8DB2C7661B200FFA7E3 /* Release */,
+				4EFB7E632C78EC4600C27AC1 /* Debug */,
+				4EFB7E642C78EC4600C27AC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4E9FC89C2C7661B100FFA7E3 /* Project object */;
+	rootObject = 4EFB7E252C78EC4400C27AC1 /* Project object */;
 }

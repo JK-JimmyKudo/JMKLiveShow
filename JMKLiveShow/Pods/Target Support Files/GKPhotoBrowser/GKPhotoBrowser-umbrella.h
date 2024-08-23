@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "GKLivePhotoProtocol.h"
 #import "GKLoadingView.h"
 #import "GKPhotoBrowser.h"
 #import "GKPhotoBrowserConfigure.h"
@@ -17,6 +18,9 @@
 #import "GKPhotoGestureHandler.h"
 #import "GKPhotoManager.h"
 #import "GKPhotoRotationHandler.h"
+#import "GKPhotoView+Image.h"
+#import "GKPhotoView+LivePhoto.h"
+#import "GKPhotoView+Video.h"
 #import "GKPhotoView.h"
 #import "GKProgressViewProtocol.h"
 #import "GKVideoPlayerProtocol.h"

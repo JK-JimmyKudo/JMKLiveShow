@@ -8,7 +8,38 @@
 
 #import <UIKit/UIKit.h>
 #import "GKPhotoView.h"
-#import "GKProgressViewProtocol.h"
+
+#if __has_include(<GKPhotoBrowser/GKPhotoBrowser-Swift.h>)
+#import <GKPhotoBrowser/GKPhotoBrowser-Swift.h>
+#endif
+
+#if __has_include(<GKPhotoBrowser/GKSDWebImageManager.h>)
+#import <GKPhotoBrowser/GKSDWebImageManager.h>
+#endif
+
+#if __has_include(<GKPhotoBrowser/GKYYWebImageManager.h>)
+#import <GKPhotoBrowser/GKYYWebImageManager.h>
+#endif
+
+#if __has_include(<GKPhotoBrowser/GKAVPlayerManager.h>)
+#import <GKPhotoBrowser/GKAVPlayerManager.h>
+#endif
+
+#if __has_include(<GKPhotoBrowser/GKZFPlayerManager.h>)
+#import <GKPhotoBrowser/GKZFPlayerManager.h>
+#endif
+
+#if __has_include(<GKPhotoBrowser/GKIJKPlayerManager.h>)
+#import <GKPhotoBrowser/GKIJKPlayerManager.h>
+#endif
+
+#if __has_include(<GKPhotoBrowser/GKAFLivePhotoManager.h>)
+#import <GKPhotoBrowser/GKAFLivePhotoManager.h>
+#endif
+
+#if __has_include(<GKPhotoBrowser/GKProgressView.h>)
+#import <GKPhotoBrowser/GKProgressView.h>
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -66,17 +97,22 @@ typedef void(^layoutBlock)(GKPhotoBrowser *photoBrowser, CGRect superFrame);
 // browser加载失败自定义弹窗
 - (void)photoBrowser:(GKPhotoBrowser *)browser loadFailedAtIndex:(NSInteger)index error:(NSError *)error;
 
-// 自定义单个图片的加载失败文字，优先级高于failureText
+// 自定义单个图片或视频的加载失败文字，优先级高于failureText
 - (NSString *)photoBrowser:(GKPhotoBrowser *)browser failedTextAtIndex:(NSInteger)index;
 
-// 自定义单个图片的加载失败图片，优先级高于failureImage
+// 自定义单个图片或视频的加载失败图片，优先级高于failureImage
 - (UIImage *)photoBrowser:(GKPhotoBrowser *)browser failedImageAtIndex:(NSInteger)index;
 
+// 视频相关
 // 视频播放状态回调
 - (void)photoBrowser:(GKPhotoBrowser *)browser videoStateChangeWithPhotoView:(GKPhotoView *)photoView status:(GKVideoPlayerStatus)status;
 
 // 视频播放进度回调
 - (void)photoBrowser:(GKPhotoBrowser *)browser videoTimeChangeWithPhotoView:(GKPhotoView *)photoView currentTime:(NSTimeInterval)currentTime totalTime:(NSTimeInterval)totalTime;
+
+// 视频加载回调，用于自定义加载方式
+// isStart: 是否开始加载  success：加载是否成功
+- (void)photoBrowser:(GKPhotoBrowser *)browser videoLoadStart:(BOOL)isStart success:(BOOL)success;
 
 // browser UIScrollViewDelegate
 - (void)photoBrowser:(GKPhotoBrowser *)browser scrollViewWillBeginDragging:(UIScrollView *)scrollView;
@@ -108,19 +144,16 @@ typedef void(^layoutBlock)(GKPhotoBrowser *photoBrowser, CGRect superFrame);
 @property (nonatomic, assign, readonly) BOOL          isLandscape;
 /** 当前设备的方向 */
 @property (nonatomic, assign, readonly) UIDeviceOrientation currentOrientation;
-/** 视频播放器 */
-@property (nonatomic, strong, readonly) id<GKVideoPlayerProtocol> player;
-/** 视频进度试图 */
-@property (nonatomic, weak, readonly, nullable) UIView *progressView;
-/** 显示方式 */
+
+/** 显示方式，默认GKPhotoBrowserShowStyleZoom */
 @property (nonatomic, assign) GKPhotoBrowserShowStyle showStyle;
-/** 隐藏方式 */
+/** 隐藏方式，默认GKPhotoBrowserHideStyleZoom */
 @property (nonatomic, assign) GKPhotoBrowserHideStyle hideStyle;
-/** 图片加载方式 */
+/** 图片加载方式，默认GKPhotoBrowserLoadStyleIndeterminate */
 @property (nonatomic, assign) GKPhotoBrowserLoadStyle loadStyle;
-/** 原图加载加载方式 */
+/** 原图加载加载方式，默认GKPhotoBrowserLoadStyleIndeterminate */
 @property (nonatomic, assign) GKPhotoBrowserLoadStyle originLoadStyle;
-/** 图片加载失败显示方式 */
+/** 图片加载失败显示方式，默认GKPhotoBrowserFailStyleOnlyText */
 @property (nonatomic, assign) GKPhotoBrowserFailStyle failStyle;
 /** 代理 */
 @property (nonatomic, weak) id<GKPhotoBrowserDelegate> delegate;
@@ -171,9 +204,6 @@ typedef void(^layoutBlock)(GKPhotoBrowser *photoBrowser, CGRect superFrame);
 /// 是否隐藏saveBtn，默认YES
 @property (nonatomic, assign) BOOL hidesSavedBtn;
 
-/// 是否隐藏进度条，默认NO，内容为视频时有效
-@property (nonatomic, assign) BOOL hidesVideoSlider;
-
 /// 图片最大放大倍数
 @property (nonatomic, assign) CGFloat maxZoomScale;
 
@@ -202,21 +232,13 @@ typedef void(^layoutBlock)(GKPhotoBrowser *photoBrowser, CGRect superFrame);
 @property (nonatomic, copy) NSString    *failureText;
 @property (nonatomic, strong) UIImage   *failureImage;
 
+/// 视频播放失败显示的文字或图片
+@property (nonatomic, copy) NSString *videoFailureText;
+@property (nonatomic, strong) UIImage *videoFailureImage;
+
 /// 是否添加导航控制器，默认NO，添加后会默认隐藏导航栏
 /// showStyle = GKPhotoBrowserShowStylePush时无效
 @property (nonatomic, assign, getter=isAddNavigationController) BOOL addNavigationController;
-
-/// 视频暂停或停止时是否显示播放图标，默认YES
-@property (nonatomic, assign) BOOL showPlayImage;
-
-/// 视频暂停或停止时显示的播放图
-@property (nonatomic, strong) UIImage *videoPlayImage;
-
-/// 视频播放结束后是否自动重播，默认YES
-@property (nonatomic, assign) BOOL isVideoReplay;
-
-/// 拖拽时是否暂停播放，默认YES
-@property (nonatomic, assign) BOOL isVideoPausedWhenDragged;
 
 /// 浏览器消失时是否清除缓存，默认NO
 /// 如果设置为YES，则结束显示时会调用GKWebImageProtocol协议的clearMemory方法
@@ -225,6 +247,46 @@ typedef void(^layoutBlock)(GKPhotoBrowser *photoBrowser, CGRect superFrame);
 /// 视图重用时是否清除对应url的缓存，默认NO
 /// 如果设置为YES，则视图放入重用池时会调用GKWebImageProtocol协议的clearMemoryForURL:方法
 @property (nonatomic, assign) BOOL isClearMemoryWhenViewReuse;
+
+#pragma mark - 视频相关
+/** 视频播放处理 */
+@property (nonatomic, strong, readonly) id<GKVideoPlayerProtocol> player;
+/** 视频进度试图 */
+@property (nonatomic, weak, readonly, nullable) UIView *progressView;
+/// 是否隐藏进度视频进度视图，默认NO，内容为视频时有效
+@property (nonatomic, assign) BOOL hidesVideoSlider;
+/** 视频加载方式，默认GKPhotoBrowserLoadStyleIndeterminate */
+@property (nonatomic, assign) GKPhotoBrowserLoadStyle videoLoadStyle;
+/** 视频播放失败显示方式，默认GKPhotoBrowserFailStyleOnlyText */
+@property (nonatomic, assign) GKPhotoBrowserFailStyle videoFailStyle;
+/// 视频暂停或停止时是否显示播放图标，默认YES
+@property (nonatomic, assign) BOOL showPlayImage;
+/// 视频暂停或停止时显示的播放图
+@property (nonatomic, strong) UIImage *videoPlayImage;
+/// 视频是否静音播放
+@property (nonatomic, assign) BOOL videoMutedPlay;
+/// 视频播放结束后是否自动重播，默认YES
+@property (nonatomic, assign) BOOL isVideoReplay;
+/// 拖拽消失时是否暂停播放，默认YES
+@property (nonatomic, assign) BOOL isVideoPausedWhenDragged;
+/// 左右滑动开始时是否暂停播放视频，默认NO
+@property (nonatomic, assign) BOOL isVideoPausedWhenScrollBegan;
+
+#pragma mark - livePhoto相关
+/** livePhoto处理 */
+@property (nonatomic, strong, readonly) id<GKLivePhotoProtocol> livePhoto;
+/** livePhoto加载方式，默认GKPhotoBrowserLoadStyleDeterminateSector*/
+@property (nonatomic, assign) GKPhotoBrowserLoadStyle liveLoadStyle;
+/// 拖拽消失时是否暂停播放livePhoto，默认YES
+@property (nonatomic, assign) BOOL isLivePhotoPausedWhenDragged;
+/// 左右滑动开始时是否暂停播放livePhoto，默认NO
+@property (nonatomic, assign) BOOL isLivePhotoPausedWhenScrollBegan;
+/// livePhoto是否静音播放
+@property (nonatomic, assign) BOOL livePhotoMutedPlay;
+// 是否显示livePhoto标识，默认NO
+@property (nonatomic, assign) BOOL isShowLivePhotoMark;
+// 是否清理livePhoto缓存，默认YES
+@property (nonatomic, assign) BOOL isClearMemoryForLivePhoto;
 
 // 初始化方法
 /// 创建图片浏览器
@@ -244,6 +306,10 @@ typedef void(^layoutBlock)(GKPhotoBrowser *photoBrowser, CGRect superFrame);
 /// 自定义视频播放处理类，需要视频播放时必须添加
 /// @param protocol 需实现GKVideoPlayerProtocol协议
 - (void)setupVideoPlayerProtocol:(id<GKVideoPlayerProtocol>)protocol;
+
+/// 自定义livePhoto加载处理类
+/// @param protocol 需实现GKLivePhotoProtocol协议
+- (void)setupLivePhotoProtocol:(id<GKLivePhotoProtocol>)protocol;
 
 /// 自定义视频播放进度条
 /// @param protocol 需实现GKProgressViewProtocol协议

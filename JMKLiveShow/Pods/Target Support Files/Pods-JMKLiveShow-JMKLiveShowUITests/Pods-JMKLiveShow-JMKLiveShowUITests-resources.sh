@@ -98,6 +98,7 @@ EOM
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/FURenderKit/Resources/graphics/aitype.bundle"
+  install_resource "${PODS_ROOT}/FURenderKit/Resources/graphics/armeshv2.bundle"
   install_resource "${PODS_ROOT}/FURenderKit/Resources/graphics/body_slim.bundle"
   install_resource "${PODS_ROOT}/FURenderKit/Resources/graphics/controller_cpp.bundle"
   install_resource "${PODS_ROOT}/FURenderKit/Resources/graphics/face_beautification.bundle"
@@ -108,9 +109,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/FURenderKit/Resources/model/ai_face_processor.bundle"
   install_resource "${PODS_ROOT}/FURenderKit/Resources/model/ai_hand_processor.bundle"
   install_resource "${PODS_ROOT}/FURenderKit/Resources/model/ai_human_processor.bundle"
+  install_resource "${PODS_ROOT}/GKPhotoBrowser/GKPhotoBrowser/GKPhotoBrowser.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/GKPhotoBrowser/GKPhotoBrowser.Privacy.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/FURenderKit/Resources/graphics/aitype.bundle"
+  install_resource "${PODS_ROOT}/FURenderKit/Resources/graphics/armeshv2.bundle"
   install_resource "${PODS_ROOT}/FURenderKit/Resources/graphics/body_slim.bundle"
   install_resource "${PODS_ROOT}/FURenderKit/Resources/graphics/controller_cpp.bundle"
   install_resource "${PODS_ROOT}/FURenderKit/Resources/graphics/face_beautification.bundle"
@@ -121,6 +125,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/FURenderKit/Resources/model/ai_face_processor.bundle"
   install_resource "${PODS_ROOT}/FURenderKit/Resources/model/ai_hand_processor.bundle"
   install_resource "${PODS_ROOT}/FURenderKit/Resources/model/ai_human_processor.bundle"
+  install_resource "${PODS_ROOT}/GKPhotoBrowser/GKPhotoBrowser/GKPhotoBrowser.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/GKPhotoBrowser/GKPhotoBrowser.Privacy.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

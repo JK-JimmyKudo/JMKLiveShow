@@ -1,5 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-JMKLiveShow/Pods-JMKLiveShow-resources.sh
 ${PODS_ROOT}/FURenderKit/Resources/graphics/aitype.bundle
+${PODS_ROOT}/FURenderKit/Resources/graphics/armeshv2.bundle
 ${PODS_ROOT}/FURenderKit/Resources/graphics/body_slim.bundle
 ${PODS_ROOT}/FURenderKit/Resources/graphics/controller_cpp.bundle
 ${PODS_ROOT}/FURenderKit/Resources/graphics/face_beautification.bundle
@@ -10,3 +11,5 @@ ${PODS_ROOT}/FURenderKit/Resources/graphics/tongue.bundle
 ${PODS_ROOT}/FURenderKit/Resources/model/ai_face_processor.bundle
 ${PODS_ROOT}/FURenderKit/Resources/model/ai_hand_processor.bundle
 ${PODS_ROOT}/FURenderKit/Resources/model/ai_human_processor.bundle
+${PODS_ROOT}/GKPhotoBrowser/GKPhotoBrowser/GKPhotoBrowser.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/GKPhotoBrowser/GKPhotoBrowser.Privacy.bundle

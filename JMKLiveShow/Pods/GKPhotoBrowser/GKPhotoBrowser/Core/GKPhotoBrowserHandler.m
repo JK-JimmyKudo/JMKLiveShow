@@ -33,8 +33,7 @@
 
 - (void)showFromVC:(UIViewController *)vc {
     if (self.browser.showStyle == GKPhotoBrowserShowStylePush) {
-        UIImage *image = [self getCaptureWithView:vc.view.window];
-        self.captureImage = image;
+        self.captureImage = [self getCaptureWithView:vc.view.window];
         self.browser.hidesBottomBarWhenPushed = YES;
         [vc.navigationController pushViewController:self.browser animated:YES];
     }else {
@@ -140,9 +139,6 @@
 
 #pragma mark - BrowserDismiss
 - (void)browserDismiss {
-    GKPhotoView *photoView = self.browser.curPhotoView;
-    photoView.isLayoutSubViews = YES;
-    
     if (!self.browser.isFollowSystemRotation) {
         // 状态栏恢复到竖屏
         if (@available(iOS 13.0, *)) {} else {
@@ -157,11 +153,14 @@
     }else {
         // 显示状态栏
         self.browser.isStatusBarShow = YES;
-        
-        // 防止返回时跳动
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self recoverAnimation];
-        });
+        if (self.browser.hideStyle == GKPhotoBrowserHideStyleNone) {
+            [self browserDismissNone];
+        }else {
+            // 防止返回时跳动
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self recoverAnimation];
+            });
+        }
     }
 }
 

@@ -16,11 +16,11 @@ target 'JMKLiveShow' do
     # Pods for testing
   end
 
-
+#
   pod 'VHLiveSDK' # 直播
   pod 'VHLiveSDK_Interactive'# 互动
   pod 'VHGoodsSDK' # 商品
-  
+#  
   pod 'MJRefresh'
   pod 'MJExtension'
   pod 'SDWebImage'
@@ -28,7 +28,7 @@ target 'JMKLiveShow' do
   pod 'Masonry'
   pod 'MBProgressHUD'
 #  pod 'IQKeyboardManager'
-#  pod 'IQKeyboardManager', '~> 6.5.11'
+#
   pod 'JXCategoryView'
   pod 'TXScrollLabelView'
   pod 'GKPhotoBrowser/SD'
@@ -43,15 +43,15 @@ target 'JMKLiveShow' do
 end
 
 
-post_install do |installer|
-    installer.generated_projects.each do |project|
-        project.targets.each do |target|
-            target.build_configurations.each do |config|
-                config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
-            end
-        end
-    end
-    installer.pods_project.targets.each do |target|
-        #  flutter_additional_ios_build_settings(target)
-    end
-end
+#post_install do |installer|
+#    installer.generated_projects.each do |project|
+#        project.targets.each do |target|
+#            target.build_configurations.each do |config|
+#                config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+#            end
+#        end
+#    end
+#    installer.pods_project.targets.each do |target|
+#        #  flutter_additional_ios_build_settings(target)
+#    end
+#end

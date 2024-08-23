@@ -15,7 +15,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4E9FC8A32C7661B100FFA7E3"
+               BlueprintIdentifier = "4EFB7E2C2C78EC4400C27AC1"
                BuildableName = "JMKLiveShow.app"
                BlueprintName = "JMKLiveShow"
                ReferencedContainer = "container:JMKLiveShow.xcodeproj">
@@ -35,7 +35,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4E9FC8BE2C7661B200FFA7E3"
+               BlueprintIdentifier = "4EFB7E472C78EC4600C27AC1"
                BuildableName = "JMKLiveShowTests.xctest"
                BlueprintName = "JMKLiveShowTests"
                ReferencedContainer = "container:JMKLiveShow.xcodeproj">
@@ -46,7 +46,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4E9FC8C82C7661B200FFA7E3"
+               BlueprintIdentifier = "4EFB7E512C78EC4600C27AC1"
                BuildableName = "JMKLiveShowUITests.xctest"
                BlueprintName = "JMKLiveShowUITests"
                ReferencedContainer = "container:JMKLiveShow.xcodeproj">
@@ -68,7 +68,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4E9FC8A32C7661B100FFA7E3"
+            BlueprintIdentifier = "4EFB7E2C2C78EC4400C27AC1"
             BuildableName = "JMKLiveShow.app"
             BlueprintName = "JMKLiveShow"
             ReferencedContainer = "container:JMKLiveShow.xcodeproj">
@@ -92,7 +92,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4E9FC8A32C7661B100FFA7E3"
+            BlueprintIdentifier = "4EFB7E2C2C78EC4400C27AC1"
             BuildableName = "JMKLiveShow.app"
             BlueprintName = "JMKLiveShow"
             ReferencedContainer = "container:JMKLiveShow.xcodeproj">

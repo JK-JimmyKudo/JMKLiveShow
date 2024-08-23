@@ -10,6 +10,8 @@
 #import "GKPhotoManager.h"
 #import "GKWebImageProtocol.h"
 #import "GKVideoPlayerProtocol.h"
+#import "GKLivePhotoProtocol.h"
+#import "GKProgressViewProtocol.h"
 #import "GKLoadingView.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -31,7 +33,12 @@ NS_ASSUME_NONNULL_BEGIN
 // 加载进度，isOriginImage：是否是原图
 - (void)photoView:(GKPhotoView *)photoView loadProgress:(float)progress isOriginImage:(BOOL)isOriginImage;
 
+// 视频加载
+- (void)photoView:(GKPhotoView *)photoView loadStart:(BOOL)isStart success:(BOOL)success;
+
 @end
+
+@class GKPhotoBrowser;
 
 @interface GKPhotoView : UIView<UIScrollViewDelegate>
 
@@ -43,59 +50,42 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong, readonly) GKLoadingView *loadingView;
 
+@property (nonatomic, strong, readonly) GKLoadingView *videoLoadingView;
+
+@property (nonatomic, strong, readonly) GKLoadingView *liveLoadingView;
+@property (nonatomic, strong, readonly) UIView *liveMarkView;
+
 @property (nonatomic, strong, readonly) GKPhoto *photo;
+
+@property (nonatomic, weak) GKPhotoBrowser *browser;
+
+@property (nonatomic, weak, readonly) id<GKWebImageProtocol> imageProtocol;
 
 @property (nonatomic, weak) id<GKVideoPlayerProtocol> player;
 
+@property (nonatomic, weak) id<GKLivePhotoProtocol> livePhoto;
+
 @property (nonatomic, weak) id<GKPhotoViewDelegate> delegate;
 
-/// 是否跟随系统旋转，默认是NO，如果设置为YES，isScreenRotateDisabled属性将失效
-@property (nonatomic, assign) BOOL isFollowSystemRotation;
-
-/** 横屏时是否充满屏幕宽度，默认YES，为NO时图片自动填充屏幕 */
-@property (nonatomic, assign) BOOL isFullWidthForLandScape;
-
-/// 是否适配安全区域，默认NO，为YES时图片会自动适配iPhone X的安全区域
-@property (nonatomic, assign) BOOL isAdaptiveSafeArea;
-
-/** 图片最大放大倍数 */
-@property (nonatomic, assign) CGFloat maxZoomScale;
+@property (nonatomic, assign) CGSize imageSize;
 
 /** 双击放大倍数 */
 @property (nonatomic, assign) CGFloat doubleZoomScale;
 
-/** 是否重新布局 */
-@property (nonatomic, assign) BOOL isLayoutSubViews;
-
-@property (nonatomic, assign) GKPhotoBrowserLoadStyle loadStyle;
-@property (nonatomic, assign) GKPhotoBrowserLoadStyle originLoadStyle;
-@property (nonatomic, assign) GKPhotoBrowserFailStyle failStyle;
-
-@property (nonatomic, copy) NSString    *failureText;
-@property (nonatomic, strong) UIImage   *failureImage;
-
-@property (nonatomic, assign) BOOL      showPlayImage;
-@property (nonatomic, strong) UIImage   *videoPlayImage;
-/// 拖拽开始时是否暂停播放，默认YES
-@property (nonatomic, assign) BOOL isVideoPausedWhenDragged;
-
-/// 视图重用时是否清除对应url的换成，默认NO
-/// 如果设置为YES，则视图放入重用池时回调用GKWebImageProtocol协议的clearMemoryForURL:方法
-@property (nonatomic, assign) BOOL isClearMemoryWhenViewReuse;
+@property (nonatomic, assign) CGFloat realZoomScale;
 
 - (instancetype)initWithFrame:(CGRect)frame imageProtocol:(id<GKWebImageProtocol>)imageProtocol;
 
 // 准备复用
 - (void)prepareForReuse;
 
+- (void)resetImageView;
+
 // 设置数据
 - (void)setupPhoto:(GKPhoto *)photo;
 
 // 设置放大倍数
 - (void)setScrollMaxZoomScale:(CGFloat)scale;
-
-// 加载原图（必须传originUrl）
-- (void)loadOriginImage;
 
 // 缩放
 - (void)zoomToRect:(CGRect)rect animated:(BOOL)animated;
@@ -112,7 +102,7 @@ NS_ASSUME_NONNULL_BEGIN
 // 加载
 - (void)showLoading;
 - (void)hideLoading;
-- (void)showFailure;
+- (void)showFailure:(NSError *)error;
 - (void)showPlayBtn;
 
 // 左右滑动
@@ -126,6 +116,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)didDismissDisappear;
 
 - (void)updateFrame;
+
+- (void)loadFailedWithError:(NSError *)error;
 
 @end
 

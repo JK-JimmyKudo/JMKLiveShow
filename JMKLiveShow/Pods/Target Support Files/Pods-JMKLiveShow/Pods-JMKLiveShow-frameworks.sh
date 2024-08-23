@@ -178,7 +178,6 @@ code_sign_if_enabled() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/BarrageRenderer/BarrageRenderer.framework"
   install_framework "${PODS_ROOT}/FURenderKit/FURenderKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/GKPhotoBrowser/GKPhotoBrowser.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JXCategoryView/JXCategoryView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LYEmptyView/LYEmptyView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
@@ -200,7 +199,6 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/BarrageRenderer/BarrageRenderer.framework"
   install_framework "${PODS_ROOT}/FURenderKit/FURenderKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/GKPhotoBrowser/GKPhotoBrowser.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JXCategoryView/JXCategoryView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LYEmptyView/LYEmptyView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"

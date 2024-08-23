@@ -1,6 +1,6 @@
 //
 //  GKVideoPlayerProtocol.h
-//  GKPhotoBrowserDemo
+//  GKPhotoBrowser
 //
 //  Created by QuintGao on 2023/3/1.
 //  Copyright © 2023 QuintGao. All rights reserved.
@@ -45,6 +45,8 @@ typedef NS_ENUM(NSUInteger, GKVideoPlayerStatus) {
 
 @property (nonatomic, copy) void(^playerGetVideoSize)(id<GKVideoPlayerProtocol> mgr, CGSize size);
 
+@property (nonatomic, strong, nullable) NSError *error;
+
 // 准备视频资源
 - (void)gk_prepareToPlay;
 
@@ -65,6 +67,9 @@ typedef NS_ENUM(NSUInteger, GKVideoPlayerStatus) {
 
 // 更新布局
 - (void)gk_updateFrame:(CGRect)frame;
+
+// 静音
+- (void)gk_setMute:(BOOL)mute;
 
 @end
 
