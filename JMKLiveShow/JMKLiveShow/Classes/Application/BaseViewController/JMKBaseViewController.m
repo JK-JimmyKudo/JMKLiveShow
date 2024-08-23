@@ -34,16 +34,85 @@
                                     initWithCustomView:leftBtn];
     self.navigationItem.leftBarButtonItem = leftBarItem;
     
+    // 导航栏不透明
+    self.navigationController.navigationBar.translucent = NO;
+    // 设置导航栏字体颜色
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+
+    // 导航栏背景色
+    if (@available(iOS 15.0,*)) {
+        UINavigationBarAppearance *appearance = [[UINavigationBarAppearance alloc] init];
+        [appearance setBackgroundImage:[UIImage imageWithColor:JMKMainColor]];
+        [appearance setTitleTextAttributes:@{ NSForegroundColorAttributeName: [UIColor whiteColor] }];
+        self.navigationController.navigationBar.standardAppearance = appearance;
+        self.navigationController.navigationBar.scrollEdgeAppearance = appearance;
+    } else {
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:JMKMainColor] forBarMetrics:UIBarMetricsDefault];
+        [self.navigationController.navigationBar setTitleTextAttributes:@{ NSForegroundColorAttributeName: [UIColor whiteColor] }];
+    }
+    
+    //进入前后台相关监听
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillEnterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidEnterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - 前后台处理
+//前台（子类重写）
+- (void)appWillEnterForeground {
 }
-*/
+
+//后台（子类重写）
+- (void)appDidEnterBackground {
+}
+
+#pragma mark - 点击返回
+- (void)clickLeftBarItem
+{
+    [self.navigationController popViewControllerAnimated:YES];
+    // 结束自动化测试
+    [JMKUITool sendTestsNotificationCenterWithKey:VHTests_END otherInfo:[NSDictionary dictionary]];
+}
+
+#pragma mark - 导航栏显隐
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    if (self.vh_NavIsHidden) {
+        [self.navigationController setNavigationBarHidden:YES animated:animated];
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+
+    if (self.vh_NavIsHidden) {
+        if ([self vh_pushOrPopIsHidden] == NO) {
+            [self.navigationController setNavigationBarHidden:NO animated:animated];
+        }
+    }
+}
+
+#pragma mark - 监听push下一个或 pop 上一个，是否隐藏导航栏
+- (BOOL)vh_pushOrPopIsHidden {
+    NSArray *viewcontrollers = self.navigationController.viewControllers;
+
+    if (viewcontrollers.count > 0) {
+        JMKBaseViewController *vc = viewcontrollers[viewcontrollers.count - 1];
+        return vc.vh_NavIsHidden;
+    }
+
+    return NO;
+}
+
+#pragma mark - 状态栏颜色
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
+#pragma mark - delloc
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 @end

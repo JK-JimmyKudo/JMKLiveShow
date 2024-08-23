@@ -11,6 +11,7 @@
 
 @property (strong, nonatomic) UIWindow * window;
 
-
+/// 是否是横屏
+@property (nonatomic, assign, getter = isLaunchScreen) BOOL launchScreen;
 @end
 

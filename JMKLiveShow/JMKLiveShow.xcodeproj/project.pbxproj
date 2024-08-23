@@ -10,7 +10,6 @@
 		333BE0DE54C69DD173C6F829 /* Pods_JMKLiveShow_JMKLiveShowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94627C1ABC00729F449EDF1C /* Pods_JMKLiveShow_JMKLiveShowUITests.framework */; };
 		4E3D84E62C7669020079B7E9 /* JMKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D84E52C7669020079B7E9 /* JMKBaseViewController.m */; };
 		4E3D84E92C76690F0079B7E9 /* JMKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D84E82C76690F0079B7E9 /* JMKNavigationController.m */; };
-		4E3D84EC2C7669600079B7E9 /* JMKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D84EB2C7669600079B7E9 /* JMKLoginViewController.m */; };
 		4E9FC8A92C7661B100FFA7E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9FC8A82C7661B100FFA7E3 /* AppDelegate.m */; };
 		4E9FC8AF2C7661B100FFA7E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9FC8AE2C7661B100FFA7E3 /* ViewController.m */; };
 		4E9FC8B22C7661B100FFA7E3 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4E9FC8B12C7661B100FFA7E3 /* Base */; };
@@ -20,6 +19,12 @@
 		4E9FC8C42C7661B200FFA7E3 /* JMKLiveShowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9FC8C32C7661B200FFA7E3 /* JMKLiveShowTests.m */; };
 		4E9FC8CE2C7661B200FFA7E3 /* JMKLiveShowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9FC8CD2C7661B200FFA7E3 /* JMKLiveShowUITests.m */; };
 		4E9FC8D02C7661B200FFA7E3 /* JMKLiveShowUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9FC8CF2C7661B200FFA7E3 /* JMKLiveShowUITestsLaunchTests.m */; };
+		4ED40BAA2C76CB12009F8ECA /* UIImage+ImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED40BA92C76CB12009F8ECA /* UIImage+ImageUtil.m */; };
+		4ED40BAE2C76D51B009F8ECA /* UIColor+JMKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED40BAD2C76D51B009F8ECA /* UIColor+JMKColor.m */; };
+		4ED40BB12C76D6A2009F8ECA /* JMKUITool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED40BB02C76D6A2009F8ECA /* JMKUITool.m */; };
+		4ED40BB52C76D96C009F8ECA /* JMKLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED40BB22C76D96C009F8ECA /* JMKLoginViewController.xib */; };
+		4ED40BB62C76D96C009F8ECA /* JMKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED40BB32C76D96C009F8ECA /* JMKLoginViewController.m */; };
+		4ED40BB82C76DDE0009F8ECA /* IQKeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED40BB72C76DDE0009F8ECA /* IQKeyboardManager.framework */; };
 		642C61B809239C7328AC9B1B /* Pods_JMKLiveShow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10CADB6F27EBF033BB80A07E /* Pods_JMKLiveShow.framework */; };
 		9C15CF658E471F9224711787 /* Pods_JMKLiveShowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B961A0422A20AB54C25E9662 /* Pods_JMKLiveShowTests.framework */; };
 /* End PBXBuildFile section */
@@ -48,8 +53,6 @@
 		4E3D84E52C7669020079B7E9 /* JMKBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKBaseViewController.m; sourceTree = "<group>"; };
 		4E3D84E72C76690F0079B7E9 /* JMKNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKNavigationController.h; sourceTree = "<group>"; };
 		4E3D84E82C76690F0079B7E9 /* JMKNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKNavigationController.m; sourceTree = "<group>"; };
-		4E3D84EA2C7669600079B7E9 /* JMKLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKLoginViewController.h; sourceTree = "<group>"; };
-		4E3D84EB2C7669600079B7E9 /* JMKLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKLoginViewController.m; sourceTree = "<group>"; };
 		4E9FC8A42C7661B100FFA7E3 /* JMKLiveShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMKLiveShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9FC8A72C7661B100FFA7E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4E9FC8A82C7661B100FFA7E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,6 +70,17 @@
 		4E9FC8CF2C7661B200FFA7E3 /* JMKLiveShowUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKLiveShowUITestsLaunchTests.m; sourceTree = "<group>"; };
 		4ED40BA32C766E32009F8ECA /* JMKLiveShowPrefix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKLiveShowPrefix.h; sourceTree = "<group>"; };
 		4ED40BA42C766E87009F8ECA /* defineHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = defineHeader.h; sourceTree = "<group>"; };
+		4ED40BA82C76CB12009F8ECA /* UIImage+ImageUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageUtil.h"; sourceTree = "<group>"; };
+		4ED40BA92C76CB12009F8ECA /* UIImage+ImageUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageUtil.m"; sourceTree = "<group>"; };
+		4ED40BAB2C76D3DE009F8ECA /* CommonMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
+		4ED40BAC2C76D51B009F8ECA /* UIColor+JMKColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+JMKColor.h"; sourceTree = "<group>"; };
+		4ED40BAD2C76D51B009F8ECA /* UIColor+JMKColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JMKColor.m"; sourceTree = "<group>"; };
+		4ED40BAF2C76D6A2009F8ECA /* JMKUITool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKUITool.h; sourceTree = "<group>"; };
+		4ED40BB02C76D6A2009F8ECA /* JMKUITool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKUITool.m; sourceTree = "<group>"; };
+		4ED40BB22C76D96C009F8ECA /* JMKLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMKLoginViewController.xib; sourceTree = "<group>"; };
+		4ED40BB32C76D96C009F8ECA /* JMKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMKLoginViewController.m; sourceTree = "<group>"; };
+		4ED40BB42C76D96C009F8ECA /* JMKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMKLoginViewController.h; sourceTree = "<group>"; };
+		4ED40BB72C76DDE0009F8ECA /* IQKeyboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E85EE684C0225E5533E4B9 /* Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig"; path = "Target Support Files/Pods-JMKLiveShow-JMKLiveShowUITests/Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig"; sourceTree = "<group>"; };
 		94627C1ABC00729F449EDF1C /* Pods_JMKLiveShow_JMKLiveShowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMKLiveShow_JMKLiveShowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3E27507AA7323ADF4998AB /* Pods-JMKLiveShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMKLiveShow.release.xcconfig"; path = "Target Support Files/Pods-JMKLiveShow/Pods-JMKLiveShow.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ED40BB82C76DDE0009F8ECA /* IQKeyboardManager.framework in Frameworks */,
 				642C61B809239C7328AC9B1B /* Pods_JMKLiveShow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +122,7 @@
 		450809CD7D2A6AAE45A787F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4ED40BB72C76DDE0009F8ECA /* IQKeyboardManager.framework */,
 				10CADB6F27EBF033BB80A07E /* Pods_JMKLiveShow.framework */,
 				94627C1ABC00729F449EDF1C /* Pods_JMKLiveShow_JMKLiveShowUITests.framework */,
 				B961A0422A20AB54C25E9662 /* Pods_JMKLiveShowTests.framework */,
@@ -161,8 +177,9 @@
 		4E3D84D32C7666440079B7E9 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				4E3D84EA2C7669600079B7E9 /* JMKLoginViewController.h */,
-				4E3D84EB2C7669600079B7E9 /* JMKLoginViewController.m */,
+				4ED40BB42C76D96C009F8ECA /* JMKLoginViewController.h */,
+				4ED40BB32C76D96C009F8ECA /* JMKLoginViewController.m */,
+				4ED40BB22C76D96C009F8ECA /* JMKLoginViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -180,6 +197,7 @@
 			children = (
 				4ED40BA32C766E32009F8ECA /* JMKLiveShowPrefix.h */,
 				4ED40BA42C766E87009F8ECA /* defineHeader.h */,
+				4ED40BAB2C76D3DE009F8ECA /* CommonMacro.h */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -208,6 +226,12 @@
 		4E3D84D92C7666440079B7E9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4ED40BA82C76CB12009F8ECA /* UIImage+ImageUtil.h */,
+				4ED40BA92C76CB12009F8ECA /* UIImage+ImageUtil.m */,
+				4ED40BAC2C76D51B009F8ECA /* UIColor+JMKColor.h */,
+				4ED40BAD2C76D51B009F8ECA /* UIColor+JMKColor.m */,
+				4ED40BAF2C76D6A2009F8ECA /* JMKUITool.h */,
+				4ED40BB02C76D6A2009F8ECA /* JMKUITool.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -420,6 +444,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ED40BB52C76D96C009F8ECA /* JMKLoginViewController.xib in Resources */,
 				4E9FC8B42C7661B200FFA7E3 /* Assets.xcassets in Resources */,
 				4E9FC8B72C7661B200FFA7E3 /* Base in Resources */,
 				4E9FC8B22C7661B100FFA7E3 /* Base in Resources */,
@@ -586,10 +611,13 @@
 			files = (
 				4E3D84E92C76690F0079B7E9 /* JMKNavigationController.m in Sources */,
 				4E9FC8AF2C7661B100FFA7E3 /* ViewController.m in Sources */,
+				4ED40BB62C76D96C009F8ECA /* JMKLoginViewController.m in Sources */,
+				4ED40BAE2C76D51B009F8ECA /* UIColor+JMKColor.m in Sources */,
+				4ED40BB12C76D6A2009F8ECA /* JMKUITool.m in Sources */,
 				4E9FC8A92C7661B100FFA7E3 /* AppDelegate.m in Sources */,
 				4E3D84E62C7669020079B7E9 /* JMKBaseViewController.m in Sources */,
 				4E9FC8BA2C7661B200FFA7E3 /* main.m in Sources */,
-				4E3D84EC2C7669600079B7E9 /* JMKLoginViewController.m in Sources */,
+				4ED40BAA2C76CB12009F8ECA /* UIImage+ImageUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,7 +812,94 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"stdc++\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"BarrageRenderer\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"FURenderKit\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GKPhotoBrowser\"",
+					"-framework",
+					"$(inherited)",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"JXCategoryView\"",
+					"-framework",
+					"\"JavaScriptCore\"",
+					"-framework",
+					"\"LYEmptyView\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MJExtension\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"OpenAL\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Reachability\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"TXScrollLabelView\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"VHBFURender\"",
+					"-framework",
+					"\"VHBeautifyKit\"",
+					"-framework",
+					"\"VHGoodsSDK\"",
+					"-framework",
+					"\"VHInteractive\"",
+					"-framework",
+					"\"VHLiveSDK\"",
+					"-framework",
+					"\"VHWebRTC\"",
+					"-framework",
+					"\"VhallLiveBaseApi\"",
+					"-framework",
+					"\"VideoToolbox\"",
+					"-framework",
+					"\"YYText\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = JMKLiveShow.JMKLiveShow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -815,7 +930,94 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"stdc++\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"BarrageRenderer\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"FURenderKit\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GKPhotoBrowser\"",
+					"-framework",
+					"$(inherited)",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"JXCategoryView\"",
+					"-framework",
+					"\"JavaScriptCore\"",
+					"-framework",
+					"\"LYEmptyView\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MJExtension\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"OpenAL\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Reachability\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"TXScrollLabelView\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"VHBFURender\"",
+					"-framework",
+					"\"VHBeautifyKit\"",
+					"-framework",
+					"\"VHGoodsSDK\"",
+					"-framework",
+					"\"VHInteractive\"",
+					"-framework",
+					"\"VHLiveSDK\"",
+					"-framework",
+					"\"VHWebRTC\"",
+					"-framework",
+					"\"VhallLiveBaseApi\"",
+					"-framework",
+					"\"VideoToolbox\"",
+					"-framework",
+					"\"YYText\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = JMKLiveShow.JMKLiveShow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

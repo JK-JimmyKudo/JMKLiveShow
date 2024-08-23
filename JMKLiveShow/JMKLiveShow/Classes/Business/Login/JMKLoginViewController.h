@@ -1,16 +1,13 @@
 //
-//  JMKLoginViewController.h
-//  JMKLiveShow
+//  MainViewController.h
+//  PublishDemo
 //
-//  Created by llj on 2024/8/22.
+//  Created by liwenlong on 15/10/9.
+//  Copyright (c) 2015年 vhall. All rights reserved.
 //
 
 #import "JMKBaseViewController.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface JMKLoginViewController : JMKBaseViewController
 
 @end
-
-NS_ASSUME_NONNULL_END
