@@ -9,7 +9,31 @@
 #import "JMKWatchVideoView.h"
 #import "JMKWatchLiveBottomView.h"
 #import "JMKFoldButton.h"
-@interface JMKWatchLiveViewController ()
+#import "JMKInavView.h"
+#import "JMKChatView.h"
+#import "JMKDocViewController.h"
+#import "JMKQAView.h"
+#import "JMKIntroView.h"
+#import "JMKVideoPointView.h"
+#import "JMKRecordChapter.h"
+#import "JMKRecordListViewController.h"
+#import "JMKFileDownloadViewController.h"
+#import "JMKFashionStyleGiftListView.h"
+#import "JMKSurveyListView.h"
+#import "JMKAnnouncementView.h"
+#import "JMKAnnouncementList.h"
+#import "JMKPushScreenCardList.h"
+#import "JMKInavApplyAlertView.h"
+#import "JMKSignInAlertView.h"
+#import "JMKLottery.h"
+#import "AppDelegate.h"
+
+
+
+@interface JMKWatchLiveViewController ()<JMKWatchVideoViewDelegate,JXCategoryViewDelegate, JXCategoryListContainerViewDelegate>
+
+//<JMKWatchVideoViewDelegate, JMKInavViewDelegate, JMKWatchLiveBottomViewDelegate, VHChatViewDelegate, JXCategoryViewDelegate, JXCategoryListContainerViewDelegate, VHallGiftObjectDelegate, VHQAViewDelegate, VHSignInAlertViewDelegate, VHSurveyListViewDelegate, JMKDocViewDelegate, VHRecordChapterDelegate, VHVideoPointViewDelegate, VHLotteryDelegate, VHExamObjectDelegate, VHRecordListDelegate,VHFileDownloadDelegate,VHPushScreenCardListDelegate>
+
 // 控件
 /// 分页控件
 @property (nonatomic, strong) JXCategoryTitleView *categoryView;
@@ -21,58 +45,58 @@
 @property (nonatomic, strong) JMKFoldButton *foldBtn;
 /// 直播播放器
 @property (nonatomic, strong) JMKWatchVideoView *watchVideoView;
-///// 互动播放器
-//@property (nonatomic, strong) VHInavView *inavView;
-///// 聊天View
-//@property (nonatomic, strong) VHChatView *chatView;
-///// 文档
-//@property (nonatomic, strong) VHDocViewController *docViewController;
-///// 问答
-//@property (nonatomic, strong) VHQAView *vhQAView;
-///// 简介
-//@property (nonatomic, strong) VHIntroView *introView;
-///// 章节打点
-//@property (nonatomic, strong) VHRecordChapter *recordChapterView;
-///// 精彩时刻
-//@property (nonatomic, strong) VHVideoPointView *videoPointView;
-///// 精彩片段
-//@property (nonatomic, strong) VHRecordListVC * recordListVC;
-//
-//@property (nonatomic, strong) NSArray<VHRecordListModel *> *recordList;
-//
-///// 文件下载
-//@property (nonatomic, strong) VHFileDownloadVC *fileDownloadVC;
-///// 底部工具
+/// 互动播放器
+@property (nonatomic, strong) JMKInavView *inavView;
+/// 聊天View
+@property (nonatomic, strong) JMKChatView *chatView;
+/// 文档
+@property (nonatomic, strong) JMKDocViewController *docViewController;
+/// 问答
+@property (nonatomic, strong) JMKQAView *vhQAView;
+/// 简介
+@property (nonatomic, strong) JMKIntroView *introView;
+/// 章节打点
+@property (nonatomic, strong) JMKRecordChapter *recordChapterView;
+/// 精彩时刻
+@property (nonatomic, strong) JMKVideoPointView *videoPointView;
+/// 精彩片段
+@property (nonatomic, strong) JMKRecordListViewController * recordListVC;
+
+@property (nonatomic, strong) NSArray<VHRecordListModel *> *recordList;
+
+/// 文件下载
+@property (nonatomic, strong) JMKFileDownloadViewController *fileDownloadVC;
+/// 底部工具
 @property (nonatomic, strong) JMKWatchLiveBottomView *bottomView;
-///// 礼物类
-//@property (nonatomic, strong) VHallGiftObject *giftObject;
-///// 礼物弹窗
-//@property (nonatomic, strong) VHFashionStyleGiftListView *giftListView;
-///// 问卷列表
-//@property (nonatomic, strong) VHSurveyListView *surveyListView;
-///// 公告
-//@property (nonatomic, strong) VHAnnouncementView *announcementView;
-///// 公告列表
-//@property (nonatomic, strong) VHAnnouncementList *announcementList;
-///// 推屏卡片
-//@property (nonatomic, strong) VHPushScreenCardList *pushScreenCardList;
-///// 申请互动连麦弹窗
-//@property (nonatomic, strong) VHInavApplyAlertView *inavApplyAlertView;
-///// 签到
-//@property (nonatomic, strong) VHSignInAlertView *signInAlertView;
-///// 抽奖
-//@property (nonatomic, strong) VHLottery *vhLottery;
-///// 快问快答
-//@property (nonatomic, strong) VHExamObject *vhExam;
-//
-//// 赋值
-///// 问答名称
-//@property (nonatomic, copy) NSString *questionName;
-///// 下载文件名称
-//@property (nonatomic, copy) NSString *fileDownloadName;
-//
-//// 标识
-///// 标识当前直播还是互动
+/// 礼物类
+@property (nonatomic, strong) VHallGiftObject *giftObject;
+/// 礼物弹窗
+@property (nonatomic, strong) JMKFashionStyleGiftListView *giftListView;
+/// 问卷列表
+@property (nonatomic, strong) JMKSurveyListView *surveyListView;
+/// 公告
+@property (nonatomic, strong) JMKAnnouncementView *announcementView;
+/// 公告列表
+@property (nonatomic, strong) JMKAnnouncementList *announcementList;
+/// 推屏卡片
+@property (nonatomic, strong) JMKPushScreenCardList *pushScreenCardList;
+/// 申请互动连麦弹窗
+@property (nonatomic, strong) JMKInavApplyAlertView *inavApplyAlertView;
+/// 签到
+@property (nonatomic, strong) JMKSignInAlertView *signInAlertView;
+/// 抽奖
+@property (nonatomic, strong) JMKLottery *vhLottery;
+/// 快问快答
+@property (nonatomic, strong) VHExamObject *vhExam;
+
+// 赋值
+/// 问答名称
+@property (nonatomic, copy) NSString *questionName;
+/// 下载文件名称
+@property (nonatomic, copy) NSString *fileDownloadName;
+
+// 标识
+/// 标识当前直播还是互动
 @property (nonatomic, assign) BOOL isLive;
 @property (nonatomic, assign) BOOL isOpenDoc;
 @property (nonatomic, assign) BOOL isOpenQA;
@@ -110,7 +134,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    self.isLive = YES;
+
+    // 设置样式
     [self setWithUI];
+
+    // 返回角色数据
+    [self getRoleName];
 }
 
 #pragma mark - 设置样式
@@ -146,47 +177,35 @@
     }];
 }
 
-
-
-#pragma mark 屏幕旋转
-- (void)clickFullIsSelect:(BOOL)isSelect
+#pragma mark - 底部工具兰的显隐
+- (void)bottomWithHidden:(BOOL)hidden
 {
-    // 只有直播可以切换横竖屏
-//    if (self.isLive) {
-//        // 切换全屏 横竖屏刷新布局
-//        [self screenChangeWithIsFull:isSelect];
-//    }
+    self.bottomView.hidden = hidden;
+
+    if (hidden) {
+        [self.bottomView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.height.mas_equalTo(0);
+        }];
+    } else {
+        [self.bottomView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.height.mas_equalTo(47 + SAFE_BOTTOM);
+        }];
+    }
+}
+#pragma mark - 获取房间主要信息
+- (void)getRoleName
+{
+    [JMKWebinarBaseInfo getRoleNameWebinar_id:self.webinar_id
+                                dataCallBack:^(VHRoleNameData *roleData) {
+        VHLog(@"roleData -- %@",roleData);
+        
+        VH_MB_HOST = roleData.host_name;
+        VH_MB_GUEST = roleData.guest_name;
+        VH_MB_ASSIST = roleData.assist_name;
+    }];
 }
 
-#pragma mark - 屏幕旋转
-- (void)screenChangeWithIsFull:(BOOL)isFull
-{
-    // 状态一致不需要在执行
-//    if (self.isVideoFull == isFull) {
-//        return;
-//    }
 
-//    // 记录状态
-//    self.isVideoFull = isFull;
-//
-//    // 旋转
-//    [self vcWithIsFull:isFull];
-//
-//    // 更多工具显示状态
-//    [self foldBtnIsHidden];
-//
-//    // 调整播放器
-//    if (isFull) {
-//        [_watchVideoView mas_remakeConstraints:^(MASConstraintMaker *make) {
-//            make.left.top.right.bottom.mas_equalTo(0);
-//        }];
-//    } else {
-//        [_watchVideoView mas_remakeConstraints:^(MASConstraintMaker *make) {
-//            make.left.top.right.mas_equalTo(0);
-//            make.height.mas_equalTo((Screen_Width < Screen_Height ? Screen_Width : Screen_Height) * 9 / 16);
-//        }];
-//    }
-}
 
 #pragma mark - JXCategoryViewDelegate
 #pragma mark 选中
@@ -233,6 +252,788 @@
     return nil;
 }
 
+#pragma mark 刷新标签页显示 文档/问答/章节
+- (void)roomWithIsOpenDoc:(BOOL)isOpenDoc isOpenQA:(BOOL)isOpenQA isOpenRecordChapter:(BOOL)isOpenRecordChapter isOpenVideoPoint:(BOOL)isOpenVideoPoint isOpenFileDownload:(BOOL)isOpenFileDownload isHaveGoods:(BOOL)isHaveGoods
+{
+    self.isOpenDoc = isOpenDoc;
+    self.isOpenQA = isOpenQA;
+    self.isOpenRecordChapter = isOpenRecordChapter;
+    self.isOpenVideoPoint = isOpenVideoPoint;
+    self.isOpenFileDownload = isOpenFileDownload;
+    self.isHaveGoods = isHaveGoods;
+
+    // 获取当前显示的标签页名称
+    NSString *selectTitle = self.listContainerArray[self.categoryView.selectedIndex];
+
+    // 清空所有
+    [self.listContainerArray removeAllObjects];
+
+    // 添加剩余的
+    [self.listContainerArray addObject:@"聊天"];
+
+    if (isOpenDoc) {
+        [self.listContainerArray addObject:@"文档"];
+    }
+
+    [self.listContainerArray addObject:@"简介"];
+
+    if (isHaveGoods) {
+        [self.listContainerArray addObject:@"商品"];
+    }
+    
+    if (isOpenQA) {
+        [self.listContainerArray addObject:self.questionName];
+    }
+
+    if (isOpenRecordChapter) {
+        [self.listContainerArray addObject:@"章节"];
+    }
+
+    if (isOpenVideoPoint) {
+        [self.listContainerArray addObject:@"精彩时刻"];
+    }
+    
+    if ((self.type == VHMovieActiveStateReplay || self.type == VHMovieActiveStatePlayBack) && self.recordList.count > 1) {
+        [self.listContainerArray addObject:@"精彩片段"];
+    }
+    
+    if (isOpenFileDownload) {
+        [self.listContainerArray addObject:self.fileDownloadName];
+    }
+
+    // 添加
+    self.categoryView.titles = self.listContainerArray;
+
+    // 刷新
+    [self.categoryView reloadData];
+
+    // 切换选中的标签页
+    BOOL isHave = [self.categoryView.titles containsObject:selectTitle];
+
+    if (isHave) {
+        [self.categoryView selectItemAtIndex:(int)[self.categoryView.titles indexOfObject:selectTitle]];
+    } else {
+        [self.categoryView selectItemAtIndex:0];
+    }
+
+    // 更多工具显示状态
+    [self foldBtnIsHidden];
+}
+
+#pragma mark - JMKWatchVideoViewDelegate
+#pragma mark 播放连接成功
+- (void)connectSucceed:(VHallMoviePlayer *)moviePlayer info:(NSDictionary *)info
+{
+
+    VHLog(@"JMKWatchVideoViewDelegate - 播放连接成功 ");
+    // 设置标题
+    self.title = [JMKUITool substringToIndex:8 text:moviePlayer.webinarInfo.webinarInfoData.webinar.subject isReplenish:YES];
+
+    // 连接消息,并加载数据
+//    [self.chatView requestDataWithVHObject:moviePlayer webinarInfoData:moviePlayer.webinarInfo.webinarInfoData];
+
+    // 初始化互动工具
+    [self initWithInteractiveTool];
+}
+
+#pragma mark 初始化互动工具
+- (void)initWithInteractiveTool
+{
+//    // 初始化简介
+//    self.introView.webinarInfoData = self.watchVideoView.moviePlayer.webinarInfo.webinarInfoData;
+//        
+//    // 精彩片段
+//    if (self.type == VHMovieActiveStateReplay || self.type == VHMovieActiveStatePlayBack) {
+//        self.recordListVC.record_id = self.watchVideoView.moviePlayer.webinarInfo.webinarInfoData.record.record_id;
+//        __weak __typeof(self)weakSelf = self;
+//        [VHWebinarBaseInfo getRecordListWithWebinarId:self.webinar_id pageNum:1 pageSize:10 complete:^(NSArray<VHRecordListModel *> *recordList, NSError *error) {
+//            weakSelf.recordList = recordList;
+//            [weakSelf roomWithIsOpenDoc:weakSelf.isOpenDoc isOpenQA:weakSelf.isOpenQA isOpenRecordChapter:weakSelf.isOpenRecordChapter isOpenVideoPoint:weakSelf.isOpenVideoPoint isOpenFileDownload:weakSelf.isOpenFileDownload isHaveGoods:self.isHaveGoods];
+//        }];
+//    }
+//
+//    // 初始化底部信息
+//    [self.bottomView requestObject:self.watchVideoView.moviePlayer webinarInfoData:self.watchVideoView.moviePlayer.webinarInfo.webinarInfoData];
+//
+//    // 初始化问答
+//    if (!_vhQAView) {
+//        self.vhQAView = [[VHQAView alloc] initQAWithFrame:self.view.frame obj:self.watchVideoView.moviePlayer webinarInfoData:self.watchVideoView.moviePlayer.webinarInfo.webinarInfoData];
+//        self.vhQAView.delegate = self;
+//    }
+//
+//    // 初始化章节
+//    if (self.watchVideoView.moviePlayer.webinarInfo.webinarInfoData.webinar.type == 4 || self.watchVideoView.moviePlayer.webinarInfo.webinarInfoData.webinar.type == 5) {
+//        if (!_recordChapterView) {
+//            self.recordChapterView = [[VHRecordChapter alloc] initRCWithFrame:self.view.frame webinarInfoData:self.watchVideoView.moviePlayer.webinarInfo.webinarInfoData];
+//            self.recordChapterView.delegate = self;
+//        }
+//    }
+//
+//    // 初始化问卷
+//    if (!_surveyListView) {
+//        self.surveyListView = [[VHSurveyListView alloc] initSurveyWithObject:self.watchVideoView.moviePlayer webinarInfoData:self.watchVideoView.moviePlayer.webinarInfo.webinarInfoData];
+//        self.surveyListView.delegate = self;
+//    }
+//
+//    // 初始化礼物
+//    if (!_giftObject) {
+//        self.giftObject = [[VHallGiftObject alloc] initWithObject:self.watchVideoView.moviePlayer];
+//        self.giftObject.delegate = self;
+//    }
+//
+//    // 初始化签到
+//    if (!_signInAlertView) {
+//        self.signInAlertView = [[VHSignInAlertView alloc] initSignWithFrame:self.view.frame obj:self.watchVideoView.moviePlayer webinarInfoData:self.watchVideoView.moviePlayer.webinarInfo.webinarInfoData];
+//        self.signInAlertView.delegate = self;
+//    }
+//
+//    // 初始化抽奖
+//    if (!_vhLottery) {
+//        self.vhLottery = [[VHLottery alloc] initLotteryWithObj:self.watchVideoView.moviePlayer webinarInfoData:self.watchVideoView.moviePlayer.webinarInfo.webinarInfoData];
+//        self.vhLottery.delegate = self;
+//    }
+//
+//    // 快问快答
+//    if (!_vhExam) {
+//        self.vhExam = [[VHExamObject alloc] initWithObject:self.watchVideoView.moviePlayer];
+//        self.vhExam.delegate = self;
+//    }
+//    
+//    // 推屏卡片
+//    if (!_pushScreenCardList) {
+//        self.pushScreenCardList = [[VHPushScreenCardList alloc] initWithFrame:self.view.bounds object:self.watchVideoView.moviePlayer];
+//        self.pushScreenCardList.delegate = self;
+//    }
+}
+
+#pragma mark 主持人显示/隐藏文档
+- (void)moviePlayer:(VHallMoviePlayer *)moviePlayer isHaveDocument:(BOOL)isHave isShowDocument:(BOOL)isShow
+{
+//    BOOL isOpen = isHave && isShow ? YES : NO;
+//
+//    // 判断是否显示
+//    [self roomWithIsOpenDoc:isOpen isOpenQA:self.isOpenQA isOpenRecordChapter:self.isOpenRecordChapter isOpenVideoPoint:self.isOpenVideoPoint isOpenFileDownload:self.isOpenFileDownload isHaveGoods:self.isHaveGoods];
+//    // 文档显示隐藏
+//    moviePlayer.documentView.hidden = !isOpen;
+//    // 赋值文档
+//    [self.docViewController addToDocumentView:moviePlayer.documentView];
+//
+//    // 全屏的话,需要切换为竖屏
+//    if (self.isFull && !isOpen) {
+//        [self docWithIsFull:NO];
+//    }
+}
+
+#pragma mark 直播文档同步，直播文档有延迟，指定需要延迟的秒数 （默认为直播缓冲时间，即：realityBufferTime/1000.0）
+- (NSTimeInterval)documentDelayTime:(VHallMoviePlayer *)moviePlayer
+{
+    return self.isLive ? moviePlayer.realityBufferTime / 1000.0 : 0;
+}
+
+#pragma mark 是否文档全屏
+- (void)fullWithSelect:(BOOL)isSelect
+{
+    [self docWithIsFull:isSelect];
+}
+
+#pragma mark 发布公告的回调
+- (void)moviePlayer:(VHallMoviePlayer *)moviePlayer announcementContentDidChange:(NSString *)content pushTime:(NSString *)pushTime duration:(NSInteger)duration
+{
+    // 刷新接口
+//    [self.announcementList loadDataRoomId:self.watchVideoView.moviePlayer.webinarInfo.webinarInfoData.interact.room_id isShow:NO];
+//
+//    // 显示公告
+//    [self.announcementView startAnimationWithContent:content pushTime:pushTime duration:duration view:self.listContainerView isFull:self.isFull];
+}
+
+#pragma mark 返回视频打点数据（若存在打点信息）
+- (void)moviePlayer:(VHallMoviePlayer *)moviePlayer videoPointArr:(NSArray <VHVidoePointModel *> *)pointArr
+{
+//    self.videoPointView = [[VHVideoPointView alloc] initVPWithFrame:self.view.frame videoPointArr:pointArr];
+//    self.videoPointView.delegate = self;
+//    // 判断是否显示
+//    [self roomWithIsOpenDoc:self.isOpenDoc isOpenQA:self.isOpenQA isOpenRecordChapter:self.isOpenRecordChapter isOpenVideoPoint:pointArr.count > 0 ? YES : NO isOpenFileDownload:self.isOpenFileDownload isHaveGoods:self.isHaveGoods];
+}
+
+#pragma mark - 互动
+#pragma mark 当前活动是否允许举手申请上麦回调
+- (void)moviePlayer:(VHallMoviePlayer *)moviePlayer isInteractiveActivity:(BOOL)isInteractive interactivePermission:(VHInteractiveState)state
+{
+    // 收起弹窗
+//    [self.inavApplyAlertView stopOrDismiss];
+//    // 是否允许举手
+//    [self.bottomView isInteractiveActivity:isInteractive interactivePermission:state];
+}
+
+#pragma mark 主持人是否同意上麦申请回调
+- (void)moviePlayer:(VHallMoviePlayer *)moviePlayer microInvitationWithAttributes:(NSDictionary *)attributes error:(NSError *)error
+{
+//    if (!error) {
+//        // 收起控件
+//        [self.inavApplyAlertView stopOrDismiss];
+//        // 主持人同意上麦申请,使用互动
+//        [self changePlayerIsLive:NO];
+//    } else {
+//        [VHProgressHud showToast:error.localizedDescription];
+//    }
+}
+
+#pragma mark 被主持人邀请上麦
+- (void)moviePlayer:(VHallMoviePlayer *)moviePlayer microInvitation:(NSDictionary *)attributes
+{
+//    int afterTime = (self.isDocFull || self.isVideoFull) ? 0.5 : 0;
+//
+//    // 判断如果当前文档是横屏则需要旋转
+//    if (self.isDocFull) {
+//        [self.docViewController quitFull];
+//    }
+//
+//    // 判断如果当前播放器是横屏则需要旋转
+//    if (self.isVideoFull) {
+//        [self.watchVideoView quitFull];
+//    }
+//
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(afterTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{     // 去观看弹窗
+//        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"邀请您上麦，是否同意？" preferredStyle:UIAlertControllerStyleAlert];
+//        UIAlertAction *refuseAction = [UIAlertAction actionWithTitle:@"拒绝"
+//                                                               style:UIAlertActionStyleDefault
+//                                                             handler:^(UIAlertAction *_Nonnull action) {
+//            // 拒绝上麦
+//            [self replyInvitationWithType:NO];
+//        }];
+//        UIAlertAction *agreeAction = [UIAlertAction actionWithTitle:@"同意"
+//                                                              style:UIAlertActionStyleDefault
+//                                                            handler:^(UIAlertAction *_Nonnull action) {
+//            // 判断权限
+//            __weak __typeof(self) weakSelf = self;
+//            [VHPrivacyManager getMediaAccess:^(BOOL videoAccess, BOOL audioAcess) {
+//                if (videoAccess && audioAcess) {
+//                    // 同意上麦,使用互动
+//                    [weakSelf replyInvitationWithType:YES];
+//                    [weakSelf changePlayerIsLive:NO];
+//                } else {
+//                    [VHProgressHud showToast:@"请开启麦克风和摄像头权限"];
+//                    // 拒绝上麦
+//                    [weakSelf replyInvitationWithType:NO];
+//                }
+//            }];
+//        }];
+//        agreeAction.accessibilityLabel = VHTests_Inav_AgreeInav;
+//        [agreeAction setValue:VHMainColor forKey:@"titleTextColor"];
+//        [alertController addAction:refuseAction];
+//        [alertController addAction:agreeAction];
+//        [self presentViewController:alertController
+//                           animated:YES
+//                         completion:^{
+//            // 自动化测试,邀请上麦
+//            [VUITool sendTestsNotificationCenterWithKey:VHTests_NC_MicroInvitation
+//                                              otherInfo:nil];
+//        }];
+//    });
+}
+
+#pragma mark 收到邀请后是否同意上麦
+- (void)replyInvitationWithType:(BOOL)isAgree
+{
+//    if (isAgree) {
+//        // 显示连麦按钮
+//        [self.bottomView isInteractiveActivity:YES interactivePermission:VHInteractiveStateHave];
+//    }
+//
+//    [self.watchVideoView.moviePlayer replyInvitationWithType:isAgree ? 1 : 2 finish:^(NSError *error) { if (error) { [VHProgressHud showToast:error.localizedDescription]; } }];
+}
+
+#pragma mark 屏幕旋转
+- (void)clickFullIsSelect:(BOOL)isSelect
+{
+    // 只有直播可以切换横竖屏
+    
+    
+    
+    if (self.isLive) {
+        // 切换全屏 横竖屏刷新布局
+        [self screenChangeWithIsFull:isSelect];
+    }
+}
+
+#pragma mark 直播已结束回调
+- (void)liveDidStoped:(VHallMoviePlayer *)moviePlayer
+{
+    if (self.type == VHMovieActiveStateLive) {
+        [self clickLeftBarItem];
+    }
+}
+
+#pragma mark 被踢出
+- (void)moviePlayer:(VHallMoviePlayer *)moviePlayer isKickout:(BOOL)isKickout
+{
+    [self clickLeftBarItem];
+}
+
+#pragma mark - VHInavViewDelegate
+#pragma mark 下麦
+- (void)unApplyAction
+{
+    // 播放直播或回放
+    [self changePlayerIsLive:YES];
+}
+
+#pragma mark 退出互动
+- (void)errorLeaveInav
+{
+    // 播放直播或回放
+    [self changePlayerIsLive:YES];
+}
+
+#pragma mark 被踢出
+- (void)isKickout:(BOOL)isKickout
+{
+    [self clickLeftBarItem];
+}
+
+#pragma mark 退出房间
+- (void)leaveRoom
+{
+    [self clickLeftBarItem];
+}
+
+#pragma mark - VHChatViewDelegate
+#pragma mark 收到上下线消息
+- (void)reciveOnlineMsg:(NSArray <VHallOnlineStateModel *> *)msgs
+{
+//    [self.watchVideoView reciveOnlineMsg:msgs];
+}
+
+#pragma mark 收到自己被禁言/取消禁言
+- (void)forbidChat:(BOOL)forbidChat
+{
+//    [self.bottomView forbidChat:forbidChat];
+}
+
+#pragma mark 收到全体禁言/取消全体禁言
+- (void)allForbidChat:(BOOL)allForbidChat
+{
+//    [self.bottomView allForbidChat:allForbidChat];
+}
+
+#pragma mark 问答状态
+- (void)isQaStatus:(BOOL)isQaStatus
+{
+//    [self.bottomView isQaStatus:isQaStatus];
+}
+
+#pragma mark 收到虚拟人数消息
+- (void)vhBaseNumUpdateToUpdate_online_num:(NSInteger)update_online_num
+                                 update_pv:(NSInteger)update_pv
+{
+//    [self.watchVideoView vhBaseNumUpdateToUpdate_online_num:update_online_num update_pv:update_pv];
+}
+
+#pragma mark 点击查看中奖名单
+- (void)clickCheckWinListWithEndLotteryModel:(VHallEndLotteryModel *)endLotteryModel
+{
+//    [self.vhLottery clickCheckWinListWithEndLotteryModel:endLotteryModel];
+}
+
+#pragma mark 点击消息上的查看推屏卡片
+- (void)clickCheckPushScreenCardModel:(VHPushScreenCardItem *)model
+{
+//    [self.pushScreenCardList showPushScreenCard:model];
+}
+
+#pragma mark - VHWatchLiveBottomViewDelegate
+#pragma mark 发送消息
+- (void)sendText:(NSString *)text
+{
+    NSString *title = self.listContainerArray[self.categoryView.selectedIndex];
+
+//    if ([title isEqualToString:self.questionName]) {
+//        [self.vhQAView sendQAMsg:text];
+//    } else {
+//        [self.chatView sendText:text];
+//    }
+}
+
+#pragma mark 点击礼物回调
+- (void)clickGift
+{
+    [self.view addSubview:self.giftListView];
+    [self.giftListView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(self.view);
+    }];
+//    [self.giftListView showGiftToWebinarInfoData:self.watchVideoView.moviePlayer.webinarInfo.webinarInfoData];
+}
+
+#pragma mark 点击参与互动连麦
+- (void)clickInav
+{
+//    if (self.isLive) {
+//        [self.inavApplyAlertView show];
+//    } else {
+//        [self.inavView clickInavRenderAlertViewIsShow:YES];
+//    }
+}
+
+#pragma mark 是否开启了回放章节
+- (void)watchRecordChapterIsOpen:(BOOL)isOpen
+{
+    // 判断是否显示
+    [self roomWithIsOpenDoc:self.isOpenDoc isOpenQA:self.isOpenQA isOpenRecordChapter:isOpen isOpenVideoPoint:self.isOpenVideoPoint isOpenFileDownload:self.isOpenFileDownload isHaveGoods:self.isHaveGoods];
+}
+
+#pragma mark - VHQAViewDelegate
+#pragma mark 问答是否打开
+- (void)vhQAIsOpen:(BOOL)isOpen
+{
+//    self.questionName = [VUITool isBlankString:self.vhQAView.vhQA.question_name] ? @"问答" : self.vhQAView.vhQA.question_name;
+//
+//    [self roomWithIsOpenDoc:self.isOpenDoc isOpenQA:isOpen isOpenRecordChapter:self.isOpenRecordChapter isOpenVideoPoint:self.isOpenVideoPoint isOpenFileDownload:self.isOpenFileDownload isHaveGoods:self.isHaveGoods];
+//
+//    // 自定义消息
+//    [self.chatView chatCustomWithNickName:[VUITool isBlankString:self.watchVideoView.moviePlayer.webinarInfo.author_nickname] ? @"主持人" : self.watchVideoView.moviePlayer.webinarInfo.author_nickname roleName:1 content:[NSString stringWithFormat:@"%@了问答", isOpen ? @"开启" : @"关闭"] info:nil];
+}
+
+#pragma mark 当前是否开启问答功能
+- (void)moviePlayer:(VHallMoviePlayer *)moviePlayer isQuestion_status:(BOOL)isQuestion_status question_name:(NSString *)questionName
+{
+//    self.questionName = [VUITool isBlankString:questionName] ? @"问答" : questionName;
+//
+//    [self roomWithIsOpenDoc:self.isOpenDoc isOpenQA:isQuestion_status isOpenRecordChapter:self.isOpenRecordChapter isOpenVideoPoint:self.isOpenVideoPoint isOpenFileDownload:self.isOpenFileDownload isHaveGoods:self.isHaveGoods];
+}
+
+#pragma mark - VHRecordChapterDelegate
+#pragma mark 点击章节
+- (void)clickChapterItemCreateAt:(CGFloat)createAt
+{
+//    self.watchVideoView.moviePlayer.currentPlaybackTime = createAt;
+}
+
+#pragma mark - VHVideoPointViewDelegate
+#pragma mark 点击视频打点
+- (void)clickVideoPointTime:(NSInteger)time
+{
+//    self.watchVideoView.moviePlayer.currentPlaybackTime = time;
+}
+
+#pragma mark - VHRecordListDelegate
+#pragma mark 选择指定回放视频
+- (void)selectPlaybackVideoWithRecordId:(NSString *)recordId {
+    // 先隐藏
+//    [self roomWithIsOpenDoc:self.isOpenDoc isOpenQA:self.isOpenQA isOpenRecordChapter:self.isOpenRecordChapter isOpenVideoPoint:NO isOpenFileDownload:self.isOpenFileDownload isHaveGoods:self.isHaveGoods];
+//    
+//    // 先移除
+//    [self.videoPointView removeFromSuperview];
+//    self.videoPointView = nil;
+//    
+//    // 播放新的
+//    [self.watchVideoView startPlayBackWithRecordId:recordId];
+}
+
+#pragma mark - 当前是否开启文件下载功能
+- (void)moviePlayer:(VHallMoviePlayer *)moviePlayer is_file_download:(BOOL)is_file_download file_download_menu:(VHallPlayMenuModel *)file_download_menu
+{
+//    self.fileDownloadName = file_download_menu.name;
+//    
+//    // 是否显示
+//    [self roomWithIsOpenDoc:self.isOpenDoc isOpenQA:self.isOpenQA isOpenRecordChapter:self.isOpenRecordChapter isOpenVideoPoint:NO isOpenFileDownload:is_file_download isHaveGoods:self.isHaveGoods];
+//
+//    // 显示则请求列表
+//    if (is_file_download) {
+//        [self.fileDownloadVC getFileDownloadListWithWebinarId:self.watchVideoView.moviePlayer.webinarInfo.webinarId file_download_menu_id:file_download_menu.ID];
+//    }
+}
+
+#pragma mark 更新文件下载列表
+- (void)uploadFileDownLoadWithModel:(VHFileDownLoadUploadModel *)model {
+    
+    self.fileDownloadName = model.name;
+
+    // 判断是否显示
+    [self roomWithIsOpenDoc:self.isOpenDoc isOpenQA:self.isOpenQA isOpenRecordChapter:self.isOpenRecordChapter isOpenVideoPoint:self.isOpenVideoPoint isOpenFileDownload:model.status == 1 ? YES : NO isHaveGoods:self.isHaveGoods];
+    
+//    if (model.status == 1) {
+//        [self.fileDownloadVC getFileDownloadListWithWebinarId:self.watchVideoView.moviePlayer.webinarInfo.webinarId file_download_menu_id:model.menu_id];
+//    }
+}
+
+#pragma mark - VHallGiftObjectDelegate
+#pragma mark 收到礼物
+- (void)vhGifttoModel:(VHallGiftModel *)model
+{
+    // 给聊天模块增加数据
+//    [self.chatView vhGifttoModel:model];
+}
+
+#pragma mark - VHSignInAlertViewDelegate
+#pragma mark 收到主持人发起签到消息
+- (void)startSign
+{
+    // 自定义消息
+//    [self.chatView chatCustomWithNickName:[VUITool isBlankString:self.watchVideoView.moviePlayer.webinarInfo.author_nickname] ? @"主持人" : self.watchVideoView.moviePlayer.webinarInfo.author_nickname roleName:1 content:@"发起了签到" info:nil];
+}
+
+#pragma mark - VHSurveyObjectDelegate
+#pragma mark 收到问卷
+- (void)receivedSurveyWithURL:(NSURL *)surveyURL surveyId:(NSString *)surveyId
+{
+    // 刷新列表
+//    [self.surveyListView showSurveyIsShow:NO];
+//    // 自定义消息
+//    NSMutableDictionary *info = [NSMutableDictionary dictionaryWithDictionary:@{ @"surveyURL": surveyURL, @"surveyId": surveyId }];
+//    [self.chatView chatCustomWithNickName:[VUITool isBlankString:self.watchVideoView.moviePlayer.webinarInfo.author_nickname] ? @"主持人" : self.watchVideoView.moviePlayer.webinarInfo.author_nickname roleName:1 content:@"发起了问卷" info:info];
+}
+
+#pragma mark 点击问卷
+- (void)clickSurveyToId:(NSString *)surveyId surveyURL:(NSURL *)surveyURL
+{
+//    [self.surveyListView clickSurveyToId:surveyId surveyURL:surveyURL];
+}
+
+#pragma mark - VHLotteryDelegate
+#pragma mark 抽奖开始
+- (void)startLottery:(VHallStartLotteryModel *)msg
+{
+//    [self.chatView chatLotteryWithStartModel:msg endModel:nil];
+}
+
+#pragma mark 抽奖结束
+- (void)endLottery:(VHallEndLotteryModel *)msg
+{
+//    [self.chatView chatLotteryWithStartModel:nil endModel:msg];
+}
+
+#pragma mark - VHExamObjectDelegate
+#pragma mark 收到快问快答消息
+- (void)paperSendMessage:(VHMessage *)message examWebUrl:(NSURL *)examWebUrl
+{
+    if ([[UIApplication sharedApplication] canOpenURL:examWebUrl]) {
+        NSDictionary *options = @{
+                UIApplicationOpenURLOptionUniversalLinksOnly: @NO
+        };
+        [[UIApplication sharedApplication] openURL:examWebUrl options:options completionHandler:nil];
+    }
+}
+
+#pragma mark - VHPushScreenCardListDelegate
+#pragma mark 推屏卡片消息
+- (void)pushScreenCardModel:(VHPushScreenCardItem *)model
+{
+//    [self.chatView chatPushScreenCardModel:model];
+}
+
+#pragma mark - 直播和互动播放器切换
+- (void)changePlayerIsLive:(BOOL)isLive
+{
+    // 如果状态重复不需要二次执行了
+    if (self.isLive == isLive) {
+        return;
+    }
+
+    // 刷新状态
+    self.isLive = isLive;
+    // 显隐
+//    _bottomView.isLive = isLive;
+
+    if (isLive) {
+        // 销毁互动
+        if (_inavView) {
+//            [_inavView destroyMP];
+            _inavView = nil;
+        }
+
+        // 布局
+        [self.view addSubview:self.watchVideoView];
+        [self.view insertSubview:_watchVideoView atIndex:0];
+        [_watchVideoView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.top.right.mas_equalTo(0);
+            make.height.mas_equalTo((Screen_Width < Screen_Height ? Screen_Width : Screen_Height) * 9 / 16);
+        }];
+
+        [self.categoryView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.watchVideoView.mas_bottom);
+        }];
+        // 观看直播
+        [_watchVideoView reconnectPlay];
+    } else {
+        // 销毁直播
+        [_watchVideoView stopPlay];
+        // 布局
+        [self.view addSubview:self.inavView];
+        [self.view insertSubview:_inavView atIndex:0];
+        [_inavView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.top.right.mas_equalTo(0);
+            make.height.mas_equalTo((Screen_Width < Screen_Height ? Screen_Width : Screen_Height) * 9 / 16);
+        }];
+
+        [self.categoryView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.inavView.mas_bottom);
+        }];
+        // 参与互动
+//        [_inavView enterRoomWithWebinarId:self.webinar_id];
+    }
+
+    _watchVideoView.hidden = !isLive;
+    _inavView.hidden = isLive;
+
+    // 强制竖屏
+    [self clickFullIsSelect:NO];
+}
+
+#pragma mark - 屏幕旋转
+- (void)screenChangeWithIsFull:(BOOL)isFull
+{
+//     状态一致不需要在执行
+    if (self.isVideoFull == isFull) {
+        return;
+    }
+
+    // 记录状态
+    self.isVideoFull = isFull;
+
+    // 旋转
+    [self vcWithIsFull:isFull];
+
+    // 更多工具显示状态
+    [self foldBtnIsHidden];
+
+    // 调整播放器
+    if (isFull) {
+        [_watchVideoView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.top.right.bottom.mas_equalTo(0);
+        }];
+    } else {
+        [_watchVideoView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.top.right.mas_equalTo(0);
+            make.height.mas_equalTo((Screen_Width < Screen_Height ? Screen_Width : Screen_Height) * 9 / 16);
+        }];
+    }
+}
+
+#pragma mark - 文档全屏
+- (void)docWithIsFull:(BOOL)isFull
+{
+    // 状态一致不需要在执行
+    if (self.isDocFull == isFull) {
+        return;
+    }
+
+    // 记录文档状态
+    self.isDocFull = isFull;
+
+    // 旋转
+    [self vcWithIsFull:isFull];
+
+    // 隐藏公告
+    self.announcementView.hidden = isFull;
+
+    // 调整播放器
+    if (isFull) {
+        [_watchVideoView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.top.mas_equalTo(0);
+            make.size.mas_equalTo(0);
+        }];
+        [_inavView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.top.mas_equalTo(0);
+            make.size.mas_equalTo(0);
+        }];
+        [_categoryView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.top.mas_equalTo(0);
+            make.size.mas_equalTo(0);
+        }];
+    } else {
+        [_watchVideoView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.top.right.mas_equalTo(0);
+            make.height.mas_equalTo((Screen_Width < Screen_Height ? Screen_Width : Screen_Height) * 9 / 16);
+        }];
+        [_inavView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.top.right.mas_equalTo(0);
+            make.height.mas_equalTo((Screen_Width < Screen_Height ? Screen_Width : Screen_Height) * 9 / 16);
+        }];
+        [_categoryView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(_watchVideoView.mas_bottom);
+            make.left.right.mas_equalTo(0);
+            make.height.mas_equalTo(40);
+        }];
+    }
+}
+
+#pragma mark - 全屏
+- (void)vcWithIsFull:(BOOL)isFull
+{
+    // 状态一致不需要在执行
+    if (self.isFull == isFull) {
+        return;
+    }
+
+    // 全屏状态
+    self.isFull = isFull;
+
+    AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+
+    if (isFull) {
+        // 全屏操作
+        appdelegate.launchScreen = YES;
+    } else {
+        // 退出全屏操作
+        appdelegate.launchScreen = NO;
+    }
+
+    if (@available(iOS 16.0, *)) {
+        [self setNeedsUpdateOfSupportedInterfaceOrientations];
+        NSArray *array = [[[UIApplication sharedApplication] connectedScenes] allObjects];
+        UIWindowScene *scene = [array firstObject];
+        UIInterfaceOrientationMask orientation = isFull ? UIInterfaceOrientationMaskLandscapeRight : UIInterfaceOrientationMaskPortrait;
+        UIWindowSceneGeometryPreferencesIOS *geometryPreferencesIOS = [[UIWindowSceneGeometryPreferencesIOS alloc] initWithInterfaceOrientations:orientation];
+        [scene requestGeometryUpdateWithPreferences:geometryPreferencesIOS
+                                       errorHandler:^(NSError *_Nonnull error) {
+            VHLog(@"强制%@错误:%@", isFull ? @"横屏" : @"竖屏", error);
+        }];
+    } else {
+        UIInterfaceOrientation interfaceOrientation =  isFull ? UIInterfaceOrientationLandscapeRight : UIInterfaceOrientationPortrait;
+        NSNumber *orientationTarget = [NSNumber numberWithInteger:interfaceOrientation];
+        [[UIDevice currentDevice] setValue:orientationTarget forKey:@"orientation"];
+    }
+
+    [self.navigationController.navigationBar setBackgroundImage:isFull ? nil : [UIImage imageWithColor:JMKMainColor] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:isFull ? nil : [UIImage imageWithColor:JMKMainColor]];
+    [self.navigationController setNavigationBarHidden:isFull animated:NO];
+}
+
+#pragma mark - 前台
+- (void)appWillEnterForeground
+{
+    [super appWillEnterForeground];
+
+//    // 如果是互动状态且当前停止推流了,则恢复旁路
+//    if (!self.isLive && !_inavView.inavRoom.isPublishing) {
+//        [self changePlayerIsLive:YES];
+//    }
+}
+
+#pragma mark - 后台
+- (void)appDidEnterBackground
+{
+    [super appDidEnterBackground];
+}
+
+#pragma mark - 点击返回
+- (void)clickLeftBarItem
+{
+//    // 销毁互动
+//    if (_inavView) {
+//        [_inavView destroyMP];
+//        _inavView = nil;
+//    }
+//
+//    // 销毁直播
+//    if (_watchVideoView) {
+//        [_watchVideoView destroyMP];
+//        _watchVideoView = nil;
+//    }
+//    
+    // 返回上级
+    [super clickLeftBarItem];
+}
 
 #pragma mark - 懒加载
 - (JXCategoryTitleView *)categoryView
@@ -294,7 +1095,7 @@
 //        }
 //
         _foldBtn = [[JMKFoldButton alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
-//        _foldBtn.hidden = YES;
+        _foldBtn.hidden = YES;
 //        _foldBtn.foldButton.accessibilityLabel = VHTests_Fold_ClickBtn;
         [self.view addSubview:_foldBtn];
 //
@@ -334,15 +1135,87 @@
 
     return _foldBtn;
 }
+
+#pragma mark - 更多工具显示状态
+- (void)foldBtnIsHidden
+{
+    NSString *title = self.listContainerArray[self.categoryView.selectedIndex];
+
+    // v6.16.0 因为要测试回放问卷,所以修改为回放也可以操作更多功能
+    if (!self.isFull) {
+        self.foldBtn.hidden = ![title isEqualToString:@"聊天"];
+    } else {
+        self.foldBtn.hidden = YES;
+    }
+}
+
+
 - (JMKWatchVideoView *)watchVideoView
 {
     if (!_watchVideoView) {
         _watchVideoView = [[JMKWatchVideoView alloc] initWithWebinarId:self.webinar_id type:self.type];
-//        _watchVideoView.delegate = self;
+        _watchVideoView.delegate = self;
         [self.view addSubview:_watchVideoView];
     }
     return _watchVideoView;
 }
+
+- (JMKInavView *)inavView
+{
+    if (!_inavView) {
+        _inavView = [[JMKInavView alloc] init];
+//        _inavView.delegate = self;
+        _inavView.hidden = YES;
+        [self.view addSubview:_inavView];
+    }
+    return _inavView;
+}
+
+- (JMKChatView *)chatView
+{
+    if (!_chatView) {
+        _chatView = [[JMKChatView alloc] init];
+//        _chatView.delegate = self;
+    }
+    return _chatView;
+}
+
+- (JMKDocViewController *)docViewController
+{
+    if (!_docViewController) {
+        _docViewController = [[JMKDocViewController alloc] init];
+//        _docViewController.delegate = self;
+    }
+    return _docViewController;
+}
+
+- (JMKIntroView *)introView
+{
+    if (!_introView) {
+        _introView = [[JMKIntroView alloc] init];
+    }
+    return _introView;
+}
+
+- (JMKRecordListViewController *)recordListVC
+{
+    if (!_recordListVC) {
+        _recordListVC = [[JMKRecordListViewController alloc] init];
+//        _recordListVC.delegate = self;
+//        _recordListVC.webinar_id = self.webinar_id;
+    }
+    return _recordListVC;
+}
+
+- (JMKFileDownloadViewController *)fileDownloadVC
+{
+    if (!_fileDownloadVC) {
+        _fileDownloadVC = [[JMKFileDownloadViewController alloc] init];
+//        _fileDownloadVC.delegate = self;
+    }
+    return _fileDownloadVC;
+}
+
 
 - (JMKWatchLiveBottomView *)bottomView
 {
@@ -355,5 +1228,53 @@
 
     return _bottomView;
 }
+
+
+- (JMKFashionStyleGiftListView *)giftListView
+{
+    if (!_giftListView) {
+        _giftListView = [JMKFashionStyleGiftListView new];
+        [self.view addSubview:_giftListView];
+    }
+    return _giftListView;
+}
+
+- (JMKAnnouncementList *)announcementList
+{
+    if (!_announcementList) {
+        _announcementList = [[JMKAnnouncementList alloc] initWithFrame:self.view.frame];
+    }
+    return _announcementList;
+}
+
+- (JMKAnnouncementView *)announcementView
+{
+    if (!_announcementView) {
+        _announcementView = [[JMKAnnouncementView alloc]initWithFrame:CGRectMake(0, 0, Screen_Width, 40)];
+        _announcementView.accessibilityLabel = VHTests_Announcement_Show;
+    }
+    return _announcementView;
+}
+
+- (JMKInavApplyAlertView *)inavApplyAlertView
+{
+    if (!_inavApplyAlertView) {
+        _inavApplyAlertView = [[JMKInavApplyAlertView alloc] initWithFrame:self.view.frame];
+//        _inavApplyAlertView.moviePlayer = self.watchVideoView.moviePlayer;
+        [self.view addSubview:_inavApplyAlertView];
+        [_inavApplyAlertView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.top.right.bottom.mas_equalTo(0);
+        }];
+    }
+    return _inavApplyAlertView;
+}
+
+#pragma mark - 释放
+- (void)dealloc
+{
+    VHLog(@"%s释放", [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String]);
+}
+
+
 
 @end

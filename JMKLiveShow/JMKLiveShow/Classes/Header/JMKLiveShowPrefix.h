@@ -21,17 +21,20 @@
 
 // 视图
 #import "JMKAuthAlertView.h"
+#import "JMKBaseView.h"
 
 
-
+//控制器
 #import "JMKHomeViewController.h"
 #import "JMKWatchLiveViewController.h"
 #import "JMKWarmUpViewController.h"
+#import "JMKDocViewController.h"
 
 
 
 
 
+//工具类
 #import "JMKStystemSetting.h"
 #import "JMKWebinarBaseInfo.h"
 

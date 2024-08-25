@@ -9,6 +9,24 @@
 /* Begin PBXBuildFile section */
 		0BEB80B7B6203ABA55E1C145 /* Pods_JMKLiveShow_JMKLiveShowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4180FA0A05C015EA56702BC0 /* Pods_JMKLiveShow_JMKLiveShowUITests.framework */; };
 		195C5C68D6BD2932F2974E1A /* Pods_JMKLiveShowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181C95884C7A77B0DCBD2E09 /* Pods_JMKLiveShowTests.framework */; };
+		4E572F7C2C7B99500061E6C1 /* JMKInavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572F7B2C7B99500061E6C1 /* JMKInavView.m */; };
+		4E572F7F2C7B9A300061E6C1 /* JMKChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572F7E2C7B9A300061E6C1 /* JMKChatView.m */; };
+		4E572F832C7B9AE30061E6C1 /* JMKBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572F822C7B9AE30061E6C1 /* JMKBaseView.m */; };
+		4E572F872C7B9B710061E6C1 /* JMKDocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572F862C7B9B710061E6C1 /* JMKDocViewController.m */; };
+		4E572F8A2C7B9BB60061E6C1 /* JMKQAView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572F892C7B9BB60061E6C1 /* JMKQAView.m */; };
+		4E572F8D2C7B9BD80061E6C1 /* JMKIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572F8C2C7B9BD80061E6C1 /* JMKIntroView.m */; };
+		4E572F902C7B9C120061E6C1 /* JMKVideoPointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572F8F2C7B9C120061E6C1 /* JMKVideoPointView.m */; };
+		4E572F932C7B9C360061E6C1 /* JMKRecordChapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572F922C7B9C360061E6C1 /* JMKRecordChapter.m */; };
+		4E572F972C7B9C600061E6C1 /* JMKRecordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572F962C7B9C600061E6C1 /* JMKRecordListViewController.m */; };
+		4E572F9B2C7B9D430061E6C1 /* JMKFileDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572F9A2C7B9D430061E6C1 /* JMKFileDownloadViewController.m */; };
+		4E572F9E2C7B9D870061E6C1 /* JMKFashionStyleGiftListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572F9D2C7B9D870061E6C1 /* JMKFashionStyleGiftListView.m */; };
+		4E572FA12C7B9DA30061E6C1 /* JMKSurveyListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572FA02C7B9DA30061E6C1 /* JMKSurveyListView.m */; };
+		4E572FA42C7B9DC70061E6C1 /* JMKAnnouncementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572FA32C7B9DC70061E6C1 /* JMKAnnouncementView.m */; };
+		4E572FA72C7B9DF50061E6C1 /* JMKAnnouncementList.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572FA62C7B9DF50061E6C1 /* JMKAnnouncementList.m */; };
+		4E572FAA2C7B9E190061E6C1 /* JMKPushScreenCardList.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572FA92C7B9E190061E6C1 /* JMKPushScreenCardList.m */; };
+		4E572FAD2C7B9E2A0061E6C1 /* JMKInavApplyAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572FAC2C7B9E2A0061E6C1 /* JMKInavApplyAlertView.m */; };
+		4E572FB02C7B9E5D0061E6C1 /* JMKSignInAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572FAF2C7B9E5D0061E6C1 /* JMKSignInAlertView.m */; };
+		4E572FB32C7B9E8E0061E6C1 /* JMKLottery.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572FB22C7B9E8E0061E6C1 /* JMKLottery.m */; };
 		4E6116E02C7901480059810D /* JMKProgressHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6116DF2C7901480059810D /* JMKProgressHud.m */; };
 		4E6116E32C7901C60059810D /* JMKHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6116E22C7901C60059810D /* JMKHomeViewController.m */; };
 		4E6116E52C7904BC0059810D /* JMKHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E6116E42C7904BC0059810D /* JMKHomeViewController.xib */; };
@@ -19,6 +37,7 @@
 		4E6116F72C790D730059810D /* JMKWarmUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6116F62C790D730059810D /* JMKWarmUpViewController.m */; };
 		4E6116FB2C790DB60059810D /* JMKWarmUpStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6116FA2C790DB60059810D /* JMKWarmUpStartView.m */; };
 		4E6116FE2C790FC10059810D /* UIView+ITTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6116FD2C790FC10059810D /* UIView+ITTAdditions.m */; };
+		4E98BD8F2C7BB27600352B43 /* JMKDanmu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E98BD8E2C7BB27600352B43 /* JMKDanmu.m */; };
 		4EAC5C602C7950740098834D /* JMKWebinarBaseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC5C5F2C7950740098834D /* JMKWebinarBaseInfo.m */; };
 		4EAC5C662C7B56780098834D /* JMKDefiniteionsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC5C652C7B56780098834D /* JMKDefiniteionsViewModel.m */; };
 		4EAC5C6A2C7B585A0098834D /* JMKWatchVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC5C692C7B585A0098834D /* JMKWatchVideoView.m */; };
@@ -66,6 +85,42 @@
 		277266BF325032AB01A6947E /* Pods_JMKLiveShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMKLiveShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4077A3A145365D8BC7979BEC /* Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig"; path = "Target Support Files/Pods-JMKLiveShow-JMKLiveShowUITests/Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4180FA0A05C015EA56702BC0 /* Pods_JMKLiveShow_JMKLiveShowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMKLiveShow_JMKLiveShowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E572F7A2C7B99500061E6C1 /* JMKInavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKInavView.h; sourceTree = "<group>"; };
+		4E572F7B2C7B99500061E6C1 /* JMKInavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKInavView.m; sourceTree = "<group>"; };
+		4E572F7D2C7B9A300061E6C1 /* JMKChatView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKChatView.h; sourceTree = "<group>"; };
+		4E572F7E2C7B9A300061E6C1 /* JMKChatView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKChatView.m; sourceTree = "<group>"; };
+		4E572F812C7B9AE30061E6C1 /* JMKBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKBaseView.h; sourceTree = "<group>"; };
+		4E572F822C7B9AE30061E6C1 /* JMKBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKBaseView.m; sourceTree = "<group>"; };
+		4E572F852C7B9B710061E6C1 /* JMKDocViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKDocViewController.h; sourceTree = "<group>"; };
+		4E572F862C7B9B710061E6C1 /* JMKDocViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKDocViewController.m; sourceTree = "<group>"; };
+		4E572F882C7B9BB60061E6C1 /* JMKQAView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKQAView.h; sourceTree = "<group>"; };
+		4E572F892C7B9BB60061E6C1 /* JMKQAView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKQAView.m; sourceTree = "<group>"; };
+		4E572F8B2C7B9BD80061E6C1 /* JMKIntroView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKIntroView.h; sourceTree = "<group>"; };
+		4E572F8C2C7B9BD80061E6C1 /* JMKIntroView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKIntroView.m; sourceTree = "<group>"; };
+		4E572F8E2C7B9C120061E6C1 /* JMKVideoPointView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKVideoPointView.h; sourceTree = "<group>"; };
+		4E572F8F2C7B9C120061E6C1 /* JMKVideoPointView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKVideoPointView.m; sourceTree = "<group>"; };
+		4E572F912C7B9C360061E6C1 /* JMKRecordChapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKRecordChapter.h; sourceTree = "<group>"; };
+		4E572F922C7B9C360061E6C1 /* JMKRecordChapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKRecordChapter.m; sourceTree = "<group>"; };
+		4E572F952C7B9C600061E6C1 /* JMKRecordListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKRecordListViewController.h; sourceTree = "<group>"; };
+		4E572F962C7B9C600061E6C1 /* JMKRecordListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKRecordListViewController.m; sourceTree = "<group>"; };
+		4E572F992C7B9D430061E6C1 /* JMKFileDownloadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKFileDownloadViewController.h; sourceTree = "<group>"; };
+		4E572F9A2C7B9D430061E6C1 /* JMKFileDownloadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKFileDownloadViewController.m; sourceTree = "<group>"; };
+		4E572F9C2C7B9D870061E6C1 /* JMKFashionStyleGiftListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKFashionStyleGiftListView.h; sourceTree = "<group>"; };
+		4E572F9D2C7B9D870061E6C1 /* JMKFashionStyleGiftListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKFashionStyleGiftListView.m; sourceTree = "<group>"; };
+		4E572F9F2C7B9DA30061E6C1 /* JMKSurveyListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKSurveyListView.h; sourceTree = "<group>"; };
+		4E572FA02C7B9DA30061E6C1 /* JMKSurveyListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKSurveyListView.m; sourceTree = "<group>"; };
+		4E572FA22C7B9DC70061E6C1 /* JMKAnnouncementView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKAnnouncementView.h; sourceTree = "<group>"; };
+		4E572FA32C7B9DC70061E6C1 /* JMKAnnouncementView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKAnnouncementView.m; sourceTree = "<group>"; };
+		4E572FA52C7B9DF50061E6C1 /* JMKAnnouncementList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKAnnouncementList.h; sourceTree = "<group>"; };
+		4E572FA62C7B9DF50061E6C1 /* JMKAnnouncementList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKAnnouncementList.m; sourceTree = "<group>"; };
+		4E572FA82C7B9E190061E6C1 /* JMKPushScreenCardList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKPushScreenCardList.h; sourceTree = "<group>"; };
+		4E572FA92C7B9E190061E6C1 /* JMKPushScreenCardList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKPushScreenCardList.m; sourceTree = "<group>"; };
+		4E572FAB2C7B9E2A0061E6C1 /* JMKInavApplyAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKInavApplyAlertView.h; sourceTree = "<group>"; };
+		4E572FAC2C7B9E2A0061E6C1 /* JMKInavApplyAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKInavApplyAlertView.m; sourceTree = "<group>"; };
+		4E572FAE2C7B9E5D0061E6C1 /* JMKSignInAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKSignInAlertView.h; sourceTree = "<group>"; };
+		4E572FAF2C7B9E5D0061E6C1 /* JMKSignInAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKSignInAlertView.m; sourceTree = "<group>"; };
+		4E572FB12C7B9E8E0061E6C1 /* JMKLottery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKLottery.h; sourceTree = "<group>"; };
+		4E572FB22C7B9E8E0061E6C1 /* JMKLottery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKLottery.m; sourceTree = "<group>"; };
 		4E6116DE2C7901480059810D /* JMKProgressHud.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKProgressHud.h; sourceTree = "<group>"; };
 		4E6116DF2C7901480059810D /* JMKProgressHud.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKProgressHud.m; sourceTree = "<group>"; };
 		4E6116E12C7901C60059810D /* JMKHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKHomeViewController.h; sourceTree = "<group>"; };
@@ -85,6 +140,8 @@
 		4E6116FA2C790DB60059810D /* JMKWarmUpStartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKWarmUpStartView.m; sourceTree = "<group>"; };
 		4E6116FC2C790FC10059810D /* UIView+ITTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ITTAdditions.h"; sourceTree = "<group>"; };
 		4E6116FD2C790FC10059810D /* UIView+ITTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ITTAdditions.m"; sourceTree = "<group>"; };
+		4E98BD8D2C7BB27600352B43 /* JMKDanmu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKDanmu.h; sourceTree = "<group>"; };
+		4E98BD8E2C7BB27600352B43 /* JMKDanmu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKDanmu.m; sourceTree = "<group>"; };
 		4EAC5C5E2C7950740098834D /* JMKWebinarBaseInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKWebinarBaseInfo.h; sourceTree = "<group>"; };
 		4EAC5C5F2C7950740098834D /* JMKWebinarBaseInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKWebinarBaseInfo.m; sourceTree = "<group>"; };
 		4EAC5C642C7B56780098834D /* JMKDefiniteionsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKDefiniteionsViewModel.h; sourceTree = "<group>"; };
@@ -170,6 +227,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4E572F802C7B9AD50061E6C1 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				4E572F812C7B9AE30061E6C1 /* JMKBaseView.h */,
+				4E572F822C7B9AE30061E6C1 /* JMKBaseView.m */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		4E572F842C7B9B4D0061E6C1 /* Doc */ = {
+			isa = PBXGroup;
+			children = (
+				4E572F852C7B9B710061E6C1 /* JMKDocViewController.h */,
+				4E572F862C7B9B710061E6C1 /* JMKDocViewController.m */,
+			);
+			path = Doc;
+			sourceTree = "<group>";
+		};
+		4E572F942C7B9C460061E6C1 /* RecordList */ = {
+			isa = PBXGroup;
+			children = (
+				4E572F952C7B9C600061E6C1 /* JMKRecordListViewController.h */,
+				4E572F962C7B9C600061E6C1 /* JMKRecordListViewController.m */,
+			);
+			path = RecordList;
+			sourceTree = "<group>";
+		};
+		4E572F982C7B9D2F0061E6C1 /* FileDownload */ = {
+			isa = PBXGroup;
+			children = (
+				4E572F992C7B9D430061E6C1 /* JMKFileDownloadViewController.h */,
+				4E572F9A2C7B9D430061E6C1 /* JMKFileDownloadViewController.m */,
+			);
+			path = FileDownload;
+			sourceTree = "<group>";
+		};
 		4E6116E92C7906460059810D /* Catogroy */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +313,34 @@
 				4EAC5C692C7B585A0098834D /* JMKWatchVideoView.m */,
 				4EAC5C6B2C7B63190098834D /* JMKWatchLiveBottomView.h */,
 				4EAC5C6C2C7B63190098834D /* JMKWatchLiveBottomView.m */,
+				4E572F7A2C7B99500061E6C1 /* JMKInavView.h */,
+				4E572F7B2C7B99500061E6C1 /* JMKInavView.m */,
+				4E572F7D2C7B9A300061E6C1 /* JMKChatView.h */,
+				4E572F7E2C7B9A300061E6C1 /* JMKChatView.m */,
+				4E572F882C7B9BB60061E6C1 /* JMKQAView.h */,
+				4E572F892C7B9BB60061E6C1 /* JMKQAView.m */,
+				4E572F8B2C7B9BD80061E6C1 /* JMKIntroView.h */,
+				4E572F8C2C7B9BD80061E6C1 /* JMKIntroView.m */,
+				4E572F8E2C7B9C120061E6C1 /* JMKVideoPointView.h */,
+				4E572F8F2C7B9C120061E6C1 /* JMKVideoPointView.m */,
+				4E572F912C7B9C360061E6C1 /* JMKRecordChapter.h */,
+				4E572F922C7B9C360061E6C1 /* JMKRecordChapter.m */,
+				4E572F9C2C7B9D870061E6C1 /* JMKFashionStyleGiftListView.h */,
+				4E572F9D2C7B9D870061E6C1 /* JMKFashionStyleGiftListView.m */,
+				4E572F9F2C7B9DA30061E6C1 /* JMKSurveyListView.h */,
+				4E572FA02C7B9DA30061E6C1 /* JMKSurveyListView.m */,
+				4E572FA22C7B9DC70061E6C1 /* JMKAnnouncementView.h */,
+				4E572FA32C7B9DC70061E6C1 /* JMKAnnouncementView.m */,
+				4E572FA52C7B9DF50061E6C1 /* JMKAnnouncementList.h */,
+				4E572FA62C7B9DF50061E6C1 /* JMKAnnouncementList.m */,
+				4E572FA82C7B9E190061E6C1 /* JMKPushScreenCardList.h */,
+				4E572FA92C7B9E190061E6C1 /* JMKPushScreenCardList.m */,
+				4E572FAB2C7B9E2A0061E6C1 /* JMKInavApplyAlertView.h */,
+				4E572FAC2C7B9E2A0061E6C1 /* JMKInavApplyAlertView.m */,
+				4E572FAE2C7B9E5D0061E6C1 /* JMKSignInAlertView.h */,
+				4E572FAF2C7B9E5D0061E6C1 /* JMKSignInAlertView.m */,
+				4E572FB12C7B9E8E0061E6C1 /* JMKLottery.h */,
+				4E572FB22C7B9E8E0061E6C1 /* JMKLottery.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -343,6 +464,7 @@
 		4EFB7E6A2C78F35400C27AC1 /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4E572F802C7B9AD50061E6C1 /* BaseView */,
 				4EFB7E682C78F35400C27AC1 /* JMKBaseViewController.h */,
 				4EFB7E692C78F35400C27AC1 /* JMKBaseViewController.m */,
 			);
@@ -388,6 +510,9 @@
 		4EFB7E742C78F35400C27AC1 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				4E572F982C7B9D2F0061E6C1 /* FileDownload */,
+				4E572F942C7B9C460061E6C1 /* RecordList */,
+				4E572F842C7B9B4D0061E6C1 /* Doc */,
 				4E6116F42C790D5E0059810D /* WarmUp */,
 				4E6116F02C790CE20059810D /* WatchLive */,
 				4EC76FD82C78FB3200000296 /* Home */,
@@ -424,6 +549,8 @@
 				4E6116EE2C790AC30059810D /* JMKStystemSetting.m */,
 				4EAC5C5E2C7950740098834D /* JMKWebinarBaseInfo.h */,
 				4EAC5C5F2C7950740098834D /* JMKWebinarBaseInfo.m */,
+				4E98BD8D2C7BB27600352B43 /* JMKDanmu.h */,
+				4E98BD8E2C7BB27600352B43 /* JMKDanmu.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -768,21 +895,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EFB7E882C78F35400C27AC1 /* JMKNavigationController.m in Sources */,
+				4E572F8A2C7B9BB60061E6C1 /* JMKQAView.m in Sources */,
 				4E6116FB2C790DB60059810D /* JMKWarmUpStartView.m in Sources */,
 				4E6116F72C790D730059810D /* JMKWarmUpViewController.m in Sources */,
+				4E572FB02C7B9E5D0061E6C1 /* JMKSignInAlertView.m in Sources */,
+				4E572FA42C7B9DC70061E6C1 /* JMKAnnouncementView.m in Sources */,
 				4E6116E32C7901C60059810D /* JMKHomeViewController.m in Sources */,
 				4E6116EC2C7906A00059810D /* JMKAuthAlertView.m in Sources */,
 				4E6116EF2C790AC30059810D /* JMKStystemSetting.m in Sources */,
+				4E572F7F2C7B9A300061E6C1 /* JMKChatView.m in Sources */,
+				4E572FB32C7B9E8E0061E6C1 /* JMKLottery.m in Sources */,
 				4EAC5C6D2C7B63190098834D /* JMKWatchLiveBottomView.m in Sources */,
+				4E98BD8F2C7BB27600352B43 /* JMKDanmu.m in Sources */,
+				4E572FAA2C7B9E190061E6C1 /* JMKPushScreenCardList.m in Sources */,
+				4E572FA12C7B9DA30061E6C1 /* JMKSurveyListView.m in Sources */,
 				4E6116F32C790D090059810D /* JMKWatchLiveViewController.m in Sources */,
+				4E572F9B2C7B9D430061E6C1 /* JMKFileDownloadViewController.m in Sources */,
+				4E572F8D2C7B9BD80061E6C1 /* JMKIntroView.m in Sources */,
 				4EFB7E8D2C78F35400C27AC1 /* UIImage+ImageUtil.m in Sources */,
+				4E572FAD2C7B9E2A0061E6C1 /* JMKInavApplyAlertView.m in Sources */,
 				4EAC5C6A2C7B585A0098834D /* JMKWatchVideoView.m in Sources */,
 				4EAC5C602C7950740098834D /* JMKWebinarBaseInfo.m in Sources */,
+				4E572F902C7B9C120061E6C1 /* JMKVideoPointView.m in Sources */,
+				4E572F872C7B9B710061E6C1 /* JMKDocViewController.m in Sources */,
+				4E572F7C2C7B99500061E6C1 /* JMKInavView.m in Sources */,
 				4EFB7E862C78F35400C27AC1 /* AppDelegate.m in Sources */,
+				4E572F932C7B9C360061E6C1 /* JMKRecordChapter.m in Sources */,
 				4EFB7E872C78F35400C27AC1 /* JMKBaseViewController.m in Sources */,
+				4E572F972C7B9C600061E6C1 /* JMKRecordListViewController.m in Sources */,
 				4EFB7E892C78F35400C27AC1 /* JMKLoginViewController.m in Sources */,
+				4E572FA72C7B9DF50061E6C1 /* JMKAnnouncementList.m in Sources */,
 				4EFB7E8B2C78F35400C27AC1 /* JMKUITool.m in Sources */,
+				4E572F9E2C7B9D870061E6C1 /* JMKFashionStyleGiftListView.m in Sources */,
 				4EFB7E382C78EC4400C27AC1 /* ViewController.m in Sources */,
+				4E572F832C7B9AE30061E6C1 /* JMKBaseView.m in Sources */,
 				4E6116E82C7906360059810D /* JMKInavAlertView.m in Sources */,
 				4E6116FE2C790FC10059810D /* UIView+ITTAdditions.m in Sources */,
 				4EAC5C702C7B63550098834D /* JMKFoldButton.m in Sources */,
