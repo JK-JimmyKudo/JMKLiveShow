@@ -33,9 +33,11 @@
 
 
 #import "JMKStystemSetting.h"
-
+#import "JMKWebinarBaseInfo.h"
 
 // 微吼
+
+#import "VHLiveSDK/VHallConst.h"
 #import <VHLiveSDK/VHallApi.h>
 #import <VHInteractive/VHRoom.h>
 // 美颜

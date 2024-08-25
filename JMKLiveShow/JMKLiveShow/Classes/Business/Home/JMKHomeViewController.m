@@ -118,45 +118,45 @@
 #pragma mark - 点击进入房间
 - (IBAction)clickEnterRoomBtn:(UIButton *)sender {
     NSLog(@"点击进入房间");
-    if (self.activityTF.text.length <= 0) {
-        [JMKProgressHud showToast:@"请输入活动ID"];
-        return;
-    }
+//    if (self.activityTF.text.length <= 0) {
+//        [JMKProgressHud showToast:@"请输入活动ID"];
+//        return;
+//    }
 
 //     记录房间号
     DEMO_Setting.activityID = self.activityTF.text;
 
     // 判断是否校验观看权限
-    if (self.authSwitch.on) {
-        // 防止重复点击
-        self.enterRoomBtn.userInteractionEnabled = NO;
-        __weak __typeof(self) weakSelf = self;
-        [VHWebinarInfoData queryWatchAuthWithWebinarId:self.activityTF.text
-                                              complete:^(NSString *type, BOOL authStatus, NSError *error) {
-            // 防止重复点击
-            weakSelf.enterRoomBtn.userInteractionEnabled = YES;
-
-            // 先判断是否报错
-            if (error) {
-                [JMKProgressHud showToast:error.domain];
-                return;
-            }
-
-            // 判断是否需要校验
-            if (authStatus) {
-                // 需要校验
-                weakSelf.type = type;
-                [weakSelf.authAlertView showAuthWithType:type];
-                // 判断校验类型
-            } else {
-                // 不需要校验
-                [weakSelf watchInit];
-            }
-        }];
-    } else {
-        // 不校验
+//    if (self.authSwitch.on) {
+//        // 防止重复点击
+//        self.enterRoomBtn.userInteractionEnabled = NO;
+//        __weak __typeof(self) weakSelf = self;
+//        [VHWebinarInfoData queryWatchAuthWithWebinarId:self.activityTF.text
+//                                              complete:^(NSString *type, BOOL authStatus, NSError *error) {
+//            // 防止重复点击
+//            weakSelf.enterRoomBtn.userInteractionEnabled = YES;
+//
+//            // 先判断是否报错
+//            if (error) {
+//                [JMKProgressHud showToast:error.domain];
+//                return;
+//            }
+//
+//            // 判断是否需要校验
+//            if (authStatus) {
+//                // 需要校验
+//                weakSelf.type = type;
+//                [weakSelf.authAlertView showAuthWithType:type];
+//                // 判断校验类型
+//            } else {
+//                // 不需要校验
+//                [weakSelf watchInit];
+//            }
+//        }];
+//    } else {
+//        // 不校验
         [self watchInit];
-    }
+//    }
 }
 
 #pragma mark - 获取房间详情
@@ -172,7 +172,13 @@
     // 增加一个hud
     [JMKProgressHud showLoading];
 //     查询活动详情
-    [VHWebinarBaseInfo getWebinarBaseInfoWithWebinarId:self.activityTF.text
+    
+
+    
+    // 正式SDK的获取方法
+//    [VHWebinarBaseInfo getWebinarBaseInfoWithWebinarId
+    
+    [JMKWebinarBaseInfo getWebinarBaseInfoWithWebinarId:self.activityTF.text
                                                success:^(VHWebinarBaseInfo *_Nonnull baseInfo) {
         // 防止重复点击
         weakSelf.enterRoomBtn.userInteractionEnabled = YES;
@@ -183,19 +189,20 @@
         NSMutableDictionary * otherInfo = [NSMutableDictionary dictionary];
         otherInfo[@"type"] = @(baseInfo.type);
         [JMKUITool sendTestsNotificationCenterWithKey:VHTests_EnterRoom otherInfo:otherInfo];
-
-        // 直播 回放
+//
+//        // 直播 回放
         JMKWatchLiveViewController *watchVC = [JMKWatchLiveViewController new];
-//        watchVC.accessibilityLabel = @"直播间";
-//        watchVC.webinar_id = baseInfo.ID;
-//        watchVC.type = baseInfo.type;
+        watchVC.accessibilityLabel = @"直播间";
+        watchVC.webinar_id = baseInfo.ID;
+        watchVC.type = baseInfo.type;
+//
 
-        // 预告页
+//        // 预告页
         JMKWarmUpViewController *warmUP = [JMKWarmUpViewController new];
         warmUP.webinarId = baseInfo.ID;
         warmUP.delegate = self;
 
-        //1-直播中，2-预约，3-结束，4-点播，5-回放
+//        //1-直播中，2-预约，3-结束，4-点播，5-回放
         switch (baseInfo.type) {
             case 1:{
                 [weakSelf.navigationController pushViewController:watchVC

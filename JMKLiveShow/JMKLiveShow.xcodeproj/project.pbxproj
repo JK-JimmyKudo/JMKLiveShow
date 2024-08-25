@@ -19,6 +19,11 @@
 		4E6116F72C790D730059810D /* JMKWarmUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6116F62C790D730059810D /* JMKWarmUpViewController.m */; };
 		4E6116FB2C790DB60059810D /* JMKWarmUpStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6116FA2C790DB60059810D /* JMKWarmUpStartView.m */; };
 		4E6116FE2C790FC10059810D /* UIView+ITTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6116FD2C790FC10059810D /* UIView+ITTAdditions.m */; };
+		4EAC5C602C7950740098834D /* JMKWebinarBaseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC5C5F2C7950740098834D /* JMKWebinarBaseInfo.m */; };
+		4EAC5C662C7B56780098834D /* JMKDefiniteionsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC5C652C7B56780098834D /* JMKDefiniteionsViewModel.m */; };
+		4EAC5C6A2C7B585A0098834D /* JMKWatchVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC5C692C7B585A0098834D /* JMKWatchVideoView.m */; };
+		4EAC5C6D2C7B63190098834D /* JMKWatchLiveBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC5C6C2C7B63190098834D /* JMKWatchLiveBottomView.m */; };
+		4EAC5C702C7B63550098834D /* JMKFoldButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC5C6F2C7B63550098834D /* JMKFoldButton.m */; };
 		4EFB7E382C78EC4400C27AC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB7E372C78EC4400C27AC1 /* ViewController.m */; };
 		4EFB7E3B2C78EC4400C27AC1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4EFB7E3A2C78EC4400C27AC1 /* Base */; };
 		4EFB7E3D2C78EC4600C27AC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EFB7E3C2C78EC4600C27AC1 /* Assets.xcassets */; };
@@ -80,6 +85,16 @@
 		4E6116FA2C790DB60059810D /* JMKWarmUpStartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKWarmUpStartView.m; sourceTree = "<group>"; };
 		4E6116FC2C790FC10059810D /* UIView+ITTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ITTAdditions.h"; sourceTree = "<group>"; };
 		4E6116FD2C790FC10059810D /* UIView+ITTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ITTAdditions.m"; sourceTree = "<group>"; };
+		4EAC5C5E2C7950740098834D /* JMKWebinarBaseInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKWebinarBaseInfo.h; sourceTree = "<group>"; };
+		4EAC5C5F2C7950740098834D /* JMKWebinarBaseInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKWebinarBaseInfo.m; sourceTree = "<group>"; };
+		4EAC5C642C7B56780098834D /* JMKDefiniteionsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKDefiniteionsViewModel.h; sourceTree = "<group>"; };
+		4EAC5C652C7B56780098834D /* JMKDefiniteionsViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKDefiniteionsViewModel.m; sourceTree = "<group>"; };
+		4EAC5C682C7B585A0098834D /* JMKWatchVideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKWatchVideoView.h; sourceTree = "<group>"; };
+		4EAC5C692C7B585A0098834D /* JMKWatchVideoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKWatchVideoView.m; sourceTree = "<group>"; };
+		4EAC5C6B2C7B63190098834D /* JMKWatchLiveBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKWatchLiveBottomView.h; sourceTree = "<group>"; };
+		4EAC5C6C2C7B63190098834D /* JMKWatchLiveBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKWatchLiveBottomView.m; sourceTree = "<group>"; };
+		4EAC5C6E2C7B63550098834D /* JMKFoldButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKFoldButton.h; sourceTree = "<group>"; };
+		4EAC5C6F2C7B63550098834D /* JMKFoldButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKFoldButton.m; sourceTree = "<group>"; };
 		4EFB7E2D2C78EC4400C27AC1 /* JMKLiveShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMKLiveShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EFB7E362C78EC4400C27AC1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4EFB7E372C78EC4400C27AC1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -171,8 +186,10 @@
 		4E6116F02C790CE20059810D /* WatchLive */ = {
 			isa = PBXGroup;
 			children = (
-				4E6116F12C790D090059810D /* JMKWatchLiveViewController.h */,
-				4E6116F22C790D090059810D /* JMKWatchLiveViewController.m */,
+				4EAC5C672C7B58430098834D /* ViewModel */,
+				4EAC5C632C7B56670098834D /* ViewController */,
+				4EAC5C622C7B56600098834D /* Model */,
+				4EAC5C612C7B565A0098834D /* View */,
 			);
 			path = WatchLive;
 			sourceTree = "<group>";
@@ -194,6 +211,59 @@
 				4E6116FA2C790DB60059810D /* JMKWarmUpStartView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4EAC5C612C7B565A0098834D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC5C682C7B585A0098834D /* JMKWatchVideoView.h */,
+				4EAC5C692C7B585A0098834D /* JMKWatchVideoView.m */,
+				4EAC5C6B2C7B63190098834D /* JMKWatchLiveBottomView.h */,
+				4EAC5C6C2C7B63190098834D /* JMKWatchLiveBottomView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4EAC5C622C7B56600098834D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC5C642C7B56780098834D /* JMKDefiniteionsViewModel.h */,
+				4EAC5C652C7B56780098834D /* JMKDefiniteionsViewModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4EAC5C632C7B56670098834D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4E6116F12C790D090059810D /* JMKWatchLiveViewController.h */,
+				4E6116F22C790D090059810D /* JMKWatchLiveViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4EAC5C672C7B58430098834D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4EAC5C712C7B64CA0098834D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC5C722C7B64DA0098834D /* FoldButton */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4EAC5C722C7B64DA0098834D /* FoldButton */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC5C6E2C7B63550098834D /* JMKFoldButton.h */,
+				4EAC5C6F2C7B63550098834D /* JMKFoldButton.m */,
+			);
+			path = FoldButton;
 			sourceTree = "<group>";
 		};
 		4EC76FD82C78FB3200000296 /* Home */ = {
@@ -352,6 +422,8 @@
 				4E6116DF2C7901480059810D /* JMKProgressHud.m */,
 				4E6116ED2C790AC30059810D /* JMKStystemSetting.h */,
 				4E6116EE2C790AC30059810D /* JMKStystemSetting.m */,
+				4EAC5C5E2C7950740098834D /* JMKWebinarBaseInfo.h */,
+				4EAC5C5F2C7950740098834D /* JMKWebinarBaseInfo.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -377,6 +449,7 @@
 		4EFB7E852C78F35400C27AC1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4EAC5C712C7B64CA0098834D /* Common */,
 				4E6116E92C7906460059810D /* Catogroy */,
 				4EFB7E672C78F35400C27AC1 /* AppDelegate */,
 				4EFB7E6F2C78F35400C27AC1 /* Application */,
@@ -700,8 +773,11 @@
 				4E6116E32C7901C60059810D /* JMKHomeViewController.m in Sources */,
 				4E6116EC2C7906A00059810D /* JMKAuthAlertView.m in Sources */,
 				4E6116EF2C790AC30059810D /* JMKStystemSetting.m in Sources */,
+				4EAC5C6D2C7B63190098834D /* JMKWatchLiveBottomView.m in Sources */,
 				4E6116F32C790D090059810D /* JMKWatchLiveViewController.m in Sources */,
 				4EFB7E8D2C78F35400C27AC1 /* UIImage+ImageUtil.m in Sources */,
+				4EAC5C6A2C7B585A0098834D /* JMKWatchVideoView.m in Sources */,
+				4EAC5C602C7950740098834D /* JMKWebinarBaseInfo.m in Sources */,
 				4EFB7E862C78F35400C27AC1 /* AppDelegate.m in Sources */,
 				4EFB7E872C78F35400C27AC1 /* JMKBaseViewController.m in Sources */,
 				4EFB7E892C78F35400C27AC1 /* JMKLoginViewController.m in Sources */,
@@ -709,6 +785,8 @@
 				4EFB7E382C78EC4400C27AC1 /* ViewController.m in Sources */,
 				4E6116E82C7906360059810D /* JMKInavAlertView.m in Sources */,
 				4E6116FE2C790FC10059810D /* UIView+ITTAdditions.m in Sources */,
+				4EAC5C702C7B63550098834D /* JMKFoldButton.m in Sources */,
+				4EAC5C662C7B56780098834D /* JMKDefiniteionsViewModel.m in Sources */,
 				4EFB7E8C2C78F35400C27AC1 /* UIColor+JMKColor.m in Sources */,
 				4EFB7E432C78EC4600C27AC1 /* main.m in Sources */,
 				4E6116E02C7901480059810D /* JMKProgressHud.m in Sources */,
@@ -902,6 +980,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -933,6 +1012,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
