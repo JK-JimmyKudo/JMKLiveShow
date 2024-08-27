@@ -64,6 +64,14 @@
                               failure:(void (^)(NSError *error))failure{
     
     
+    VHPermissionConfigItem *item = [[VHPermissionConfigItem alloc]init];
+    item.watch_hide_like = YES;                                           ///<是否开启点赞
+    item.hide_gifts = YES;                                                  ///<是否开启礼物
+    item.watch_record_no_chatting = NO;                                    ///<是否开启回放禁言
+    item.watch_record_chapter = YES;                                        ///<是否开启回放章节打点
+    
+    success(item);
+    
     
 }
 

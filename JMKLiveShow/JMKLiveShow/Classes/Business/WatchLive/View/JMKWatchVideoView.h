@@ -16,6 +16,12 @@ NS_ASSUME_NONNULL_BEGIN
 // 播放连接成功
 - (void)connectSucceed:(VHallMoviePlayer *)moviePlayer info:(NSDictionary *)info;
 
+
+// 播放时错误的回调
+- (void)JMKWatchVideoViewMoviePlayer:(VHallMoviePlayer *)moviePlayer playError:(VHSaasLivePlayErrorType)livePlayErrorType info:(NSDictionary *)info;
+
+
+
 // 主持人显示/隐藏文档
 - (void)moviePlayer:(VHallMoviePlayer *)moviePlayer
      isHaveDocument:(BOOL)isHave

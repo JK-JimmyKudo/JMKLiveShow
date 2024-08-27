@@ -30,9 +30,9 @@
 
 
 
-@interface JMKWatchLiveViewController ()<JMKWatchVideoViewDelegate,JXCategoryViewDelegate, JXCategoryListContainerViewDelegate>
+@interface JMKWatchLiveViewController ()<JMKWatchVideoViewDelegate,JXCategoryViewDelegate, JXCategoryListContainerViewDelegate,JMKWatchLiveBottomViewDelegate>
 
-//<JMKWatchVideoViewDelegate, JMKInavViewDelegate, JMKWatchLiveBottomViewDelegate, VHChatViewDelegate, JXCategoryViewDelegate, JXCategoryListContainerViewDelegate, VHallGiftObjectDelegate, VHQAViewDelegate, VHSignInAlertViewDelegate, VHSurveyListViewDelegate, JMKDocViewDelegate, VHRecordChapterDelegate, VHVideoPointViewDelegate, VHLotteryDelegate, VHExamObjectDelegate, VHRecordListDelegate,VHFileDownloadDelegate,VHPushScreenCardListDelegate>
+//<, JMKInavViewDelegate, VHChatViewDelegate, , , VHallGiftObjectDelegate, VHQAViewDelegate, VHSignInAlertViewDelegate, VHSurveyListViewDelegate, JMKDocViewDelegate, VHRecordChapterDelegate, VHVideoPointViewDelegate, VHLotteryDelegate, VHExamObjectDelegate, VHRecordListDelegate,VHFileDownloadDelegate,VHPushScreenCardListDelegate>
 
 // 控件
 /// 分页控件
@@ -142,6 +142,9 @@
 
     // 返回角色数据
     [self getRoleName];
+    
+    [self initWithInteractiveTool];
+    
 }
 
 #pragma mark - 设置样式
@@ -335,6 +338,15 @@
     // 初始化互动工具
     [self initWithInteractiveTool];
 }
+// 播放时错误的回调
+-(void)JMKWatchVideoViewMoviePlayer:(VHallMoviePlayer *)moviePlayer playError:(VHSaasLivePlayErrorType)livePlayErrorType info:(NSDictionary *)info{
+    
+     VHLog(@"JMKWatchVideoViewMoviePlayer ==== 播放时错误的回调 ");
+    
+}
+
+
+
 
 #pragma mark 初始化互动工具
 - (void)initWithInteractiveTool
@@ -353,7 +365,7 @@
 //    }
 //
 //    // 初始化底部信息
-//    [self.bottomView requestObject:self.watchVideoView.moviePlayer webinarInfoData:self.watchVideoView.moviePlayer.webinarInfo.webinarInfoData];
+    [self.bottomView requestObject:self.watchVideoView.moviePlayer webinarInfoData:self.watchVideoView.moviePlayer.webinarInfo.webinarInfoData];
 //
 //    // 初始化问答
 //    if (!_vhQAView) {
@@ -548,7 +560,7 @@
 {
     // 只有直播可以切换横竖屏
     
-    
+    VHLog(@"屏幕旋转 ");
     
     if (self.isLive) {
         // 切换全屏 横竖屏刷新布局
@@ -567,6 +579,9 @@
 #pragma mark 被踢出
 - (void)moviePlayer:(VHallMoviePlayer *)moviePlayer isKickout:(BOOL)isKickout
 {
+   
+    
+    
     [self clickLeftBarItem];
 }
 
@@ -641,7 +656,7 @@
 //    [self.pushScreenCardList showPushScreenCard:model];
 }
 
-#pragma mark - VHWatchLiveBottomViewDelegate
+#pragma mark - JMKWatchLiveBottomViewDelegate
 #pragma mark 发送消息
 - (void)sendText:(NSString *)text
 {
@@ -661,7 +676,7 @@
     [self.giftListView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.view);
     }];
-//    [self.giftListView showGiftToWebinarInfoData:self.watchVideoView.moviePlayer.webinarInfo.webinarInfoData];
+    [self.giftListView showGiftToWebinarInfoData:self.watchVideoView.moviePlayer.webinarInfo.webinarInfoData];
 }
 
 #pragma mark 点击参与互动连麦
@@ -677,6 +692,10 @@
 #pragma mark 是否开启了回放章节
 - (void)watchRecordChapterIsOpen:(BOOL)isOpen
 {
+    
+    
+    VHLog(@"是否开启了回放章节");
+    
     // 判断是否显示
     [self roomWithIsOpenDoc:self.isOpenDoc isOpenQA:self.isOpenQA isOpenRecordChapter:isOpen isOpenVideoPoint:self.isOpenVideoPoint isOpenFileDownload:self.isOpenFileDownload isHaveGoods:self.isHaveGoods];
 }
@@ -1221,8 +1240,8 @@
 {
     if (!_bottomView) {
         _bottomView = [[JMKWatchLiveBottomView alloc] init];
-//        _bottomView.delegate = self;
-//        _bottomView.isLive = self.isLive;
+        _bottomView.delegate = self;
+        _bottomView.isLive = self.isLive;
         [self.view addSubview:_bottomView];
     }
 

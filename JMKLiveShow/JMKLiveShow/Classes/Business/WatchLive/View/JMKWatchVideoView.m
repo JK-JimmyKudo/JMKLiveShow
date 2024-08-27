@@ -346,7 +346,9 @@
 - (void)startPlay
 {
     VHLog(@"🍌 === 点击开始播放");
-
+    if(self.delegate && [self.delegate respondsToSelector:@selector(JMKWatchVideoViewMoviePlayer:playError:info:)]){
+        [self.delegate JMKWatchVideoViewMoviePlayer:nil playError:nil info:nil];
+    }
     // 判断是直播还是回放
     if (self.type == VHMovieActiveStateLive) {
         [self.moviePlayer startPlay:[self playParam]];
@@ -394,6 +396,8 @@
 #pragma mark - 恢复
 - (void)reconnectPlay
 {
+  
+    
     if (self.moviePlayer.playerState == VHPlayerStatePause) {
         [self.moviePlayer reconnectPlay];
     } else {
@@ -452,31 +456,41 @@
 - (void)moviePlayer:(VHallMoviePlayer *)moviePlayer playError:(VHSaasLivePlayErrorType)livePlayErrorType info:(NSDictionary *)info
 {
     VHLog(@"播放错误：%@", info);
+    // 赋值数据
+    [self updataToWebinarInfo:moviePlayer.webinarInfo];
+
+    if(self.delegate && [self.delegate respondsToSelector:@selector(JMKWatchVideoViewMoviePlayer:playError:info:)]){
+        [self.delegate JMKWatchVideoViewMoviePlayer:moviePlayer playError:livePlayErrorType info:info];
+    }
     
+//    if (self.delegate && [self.delegate respondsToSelector:@selector(connectSucceed:info:)]) {
+//        [self.delegate connectSucceed:moviePlayer info:info];
+//    }
 
-    if (livePlayErrorType == VHSaasPlaySSOKickout) {
-        [JMKProgressHud showToast:@"被踢出"];
+//    if (livePlayErrorType == VHSaasPlaySSOKickout) {
+//        [JMKProgressHud showToast:@"被踢出"];
+//
+//        if ([self.delegate respondsToSelector:@selector(moviePlayer:isKickout:)]) {
+//            [self.delegate moviePlayer:moviePlayer isKickout:YES];
+//        }
+//    } else {
+//        NSString *errorStr = [NSString stringWithFormat:@"type == %ld , %@", livePlayErrorType, info[@"content"]];
+//        [JMKProgressHud showToast:errorStr];
+//
+//        if (livePlayErrorType == VHSaasLivePlayGetUrlError) {
+//            NSInteger code = [info[@"code"] integerValue];
+//            if (code == 512536) { return; }
+//            if ([self.delegate respondsToSelector:@selector(moviePlayer:isKickout:)]) {
+//                [self.delegate moviePlayer:moviePlayer isKickout:NO];
+//            }
+//        }
+//    }
 
-        if ([self.delegate respondsToSelector:@selector(moviePlayer:isKickout:)]) {
-            [self.delegate moviePlayer:moviePlayer isKickout:YES];
-        }
-    } else {
-        NSString *errorStr = [NSString stringWithFormat:@"type == %ld , %@", livePlayErrorType, info[@"content"]];
-        [JMKProgressHud showToast:errorStr];
-
-        if (livePlayErrorType == VHSaasLivePlayGetUrlError) {
-            NSInteger code = [info[@"code"] integerValue];
-            if (code == 512536) { return; }
-            if ([self.delegate respondsToSelector:@selector(moviePlayer:isKickout:)]) {
-                [self.delegate moviePlayer:moviePlayer isKickout:NO];
-            }
-        }
-    }
-
-    if (livePlayErrorType == VHSaasLivePlayCDNConnectError) {
-//        // 出现这种报错后 继续重试
+//    if (livePlayErrorType == VHSaasLivePlayCDNConnectError) {
+////        [JMKProgressHud showToast:errorStr];
+////        // 出现这种报错后 继续重试
 //        [self reconnectPlay];
-    }
+//    }
 }
 
 // 当前播放时间回调
@@ -819,6 +833,11 @@
     if (self.delegate && [self.delegate respondsToSelector:@selector(clickFullIsSelect:)]) {
         [self.delegate clickFullIsSelect:sender.selected];
     }
+    
+//    if(self.delegate && [self.delegate respondsToSelector:@selector(JMKWatchVideoViewMoviePlayer:playError:info:)]){
+//        [self.delegate JMKWatchVideoViewMoviePlayer:nil playError:nil info:nil];
+//    }
+    
 }
 
 #pragma mark - 退出全屏

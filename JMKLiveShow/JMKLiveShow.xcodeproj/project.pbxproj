@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0BEB80B7B6203ABA55E1C145 /* Pods_JMKLiveShow_JMKLiveShowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4180FA0A05C015EA56702BC0 /* Pods_JMKLiveShow_JMKLiveShowUITests.framework */; };
 		195C5C68D6BD2932F2974E1A /* Pods_JMKLiveShowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181C95884C7A77B0DCBD2E09 /* Pods_JMKLiveShowTests.framework */; };
+		4E1CA4F42C7E234E000D60D6 /* JMKLikeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CA4F32C7E234E000D60D6 /* JMKLikeObject.m */; };
+		4E1CA4F72C7E25E4000D60D6 /* JMKKeyboardToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CA4F62C7E25E4000D60D6 /* JMKKeyboardToolView.m */; };
+		4E1CA4FB2C7E2D2B000D60D6 /* VHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CA4F92C7E2D2B000D60D6 /* VHTextView.m */; };
 		4E572F7C2C7B99500061E6C1 /* JMKInavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572F7B2C7B99500061E6C1 /* JMKInavView.m */; };
 		4E572F7F2C7B9A300061E6C1 /* JMKChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572F7E2C7B9A300061E6C1 /* JMKChatView.m */; };
 		4E572F832C7B9AE30061E6C1 /* JMKBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572F822C7B9AE30061E6C1 /* JMKBaseView.m */; };
@@ -85,6 +88,12 @@
 		277266BF325032AB01A6947E /* Pods_JMKLiveShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMKLiveShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4077A3A145365D8BC7979BEC /* Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig"; path = "Target Support Files/Pods-JMKLiveShow-JMKLiveShowUITests/Pods-JMKLiveShow-JMKLiveShowUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4180FA0A05C015EA56702BC0 /* Pods_JMKLiveShow_JMKLiveShowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMKLiveShow_JMKLiveShowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E1CA4F22C7E234E000D60D6 /* JMKLikeObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKLikeObject.h; sourceTree = "<group>"; };
+		4E1CA4F32C7E234E000D60D6 /* JMKLikeObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKLikeObject.m; sourceTree = "<group>"; };
+		4E1CA4F52C7E25E4000D60D6 /* JMKKeyboardToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKKeyboardToolView.h; sourceTree = "<group>"; };
+		4E1CA4F62C7E25E4000D60D6 /* JMKKeyboardToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKKeyboardToolView.m; sourceTree = "<group>"; };
+		4E1CA4F82C7E2D2B000D60D6 /* VHTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VHTextView.h; sourceTree = "<group>"; };
+		4E1CA4F92C7E2D2B000D60D6 /* VHTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VHTextView.m; sourceTree = "<group>"; };
 		4E572F7A2C7B99500061E6C1 /* JMKInavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKInavView.h; sourceTree = "<group>"; };
 		4E572F7B2C7B99500061E6C1 /* JMKInavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMKInavView.m; sourceTree = "<group>"; };
 		4E572F7D2C7B9A300061E6C1 /* JMKChatView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMKChatView.h; sourceTree = "<group>"; };
@@ -227,6 +236,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4E1CA4FA2C7E2D2B000D60D6 /* VHTextView */ = {
+			isa = PBXGroup;
+			children = (
+				4E1CA4F82C7E2D2B000D60D6 /* VHTextView.h */,
+				4E1CA4F92C7E2D2B000D60D6 /* VHTextView.m */,
+			);
+			path = VHTextView;
+			sourceTree = "<group>";
+		};
 		4E572F802C7B9AD50061E6C1 /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +359,10 @@
 				4E572FAF2C7B9E5D0061E6C1 /* JMKSignInAlertView.m */,
 				4E572FB12C7B9E8E0061E6C1 /* JMKLottery.h */,
 				4E572FB22C7B9E8E0061E6C1 /* JMKLottery.m */,
+				4E1CA4F22C7E234E000D60D6 /* JMKLikeObject.h */,
+				4E1CA4F32C7E234E000D60D6 /* JMKLikeObject.m */,
+				4E1CA4F52C7E25E4000D60D6 /* JMKKeyboardToolView.h */,
+				4E1CA4F62C7E25E4000D60D6 /* JMKKeyboardToolView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -366,6 +388,8 @@
 		4EAC5C672C7B58430098834D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				4EAC5C5E2C7950740098834D /* JMKWebinarBaseInfo.h */,
+				4EAC5C5F2C7950740098834D /* JMKWebinarBaseInfo.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -547,8 +571,6 @@
 				4E6116DF2C7901480059810D /* JMKProgressHud.m */,
 				4E6116ED2C790AC30059810D /* JMKStystemSetting.h */,
 				4E6116EE2C790AC30059810D /* JMKStystemSetting.m */,
-				4EAC5C5E2C7950740098834D /* JMKWebinarBaseInfo.h */,
-				4EAC5C5F2C7950740098834D /* JMKWebinarBaseInfo.m */,
 				4E98BD8D2C7BB27600352B43 /* JMKDanmu.h */,
 				4E98BD8E2C7BB27600352B43 /* JMKDanmu.m */,
 			);
@@ -565,6 +587,7 @@
 		4EFB7E842C78F35400C27AC1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4E1CA4FA2C7E2D2B000D60D6 /* VHTextView */,
 				4E6116E62C7906360059810D /* JMKInavAlertView.h */,
 				4E6116E72C7906360059810D /* JMKInavAlertView.m */,
 				4E6116EA2C7906A00059810D /* JMKAuthAlertView.h */,
@@ -914,12 +937,14 @@
 				4E572F8D2C7B9BD80061E6C1 /* JMKIntroView.m in Sources */,
 				4EFB7E8D2C78F35400C27AC1 /* UIImage+ImageUtil.m in Sources */,
 				4E572FAD2C7B9E2A0061E6C1 /* JMKInavApplyAlertView.m in Sources */,
+				4E1CA4F72C7E25E4000D60D6 /* JMKKeyboardToolView.m in Sources */,
 				4EAC5C6A2C7B585A0098834D /* JMKWatchVideoView.m in Sources */,
 				4EAC5C602C7950740098834D /* JMKWebinarBaseInfo.m in Sources */,
 				4E572F902C7B9C120061E6C1 /* JMKVideoPointView.m in Sources */,
 				4E572F872C7B9B710061E6C1 /* JMKDocViewController.m in Sources */,
 				4E572F7C2C7B99500061E6C1 /* JMKInavView.m in Sources */,
 				4EFB7E862C78F35400C27AC1 /* AppDelegate.m in Sources */,
+				4E1CA4FB2C7E2D2B000D60D6 /* VHTextView.m in Sources */,
 				4E572F932C7B9C360061E6C1 /* JMKRecordChapter.m in Sources */,
 				4EFB7E872C78F35400C27AC1 /* JMKBaseViewController.m in Sources */,
 				4E572F972C7B9C600061E6C1 /* JMKRecordListViewController.m in Sources */,
@@ -931,6 +956,7 @@
 				4E572F832C7B9AE30061E6C1 /* JMKBaseView.m in Sources */,
 				4E6116E82C7906360059810D /* JMKInavAlertView.m in Sources */,
 				4E6116FE2C790FC10059810D /* UIView+ITTAdditions.m in Sources */,
+				4E1CA4F42C7E234E000D60D6 /* JMKLikeObject.m in Sources */,
 				4EAC5C702C7B63550098834D /* JMKFoldButton.m in Sources */,
 				4EAC5C662C7B56780098834D /* JMKDefiniteionsViewModel.m in Sources */,
 				4EFB7E8C2C78F35400C27AC1 /* UIColor+JMKColor.m in Sources */,
@@ -1126,7 +1152,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1158,7 +1184,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
