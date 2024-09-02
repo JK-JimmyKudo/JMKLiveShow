@@ -45,6 +45,7 @@
 
     self.title = @"";
 
+    self.zx_hideBaseNavBar = YES;
     // 初始化控件
     [self initViews];
         
@@ -176,7 +177,7 @@
 //
 //        // 进入首页
     JMKHomeViewController *homeVC = [[JMKHomeViewController alloc] init];
-        homeVC.vh_NavIsHidden = YES;
+//        homeVC.vh_NavIsHidden = YES;
         [weakSelf.navigationController pushViewController:homeVC
                                                  animated:YES];
 //    }

@@ -27,18 +27,20 @@ target 'JMKLiveShow' do
   pod 'YYText'
   pod 'Masonry'
   pod 'MBProgressHUD'
-#  pod 'IQKeyboardManager'
-#
+  pod 'IQKeyboardManager'
+
   pod 'JXCategoryView'
   pod 'TXScrollLabelView'
   pod 'GKPhotoBrowser/SD'
   pod 'Reachability'
   pod 'LYEmptyView'
   pod 'BarrageRenderer'
-
+  pod 'TYCyclePagerView'
+  pod 'ZXNavigationBar'
+  pod 'JKCategories'
   pod 'VHYun_Beautify'
   pod 'FURenderKit'
-
+  pod 'YTKNetwork'
 
 end
 
@@ -55,3 +57,13 @@ end
 #        #  flutter_additional_ios_build_settings(target)
 #    end
 #end
+
+post_install do |installer|
+    installer.generated_projects.each do |project|
+          project.targets.each do |target|
+              target.build_configurations.each do |config|
+                  config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
+               end
+          end
+   end
+end

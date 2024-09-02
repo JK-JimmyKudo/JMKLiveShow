@@ -176,8 +176,11 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BarrageRenderer/BarrageRenderer.framework"
   install_framework "${PODS_ROOT}/FURenderKit/FURenderKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JKCategories/JKCategories.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JXCategoryView/JXCategoryView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LYEmptyView/LYEmptyView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
@@ -187,6 +190,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TXScrollLabelView/TXScrollLabelView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TYCyclePagerView/TYCyclePagerView.framework"
   install_framework "${PODS_ROOT}/VHGoodsSDK/VHallSDK/VHGoodsSDK/VHGoodsSDK.framework"
   install_framework "${PODS_ROOT}/VHLiveSDK/VHallSDK/VhallLiveBaseApi.framework"
   install_framework "${PODS_ROOT}/VHLiveSDK/VHallSDK/VHLiveSDK.framework"
@@ -194,11 +198,16 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${PODS_ROOT}/VHLiveSDK_Interactive/VHallSDK/VHallInteractive/VHInteractive.framework"
   install_framework "${PODS_ROOT}/VHYun_Beautify/framework/VHBeautifyKit.framework"
   install_framework "${PODS_ROOT}/VHYun_Beautify/framework/VHBFURender.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYText/YYText.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ZXNavigationBar/ZXNavigationBar.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BarrageRenderer/BarrageRenderer.framework"
   install_framework "${PODS_ROOT}/FURenderKit/FURenderKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JKCategories/JKCategories.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JXCategoryView/JXCategoryView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LYEmptyView/LYEmptyView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
@@ -208,6 +217,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TXScrollLabelView/TXScrollLabelView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TYCyclePagerView/TYCyclePagerView.framework"
   install_framework "${PODS_ROOT}/VHGoodsSDK/VHallSDK/VHGoodsSDK/VHGoodsSDK.framework"
   install_framework "${PODS_ROOT}/VHLiveSDK/VHallSDK/VhallLiveBaseApi.framework"
   install_framework "${PODS_ROOT}/VHLiveSDK/VHallSDK/VHLiveSDK.framework"
@@ -215,7 +225,9 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${PODS_ROOT}/VHLiveSDK_Interactive/VHallSDK/VHallInteractive/VHInteractive.framework"
   install_framework "${PODS_ROOT}/VHYun_Beautify/framework/VHBeautifyKit.framework"
   install_framework "${PODS_ROOT}/VHYun_Beautify/framework/VHBFURender.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYText/YYText.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ZXNavigationBar/ZXNavigationBar.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

@@ -30,9 +30,9 @@
 
 
 
-@interface JMKWatchLiveViewController ()<JMKWatchVideoViewDelegate,JXCategoryViewDelegate, JXCategoryListContainerViewDelegate,JMKWatchLiveBottomViewDelegate>
+@interface JMKWatchLiveViewController ()<JMKWatchVideoViewDelegate,JXCategoryViewDelegate, JXCategoryListContainerViewDelegate,JMKWatchLiveBottomViewDelegate,VHallGiftObjectDelegate>
 
-//<, JMKInavViewDelegate, VHChatViewDelegate, , , VHallGiftObjectDelegate, VHQAViewDelegate, VHSignInAlertViewDelegate, VHSurveyListViewDelegate, JMKDocViewDelegate, VHRecordChapterDelegate, VHVideoPointViewDelegate, VHLotteryDelegate, VHExamObjectDelegate, VHRecordListDelegate,VHFileDownloadDelegate,VHPushScreenCardListDelegate>
+//<, JMKInavViewDelegate, VHChatViewDelegate, , , , VHQAViewDelegate, VHSignInAlertViewDelegate, VHSurveyListViewDelegate, JMKDocViewDelegate, VHRecordChapterDelegate, VHVideoPointViewDelegate, VHLotteryDelegate, VHExamObjectDelegate, VHRecordListDelegate,VHFileDownloadDelegate,VHPushScreenCardListDelegate>
 
 // 控件
 /// 分页控件
@@ -234,9 +234,10 @@
 - (id<JXCategoryListContentViewDelegate>)listContainerView:(JXCategoryListContainerView *)listContainerView initListForIndex:(NSInteger)index {
     NSString *title = self.listContainerArray[index];
 
-//    if ([title isEqualToString:@"聊天"]) {
-//        return self.chatView;
-//    } else if ([title isEqualToString:@"文档"]) {
+    if ([title isEqualToString:@"聊天"]) {
+        return self.chatView;
+    } 
+//    else if ([title isEqualToString:@"文档"]) {
 //        return self.docViewController;
 //    } else if ([title isEqualToString:@"简介"]) {
 //        return self.introView;
@@ -333,7 +334,7 @@
     self.title = [JMKUITool substringToIndex:8 text:moviePlayer.webinarInfo.webinarInfoData.webinar.subject isReplenish:YES];
 
     // 连接消息,并加载数据
-//    [self.chatView requestDataWithVHObject:moviePlayer webinarInfoData:moviePlayer.webinarInfo.webinarInfoData];
+    [self.chatView requestDataWithVHObject:moviePlayer webinarInfoData:moviePlayer.webinarInfo.webinarInfoData];
 
     // 初始化互动工具
     [self initWithInteractiveTool];
@@ -351,6 +352,10 @@
 #pragma mark 初始化互动工具
 - (void)initWithInteractiveTool
 {
+    
+    // 连接消息,并加载数据
+    [self.chatView requestDataWithVHObject:nil webinarInfoData:nil];
+
 //    // 初始化简介
 //    self.introView.webinarInfoData = self.watchVideoView.moviePlayer.webinarInfo.webinarInfoData;
 //        
@@ -665,7 +670,7 @@
 //    if ([title isEqualToString:self.questionName]) {
 //        [self.vhQAView sendQAMsg:text];
 //    } else {
-//        [self.chatView sendText:text];
+        [self.chatView sendText:text];
 //    }
 }
 
@@ -1051,7 +1056,7 @@
 //    }
 //    
     // 返回上级
-    [super clickLeftBarItem];
+//    [super clickLeftBarItem];
 }
 
 #pragma mark - 懒加载

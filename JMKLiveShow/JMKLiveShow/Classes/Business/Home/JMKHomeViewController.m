@@ -9,14 +9,16 @@
 
 //#import "VHAirPlayViewController.h"
 #import "JMKAuthAlertView.h"
+#import "HomeBannerModel.h"
 //#import "VHCodeVC.h"
 //
 //#import "VHPublishVC.h"
 //#import "VHWarmUpViewController.h"
 //#import "VHWatchVC.h"
 //#import "VHWebViewVC.h"
+#import "JMKHomeRequest.h"
+@interface JMKHomeViewController ()<TYCyclePagerViewDataSource, TYCyclePagerViewDelegate>
 
-@interface JMKHomeViewController ()
 //<VHallApiDelegate, VHWarmUpViewControllerDelegate, VHAuthAlertViewDelegate>
 
 /// 退出登录
@@ -44,6 +46,13 @@
 /// H5观看页
 @property (weak, nonatomic) IBOutlet UIButton *h5Btn;
 
+
+@property (nonatomic,strong) NSMutableArray *HomeBannerArr;
+
+@property (nonatomic, strong) TYCyclePagerView *pagerView;
+@property (nonatomic, strong) TYPageControl *pageControl;
+//@property (nonatomic, strong) NSArray *datas;
+
 @end
 
 @implementation JMKHomeViewController
@@ -53,6 +62,8 @@
 
     self.view.backgroundColor = [UIColor whiteColor];
 
+    
+    
     self.type = @"";
 
     // 初始化
@@ -63,8 +74,215 @@
 
     // 绑定自动化标识
     [self initKIF];
+    [self requestDraft];
+    
+    
+    
+    [self addPagerView];
+    [self addPageControl];
+    
+    
+    
 }
 
+
+- (void)addPagerView {
+    TYCyclePagerView *pagerView = [[TYCyclePagerView alloc]init];
+//    pagerView.layer.borderWidth = 1;
+    pagerView.isInfiniteLoop = YES;
+    pagerView.autoScrollInterval = 3.0;
+    pagerView.dataSource = self;
+    pagerView.delegate = self;
+    // registerClass or registerNib
+    [pagerView registerClass:[TYCyclePagerViewCell class] forCellWithReuseIdentifier:@"cellId"];
+    [self.view addSubview:pagerView];
+    _pagerView = pagerView;
+}
+
+- (void)addPageControl {
+    TYPageControl *pageControl = [[TYPageControl alloc]init];
+    //pageControl.numberOfPages = _datas.count;
+    pageControl.currentPageIndicatorSize = CGSizeMake(6, 6);
+    pageControl.pageIndicatorSize = CGSizeMake(12, 6);
+    pageControl.currentPageIndicatorTintColor = [UIColor redColor];
+    pageControl.pageIndicatorTintColor = [UIColor grayColor];
+//    pageControl.pageIndicatorImage = [UIImage imageNamed:@"Dot"];
+//    pageControl.currentPageIndicatorImage = [UIImage imageNamed:@"DotSelected"];
+//    pageControl.contentInset = UIEdgeInsetsMake(0, 20, 0, 20);
+//    pageControl.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+//    pageControl.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+//    [pageControl addTarget:self action:@selector(pageControlValueChangeAction:) forControlEvents:UIControlEventValueChanged];
+    [_pagerView addSubview:pageControl];
+    _pageControl = pageControl;
+}
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    _pagerView.frame = CGRectMake(10, NAVIGATION_BAR_H + 20, CGRectGetWidth(self.view.frame) - 20, 148);
+    [JMKUITool clipView:_pagerView corner:UIRectCornerAllCorners anSize:CGSizeMake(10, 10)];
+    _pageControl.frame = CGRectMake(0, CGRectGetHeight(_pagerView.frame) - 26, CGRectGetWidth(_pagerView.frame), 26);
+}
+
+- (void)loadData {
+//    NSMutableArray *datas = [NSMutableArray array];
+//    for (int i = 0; i < 7; ++i) {
+//        if (i == 0) {
+//            [datas addObject:[UIColor redColor]];
+//            continue;
+//        }
+//        [datas addObject:[UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:arc4random()%255/255.0]];
+//    }
+//    _datas = [datas copy];
+
+    //[_pagerView scrollToItemAtIndex:3 animate:YES];
+}
+
+//- (void)loadData {
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        NSMutableArray *datas = [NSMutableArray array];
+//        for (int i = 0; i < 5; ++i) {
+//            if (i == 0) {
+//                [datas addObject:[UIColor redColor]];
+//                continue;
+//            }
+//            [datas addObject:[UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:arc4random()%255/255.0]];
+//        }
+//        _datas = [datas copy];
+//        _pageControl.numberOfPages = _datas.count;
+//        [_pagerView reloadData];
+//    });
+//}
+
+#pragma mark - TYCyclePagerViewDataSource
+
+- (NSInteger)numberOfItemsInPagerView:(TYCyclePagerView *)pageView {
+    return self.HomeBannerArr.count;
+}
+
+- (UICollectionViewCell *)pagerView:(TYCyclePagerView *)pagerView cellForItemAtIndex:(NSInteger)index {
+    TYCyclePagerViewCell *cell = [pagerView dequeueReusableCellWithReuseIdentifier:@"cellId" forIndex:index];
+//    cell.backgroundColor = self.HomeBannerArr[index];
+//    cell.label.text = [NSString stringWithFormat:@"index->%ld",index];
+    HomeBannerModel *model = self.HomeBannerArr[index];
+    [cell.img sd_setImageWithURL:[NSURL URLWithString:model.imgUrl]];
+    return cell;
+}
+
+- (TYCyclePagerViewLayout *)layoutForPagerView:(TYCyclePagerView *)pageView {
+    TYCyclePagerViewLayout *layout = [[TYCyclePagerViewLayout alloc]init];
+    layout.itemSize = CGSizeMake(CGRectGetWidth(pageView.frame)*1, CGRectGetHeight(pageView.frame)*1);
+    layout.itemSpacing = 15;
+    //layout.minimumAlpha = 0.3;
+//    layout.itemHorizontalCenter = _horCenterSwitch.isOn;
+    return layout;
+}
+
+- (void)pagerView:(TYCyclePagerView *)pageView didScrollFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex {
+    _pageControl.currentPage = toIndex;
+    //[_pageControl setCurrentPage:newIndex animate:YES];
+    NSLog(@"%ld ->  %ld",fromIndex,toIndex);
+}
+
+#pragma mark - action
+
+- (IBAction)switchValueChangeAction:(UISwitch *)sender {
+    if (sender.tag == 0) {
+        _pagerView.isInfiniteLoop = sender.isOn;
+        [_pagerView updateData];
+    }else if (sender.tag == 1) {
+        _pagerView.autoScrollInterval = sender.isOn ? 3.0:0;
+    }else if (sender.tag == 2) {
+        _pagerView.layout.itemHorizontalCenter = sender.isOn;
+        [UIView animateWithDuration:0.3 animations:^{
+            [_pagerView setNeedUpdateLayout];
+        }];
+    }
+}
+
+- (IBAction)sliderValueChangeAction:(UISlider *)sender {
+    if (sender.tag == 0) {
+        _pagerView.layout.itemSize = CGSizeMake(CGRectGetWidth(_pagerView.frame)*sender.value, CGRectGetHeight(_pagerView.frame)*sender.value);
+        [_pagerView setNeedUpdateLayout];
+    }else if (sender.tag == 1) {
+        _pagerView.layout.itemSpacing = 30*sender.value;
+        [_pagerView setNeedUpdateLayout];
+    }else if (sender.tag == 2) {
+        _pageControl.pageIndicatorSize = CGSizeMake(6*(1+sender.value), 6*(1+sender.value));
+        _pageControl.currentPageIndicatorSize = CGSizeMake(8*(1+sender.value), 8*(1+sender.value));
+        _pageControl.pageIndicatorSpaing = (1+sender.value)*10;
+    }
+}
+
+- (IBAction)buttonAction:(UIButton *)sender {
+    _pagerView.layout.layoutType = sender.tag;
+    [_pagerView setNeedUpdateLayout];
+}
+
+- (void)pageControlValueChangeAction:(TYPageControl *)sender {
+    NSLog(@"pageControlValueChangeAction: %ld",sender.currentPage);
+}
+
+
+
+
+
+
+
+-(NSMutableArray *)HomeBannerArr{
+    if (!_HomeBannerArr) {
+        _HomeBannerArr = [NSMutableArray array];
+    }
+    return _HomeBannerArr;
+}
+- (void)requestDraft {
+    
+//    [QMUITips showLoadingInView:self.view];
+   
+    NSDictionary *dict = @{
+        @"portalId":@4,
+        @"portalType":@2,
+        @"userId":@0,
+        @"deviceType":@2
+    };
+    
+    JMKHomeRequest *request = [[JMKHomeRequest alloc] initWithInfo:dict];
+    
+    [request requestWithModelClass:nil complete:^(id responseObject, NSError *error) {
+        
+        NSLog(@"responseObject --- %@",responseObject);
+        
+        
+        
+//        [QMUITips hideAllTipsInView:self.view];
+//        self.draftId = responseObject[@"data"][@"id"];
+        NSArray *dataArr =responseObject[@"data"];
+//
+        [dataArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            
+            HomeBannerModel *model = [HomeBannerModel mj_objectWithKeyValues:obj];
+           
+            NSLog(@"model --- %@",model);
+            [self.HomeBannerArr addObject: model];
+            
+        }];
+        
+        NSLog(@"self.HomeBannerArr --- %@",self.HomeBannerArr);
+        _pageControl.numberOfPages = self.HomeBannerArr.count;
+        [_pagerView reloadData];
+//        BOTCitizenDataModel *dataModel = [BOTCitizenDataModel yy_modelWithDictionary:dic];
+//        if (dataModel){
+//            self.dataModel = dataModel;
+//        }
+//        
+//        if (self.dataModel.userName.length == 0) {
+//            [self requestUser];
+//        }else{
+//            [self updateChildrenViewModel];
+//        }
+//        
+    }];
+
+}
 #pragma mark - 初始化
 - (void)initWithData
 {

@@ -6,15 +6,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ZXNavigationBarController.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JMKBaseViewController : UIViewController
+@interface JMKBaseViewController : ZXNavigationBarController
 
-///是否隐藏导航栏 默认 NO 不隐藏
-@property (nonatomic, assign) BOOL vh_NavIsHidden;
-/// 点击返回
-- (void)clickLeftBarItem;
+/////是否隐藏导航栏 默认 NO 不隐藏
+//@property (nonatomic, assign) BOOL vh_NavIsHidden;
+///// 点击返回
+//- (void)clickLeftBarItem;
 /// 前台
 - (void)appWillEnterForeground;
 /// 后台

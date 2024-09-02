@@ -6,10 +6,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ZXNavigationBarNavigationController.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JMKNavigationController : UINavigationController
+@interface JMKNavigationController : ZXNavigationBarNavigationController
 
 @end
 

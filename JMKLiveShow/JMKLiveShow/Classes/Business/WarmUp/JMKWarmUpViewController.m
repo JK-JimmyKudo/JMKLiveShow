@@ -532,7 +532,7 @@
 #pragma mark - 点击返回
 - (void)clickLeftBarItem {
     // 返回上级
-    [super clickLeftBarItem];
+//    [super clickLeftBarItem];
 
 }
 

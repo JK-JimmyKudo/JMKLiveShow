@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>BarrageRenderer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -20,6 +25,21 @@
 			<false/>
 		</dict>
 		<key>GKPhotoBrowser.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>IQKeyboardManager-IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JKCategories.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -109,6 +129,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TYCyclePagerView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>VHGoodsSDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -129,7 +154,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>YTKNetwork.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>YYText.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ZXNavigationBar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

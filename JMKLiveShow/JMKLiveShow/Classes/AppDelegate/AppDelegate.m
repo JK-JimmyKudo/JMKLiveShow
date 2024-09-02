@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "JMKNavigationController.h"
 #import "JMKLoginViewController.h"
-
+#import "JMKNetworkAgent.h"
 
 @interface AppDelegate ()
 
@@ -28,7 +28,8 @@
 
     [self keyboardManager];
     [self configIQKeyboardManager];
-
+    // 配置网络环境
+    [JMKNetworkAgent configNetworkEnvironment];
     return YES;
 }
 
