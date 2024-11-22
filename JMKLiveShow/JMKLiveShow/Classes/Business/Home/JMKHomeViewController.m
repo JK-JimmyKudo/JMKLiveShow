@@ -6,6 +6,8 @@
 //
 
 #import "JMKHomeViewController.h"
+#import "JMKFileDownloadViewController.h"
+#import "ZXBRTCCommonUtilres.h"
 
 //#import "VHAirPlayViewController.h"
 #import "JMKAuthAlertView.h"
@@ -15,8 +17,12 @@
 //#import "VHPublishVC.h"
 //#import "VHWarmUpViewController.h"
 //#import "VHWatchVC.h"
-//#import "VHWebViewVC.h"
+//#import "BOTChatViewController.h"
 #import "JMKHomeRequest.h"
+#import "ZXBNetworkBaseRequest.h"
+
+
+
 @interface JMKHomeViewController ()<TYCyclePagerViewDataSource, TYCyclePagerViewDelegate>
 
 //<VHallApiDelegate, VHWarmUpViewControllerDelegate, VHAuthAlertViewDelegate>
@@ -81,7 +87,88 @@
     [self addPagerView];
     [self addPageControl];
     
+//    NSArray *testArray = @[@"s1",@"s2"];
+//    NSLog(@"%@",testArray[10]);
+    NSDictionary *dict = @{
+        @"portalId":@4,
+        @"portalType":@2,
+        @"userId":@0,
+        @"deviceType":@2
+    };
     
+    ZXBRTCCommonUtilres *req = [[ZXBRTCCommonUtilres alloc]init];
+    NSDictionary *dict1 = @{@"orgCode": @"",
+                           @"type":@"",
+                           @"lastPublishTime":@"",
+                           @"excludeIds":@[],
+                           @"start":@0,
+                           @"size":@20,
+                           @"selfDiseases":@[]
+                                         };
+    req.requestDic = dict1;
+//    req.portalId = @4;
+//    req.portalType = @2;
+//
+//    req.userId = @0;
+//
+//    req.deviceType = @2;
+    
+    
+
+//    [req startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+//            
+//        
+//        
+//        } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+//            
+//        }];
+    
+    [req startRequestWithSuccess:^(NSInteger statusCode, NSString * _Nullable message, id  _Nullable data) {
+            
+        
+        } failure:^(NSInteger statusCode, NSString * _Nullable message, id  _Nullable data) {
+            
+        }];
+//    
+    
+    
+    
+    NSString *uid = @"1002";
+    //1. 创建一个请求实例，uid是参数。这个请求是post。
+    ZXBNetworkBaseRequest *userInfoReq = [[ZXBNetworkBaseRequest alloc] init];
+    userInfoReq.portalId = @4;
+    userInfoReq.portalType = @2;
+    userInfoReq.userId = @0;
+    userInfoReq.deviceType = @2;
+    //2. 便利请求方法，选择了block回调的方式。点进这个方法，去看看它的实现。
+//    [userInfoReq startWithCompletionBlockWithSuccess:^(YTKBaseRequest *request) {
+//        NSLog(@"请求成功,返回数据:%@",request.responseString);
+//    } failure:^(YTKBaseRequest *request) {
+//        NSLog(@"请求失败");
+//    }];
+    
+    
+//                NSDictionary *dict1 = @{@"orgCode": @"",
+//                                       @"type":@"",
+//                                       @"lastPublishTime":@"",
+//                                       @"excludeIds":@[],
+//                                       @"start":@0,
+//                                       @"size":@20,
+//                                       @"selfDiseases":@[]
+//                                                     };
+    
+    ZXBNetworkBaseRequest *resq = [[ZXBNetworkBaseRequest alloc] init];
+ 
+    resq.requestDic=dict1;
+    //2. 便利请求方法，选择了block回调的方式。点进这个方法，去看看它的实现。
+//    [resq startWithCompletionBlockWithSuccess:^(YTKBaseRequest *request) {
+//        NSLog(@"请求成功,返回数据:%@",request.responseString);
+//    } failure:^(YTKBaseRequest *request) {
+//        
+//        
+//        
+//        NSLog(@"请求失败");
+//    }];
     
 }
 
@@ -106,8 +193,8 @@
     pageControl.pageIndicatorSize = CGSizeMake(12, 6);
     pageControl.currentPageIndicatorTintColor = [UIColor redColor];
     pageControl.pageIndicatorTintColor = [UIColor grayColor];
-//    pageControl.pageIndicatorImage = [UIImage imageNamed:@"Dot"];
-//    pageControl.currentPageIndicatorImage = [UIImage imageNamed:@"DotSelected"];
+    pageControl.pageIndicatorImage = [UIImage imageNamed:@"pageImage"];
+    pageControl.currentPageIndicatorImage = [UIImage imageNamed:@"selePageImage"];
 //    pageControl.contentInset = UIEdgeInsetsMake(0, 20, 0, 20);
 //    pageControl.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
 //    pageControl.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
@@ -118,9 +205,10 @@
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
-    _pagerView.frame = CGRectMake(10, NAVIGATION_BAR_H + 20, CGRectGetWidth(self.view.frame) - 20, 148);
+    _pagerView.frame = CGRectMake(10, NAVIGATION_BAR_H + 120, CGRectGetWidth(self.view.frame) - 20, 148);
     [JMKUITool clipView:_pagerView corner:UIRectCornerAllCorners anSize:CGSizeMake(10, 10)];
     _pageControl.frame = CGRectMake(0, CGRectGetHeight(_pagerView.frame) - 26, CGRectGetWidth(_pagerView.frame), 26);
+    _pageControl.backgroundColor = [UIColor redColor];
 }
 
 - (void)loadData {
@@ -163,8 +251,8 @@
     TYCyclePagerViewCell *cell = [pagerView dequeueReusableCellWithReuseIdentifier:@"cellId" forIndex:index];
 //    cell.backgroundColor = self.HomeBannerArr[index];
 //    cell.label.text = [NSString stringWithFormat:@"index->%ld",index];
-    HomeBannerModel *model = self.HomeBannerArr[index];
-    [cell.img sd_setImageWithURL:[NSURL URLWithString:model.imgUrl]];
+//    HomeBannerModel *model = [self.HomeBannerArr addObjectSafe: index];
+//    [cell.img sd_setImageWithURL:[NSURL URLWithString:model.imgUrl]];
     return cell;
 }
 
@@ -181,6 +269,10 @@
     _pageControl.currentPage = toIndex;
     //[_pageControl setCurrentPage:newIndex animate:YES];
     NSLog(@"%ld ->  %ld",fromIndex,toIndex);
+    
+    
+//    BOTChatViewController *chat = [[BOTChatViewController alloc]init];
+//    [self.navigationController pushViewController:chat animated:YES];
 }
 
 #pragma mark - action
@@ -261,12 +353,12 @@
             
             HomeBannerModel *model = [HomeBannerModel mj_objectWithKeyValues:obj];
            
-            NSLog(@"model --- %@",model);
+//            NSLog(@"model --- %@",model);
             [self.HomeBannerArr addObject: model];
             
         }];
         
-        NSLog(@"self.HomeBannerArr --- %@",self.HomeBannerArr);
+//        NSLog(@"self.HomeBannerArr --- %@",self.HomeBannerArr);
         _pageControl.numberOfPages = self.HomeBannerArr.count;
         [_pagerView reloadData];
 //        BOTCitizenDataModel *dataModel = [BOTCitizenDataModel yy_modelWithDictionary:dic];
@@ -324,7 +416,9 @@
 #pragma mark - 点击退出登录
 - (IBAction)clickOutLoginBtn:(UIButton *)sender
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    JMKFileDownloadViewController *fileDownloadVC = [[JMKFileDownloadViewController alloc] init];
+    [self.navigationController pushViewController:fileDownloadVC animated:YES];
+//    [self.navigationController popViewControllerAnimated:YES];
 //    [VHallApi logout:^{
 //        [VHProgressHud showToast:@"退出登录成功"];
 //    }

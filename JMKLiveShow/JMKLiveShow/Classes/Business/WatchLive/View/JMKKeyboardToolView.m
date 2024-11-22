@@ -252,7 +252,7 @@
 - (UIButton *)keyboardBackView {
     if (!_keyboardBackView) {
         _keyboardBackView = [UIButton buttonWithType:UIButtonTypeCustom];
-        _keyboardBackView.backgroundColor = [UIColor clearColor];
+        _keyboardBackView.backgroundColor = [UIColor blueColor];
         [_keyboardBackView addTarget:self action:@selector(keyboardToolViewBackViewClick) forControlEvents:UIControlEventTouchUpInside];
     }
 

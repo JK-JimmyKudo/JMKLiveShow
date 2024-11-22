@@ -52,6 +52,7 @@
     // 绑定自动化标识
     [self initKIF];
     [self keyboardManager];
+    [self getGCD];
 }
 
 - (void)keyboardManager
@@ -272,6 +273,49 @@
 #pragma mark - 状态栏颜色
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleDefault;
+}
+
+-(void)getGCD{
+//    1.不管是串行队列还是并发队列，同步任务和异步任务都是按顺序执行。
+    
+    //全局队列 global 并发
+//    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+//    //异步
+//     dispatch_async(queue, ^{
+//        VHLog(@"全局队列 异步 - %@",[NSThread currentThread]);
+//    });
+//    
+//    //同步
+//     dispatch_sync(queue, ^{
+//        VHLog(@"全局队列 同步 - %@",[NSThread currentThread]);
+//    });
+//    
+//    
+//    dispatch_sync(queue, ^{
+//        for (int i = 0; i< 5; i++) {
+//            VHLog(@"renwu 11111");
+//        }
+//    });
+//    dispatch_sync(queue, ^{
+//        for (int i = 0; i< 5; i++) {
+//            VHLog(@"renwu 222");
+//        }
+//    });
+    
+    //串行
+    dispatch_queue_t serialQueue = dispatch_queue_create("自定义署名",DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t mainqueue = dispatch_get_main_queue();
+    
+    dispatch_async(serialQueue, ^{
+        for (int i = 0; i< 5; i++) {
+            VHLog(@"renwu 11111");
+        }
+    });
+    dispatch_async(serialQueue, ^{
+        for (int i = 0; i< 5; i++) {
+            VHLog(@"renwu 222");
+        }
+    });
 }
 
 @end

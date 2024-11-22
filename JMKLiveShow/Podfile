@@ -41,7 +41,13 @@ target 'JMKLiveShow' do
   pod 'VHYun_Beautify'
   pod 'FURenderKit'
   pod 'YTKNetwork'
-
+#  pod 'FMDB'
+  pod 'WCDB'
+  pod 'KSCrash'
+  
+  
+  
+  
 end
 
 

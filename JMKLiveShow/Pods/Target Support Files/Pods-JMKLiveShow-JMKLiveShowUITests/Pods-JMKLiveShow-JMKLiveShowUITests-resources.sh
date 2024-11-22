@@ -109,7 +109,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/FURenderKit/Resources/model/ai_face_processor.bundle"
   install_resource "${PODS_ROOT}/FURenderKit/Resources/model/ai_hand_processor.bundle"
   install_resource "${PODS_ROOT}/FURenderKit/Resources/model/ai_human_processor.bundle"
-  install_resource "${PODS_ROOT}/GKPhotoBrowser/GKPhotoBrowser/GKPhotoBrowser.bundle"
+  install_resource "${PODS_ROOT}/GKPhotoBrowser/GKPhotoBrowser/Resources/GKPhotoBrowser.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/GKPhotoBrowser/GKPhotoBrowser.Privacy.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -125,7 +125,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/FURenderKit/Resources/model/ai_face_processor.bundle"
   install_resource "${PODS_ROOT}/FURenderKit/Resources/model/ai_hand_processor.bundle"
   install_resource "${PODS_ROOT}/FURenderKit/Resources/model/ai_human_processor.bundle"
-  install_resource "${PODS_ROOT}/GKPhotoBrowser/GKPhotoBrowser/GKPhotoBrowser.bundle"
+  install_resource "${PODS_ROOT}/GKPhotoBrowser/GKPhotoBrowser/Resources/GKPhotoBrowser.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/GKPhotoBrowser/GKPhotoBrowser.Privacy.bundle"
 fi
 

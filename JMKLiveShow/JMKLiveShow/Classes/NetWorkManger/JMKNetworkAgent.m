@@ -29,8 +29,9 @@ NSString * const BOTNetworkingDidChangeNotification = @"BOTNetworkingDidChangeNo
     JMKURLFilter *filter = [[JMKURLFilter alloc] init];
     [config addUrlFilter:filter];
 //https://yi-chuangxin.com/api/v2/ycxsx-product/banner/getBanner
-    config.baseUrl = @"https://yi-chuangxin.com";
-    
+//    config.baseUrl = @"https://yi-chuangxin.com";
+    config.baseUrl = @"https://gate-qa.op.laikang.com";
+
     AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
     [manager startMonitoring];
     [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {

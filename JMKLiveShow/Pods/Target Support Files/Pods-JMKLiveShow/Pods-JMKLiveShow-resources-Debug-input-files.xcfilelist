@@ -11,5 +11,5 @@ ${PODS_ROOT}/FURenderKit/Resources/graphics/tongue.bundle
 ${PODS_ROOT}/FURenderKit/Resources/model/ai_face_processor.bundle
 ${PODS_ROOT}/FURenderKit/Resources/model/ai_hand_processor.bundle
 ${PODS_ROOT}/FURenderKit/Resources/model/ai_human_processor.bundle
-${PODS_ROOT}/GKPhotoBrowser/GKPhotoBrowser/GKPhotoBrowser.bundle
+${PODS_ROOT}/GKPhotoBrowser/GKPhotoBrowser/Resources/GKPhotoBrowser.bundle
 ${PODS_CONFIGURATION_BUILD_DIR}/GKPhotoBrowser/GKPhotoBrowser.Privacy.bundle

@@ -10,7 +10,8 @@
 @implementation JMKURLFilter
 
 - (NSString *)filterUrl:(NSString *)originUrl withRequest:(YTKBaseRequest *)request {
-    
+    NSLog(@"request.baseUrl --- %@",request.baseUrl);
+
 //    if ([request.baseUrl isEqualToString:BOT_REQUEST_HOST_CHAT]) {
 //        return originUrl;
 //    }
@@ -30,7 +31,7 @@
 //    }
 //    
     
-    NSString *filterUrl = [NSString stringWithFormat:@"/api/v2%@", originUrl];
+    NSString *filterUrl = [NSString stringWithFormat:@"%@", originUrl];
     
     NSLog(@"filterUrl --- %@",filterUrl);
     

@@ -21,9 +21,28 @@ GKPhotoBrowser是一个可高度自定义的图片、视频浏览器，支持多
 
 ## 重要
  如果在使用过程中遇到问题，请先检查使用的版本是否是最新版本（可在说明最上面的pod后面查看），如果不是最新版本，请先更新到最后版本，看看问题是否存在，如果依然存在，可提issue说明或加我QQ1094887059直接问我，最好能提供demo。
+ 
+ ### 3.1.0升级说明
+ ** 3.1.0版本之后对项目部分代码进行了拆分，增加了GKPhotoBrowserConfigure配置类，升级后可按以下方式进行配置
+ 
+方法一
+```
+browser.configure.showStyle = GKPhotoBrowserShowStyleZoom;
+[browser.configure setupWebImageProtocol:GKYYWebImageManager.new];
+```
+
+方法二
+```
+GKPhotoBrowserConfigure *configure = GKPhotoBrowserConfigure.defaultConfig;
+configure.showStyle = GKPhotoBrowserShowStyleZoom;
+[configure setupWebImageProtocol:GKYYWebImageManager.new];
+
+browser.configure = configure;
+```
 
 ## 特性
 - 支持图片浏览、视频播放、图片视频混排等
+- 支持本地、网络、相册等资源
 - 支持iPhone、iPad
 - 支持单击、双击、长按手势，支持滑动缩放
 - 支持多种显示方式（none，zoom，push）
@@ -109,6 +128,7 @@ GKPhotoBrowser *browser = [GKPhotoBrowser photoBrowserWithPhotos:photos currentI
 ```
 [browser showFromVC:self];
 ```
+
 更多功能及属性可在demo和代码中查看
 
 ## 常见问题
@@ -121,28 +141,28 @@ GKPhotoBrowser *browser = [GKPhotoBrowser photoBrowserWithPhotos:photos currentI
 2、使用YYWebImage(1.0.5)加载图片，请使用pod 'GKPhotoBrowser/YY'   
 3、自定义图片加载类，如：SDWebImage 5.0以下版本，请使用pod 'GKPhotoBrowser/Core'，然后添加图片加载类并实现GKWebImageProtocol协议
 
-### 3、关于本地gif图片的加载 
-1、 如果使用SDWebImage，请使用SDAnimatedImage加载本地图片  
-``` 
-photo.image = [SDAnimatedImage imageNamed:obj];
+### 3、本库支持多种自定义（图片加载、视频播放、livePhoto下载等等）
+如果想自定义图片加载，请创建类并实现GKWebImageProtocol协议，并在浏览器显示之前进行配置
 ```
+GKPhotoBrowserConfigure *configure = GKPhotoBrowserConfigure.defaultConfig;
+[configure setupWebImageProtocol:CustomWebManager.new];
 
-2、如果使用YYWebImage，请使用YYImage加载本地图片  
-``` 
-photo.image = [YYImage imageNamed:obj];
+browser.configure = configure;
+```
+如果想自定义视频播放，请创建类并实现GKVideoPlayerProtocol协议，并在浏览器显示之前进行配置
+```
+GKPhotoBrowserConfigure *configure = GKPhotoBrowserConfigure.defaultConfig;
+[configure setupWebImageProtocol:CustomPlayerManager.new];
+
+browser.configure = configure;
 ```
 
 ### 4、对于支持屏幕旋转的APP及iPad的适配
 需要设置属性isFollowSystemRotation为YES，此时isScreenRotateDisabled属性将失效
 
-### 5、关于视频的播放处理
-内部默认使用的AVPlayer播放视频，如果想要使用其他播放器可使用基础库，然后创建视频播放类并实现GKVideoPlayerProtocol协议，然后设置播放处理类
-```
-[browser setupVideoPlayerProtocol:[CustomPlayerManager class]];
-```
-
-### 6、滑动返回时显示黑屏（不出现背景渐变）
+### 5、滑动返回时显示黑屏（不出现背景渐变）
 查看其他代码中是否有分类修改了UIViewController的modalPresentationStyle，GKPhotoBrowser的默认modalPresentationStyle是UIModalPresentationCustom，如果有修改则需要屏蔽对GKPhotoBrowser的修改
+
  
  ## 效果图
  
@@ -173,6 +193,13 @@ photo.image = [YYImage imageNamed:obj];
  <details open>
      <summary><font size=4>最近更新</font></summary>
 
+ * 3.1.3 - 2024.09.24 
+    - 1、新增liveTargetSize属性，可自定义livePhoto相册图片加载尺寸
+    - 2、新增isLivePhotoLongPressPlay属性，可控制livePhoto是否可以长按播放
+    - 3、livePhoto播放优化，demo优化
+ * 3.1.2 - 2024.09.11 1、修复加载相册图片时的闪动问题 2、修复相册livePhoto加载失败的问题
+ * 3.1.1 - 2024.09.10 1、修复滑动隐藏bug 2、修复状态栏显示异常问题 #196 #197
+ * 3.1.0 - 2024.09.04 1、代码优化，增加配置类 2、本地图片加载优化，图片加载类支持为nil
  * 3.0.3 - 2024.08.12 1、修复系统静音情况下，播放视频无声音的问题 2、增加视频和livePhoto静音播放属性
  * 3.0.2 - 2024.07.26 1、livePhoto优化，增加是否清理缓存属性
  * 3.0.1 - 2024.07.03 1、修复bug #193 2、livePhoto进度优化及增加标识

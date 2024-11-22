@@ -41,11 +41,16 @@
 //  "deviceType": 2
 //}m
 
+//- (NSString *)requestUrl {
+////    if (self.orderNo) {
+////        return [NSString stringWithFormat:@"/as-business/v1/travel-certificate/order/info/proclaimed/%@/%@", self.orderNo, self.resource];
+////    }
+//    return [NSString stringWithFormat:@"/ycxsx-product/banner/getBanner"];
+//}
+
 - (NSString *)requestUrl {
-//    if (self.orderNo) {
-//        return [NSString stringWithFormat:@"/as-business/v1/travel-certificate/order/info/proclaimed/%@/%@", self.orderNo, self.resource];
-//    }
-    return [NSString stringWithFormat:@"/ycxsx-product/banner/getBanner"];
+
+    return [NSString stringWithFormat:@"/cdp-test/kind/kind/getKindByType/frametype"];
 }
 
 @end
